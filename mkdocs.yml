@@ -1,15 +1,25 @@
 ---
-site_name: "im-core-equipment"
+site_name: "Core Equipment Profile"
 theme:
   name: material
-  # palette:
-  #  scheme: slate
-  #  primary: cyan
+  palette:
+    scheme: default
+    primary: green
+    accent: deep orange
   features:
     - content.tabs.link
+  logo: assets/alliander_logo_wit.png
+  language: en
 plugins:
   - search
   - mermaid2
+markdown_extensions:
+  - pymdownx.betterem
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
   # - Home: home.md
   - Index: index.md

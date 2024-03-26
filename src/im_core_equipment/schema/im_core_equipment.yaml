@@ -1,96 +1,1459 @@
----
-id: https://w3id.org/ritger-alliander/im-core-equipment
-name: im-core-equipment
-title: im-core-equipment
-description: |-
-  Core Equipment Profile
-license: Apache Software License 2.0
-see_also:
-  - https://ritger-alliander.github.io/im-core-equipment
-
-prefixes:
-  im_core_equipment: https://w3id.org/ritger-alliander/im-core-equipment/
-  linkml: https://w3id.org/linkml/
-  biolink: https://w3id.org/biolink/
-  schema: http://schema.org/
-  PATO: http://purl.obolibrary.org/obo/PATO_
-  example: https://example.org/
-default_prefix: im_core_equipment
-default_range: string
-
+name: CoreEquipmentProfile
+id: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
 imports:
-  - linkml:types
-
-classes:
-
-  NamedThing:
-    description: >-
-      A generic grouping for any identifiable entity
-    slots:
-      - id
-      - name
-      - description
-    class_uri: schema:Thing
-
-  IdentifiedObject:
-    is_a: NamedThing
-    description: >-
-      Represents a IdentifiedObject
-    slots:
-      - primary_email
-      - birth_date
-      - age_in_years
-      - vital_status
-    slot_usage:
-      primary_email:
-        pattern: "^\\S+@[\\S+\\.]+\\S+"
-
-  IdentifiedObjectCollection:
-    tree_root: true
-    description: >-
-      A holder for IdentifiedObject objects
-    attributes:
-      entries:
-        range: IdentifiedObject
-        multivalued: true
-        inlined: true
-
-slots:
-  id:
-    identifier: true
-    slot_uri: schema:identifier
-    range: uriorcurie
-    description: A unique identifier for a thing
-  name:
-    slot_uri: schema:name
-    description: A human-readable name for a thing
-  description:
-    slot_uri: schema:description
-    description: A human-readable description for a thing
-  primary_email:
-    slot_uri: schema:email
-    description: The main email address of a person
-  birth_date:
-    slot_uri: schema:birthDate
-    range: date
-    description: Date on which a person is born
-  age_in_years:
-    range: integer
-    description: Number of years since birth
-  vital_status:
-    range: PersonStatus
-    description: living or dead status
-
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  CoreEquipmentProfile: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile/
+  cim: http://iec.ch/TC57/CIM100#
+  cims: http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#
+  dc: http://purl.org/dc/elements/1.1/
+  dcat: http://www.w3.org/ns/dcat#
+  dct: http://purl.org/dc/terms/
+  eu: http://iec.ch/TC57/CIM100-European#
+  owl: http://www.w3.org/2002/07/owl#
+  profcim: http://iec.ch/TC57/ns/CIM/prof-cim#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  sh: http://www.w3.org/ns/shacl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  eq: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#
+  this: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+  dcterms: http://purl.org/dc/terms/
+  faldo: http://biohackathon.org/resource/faldo#
+  foaf: http://xmlns.com/foaf/0.1/
+  idot: http://identifiers.org/
+  oa: http://www.w3.org/ns/oa#
+  prov: http://www.w3.org/ns/prov#
+  void: http://rdfs.org/ns/void#
+  oboInOwl: http://www.geneontology.org/formats/oboInOwl#
+  shex: http://www.w3.org/ns/shex#
+  schema: http://schema.org/
+default_prefix: this
+default_range: string
+types:
+  replaced_by_profiler:
+    description: Range was replaced by the profiler
+    base: str
+    uri: xsd:string
 enums:
-  PersonStatus:
+  UnitMultiplier:
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    enum_uri: http://iec.ch/TC57/CIM100#UnitMultiplier
     permissible_values:
-      ALIVE:
-        description: the person is living
-        meaning: PATO:0001421
-      DEAD:
-        description: the person is deceased
-        meaning: PATO:0001422
-      UNKNOWN:
-        description: the vital status is not known
-        todos:
-          - map this to an ontology
+      y:
+        meaning: cim:UnitMultiplier.y
+      z:
+        meaning: cim:UnitMultiplier.z
+      a:
+        meaning: cim:UnitMultiplier.a
+      f:
+        meaning: cim:UnitMultiplier.f
+      p:
+        meaning: cim:UnitMultiplier.p
+      n:
+        meaning: cim:UnitMultiplier.n
+      micro:
+        meaning: cim:UnitMultiplier.micro
+      m:
+        meaning: cim:UnitMultiplier.m
+      c:
+        meaning: cim:UnitMultiplier.c
+      d:
+        meaning: cim:UnitMultiplier.d
+      none:
+        meaning: cim:UnitMultiplier.none
+      da:
+        meaning: cim:UnitMultiplier.da
+      h:
+        meaning: cim:UnitMultiplier.h
+      k:
+        meaning: cim:UnitMultiplier.k
+      M:
+        meaning: cim:UnitMultiplier.M
+      G:
+        meaning: cim:UnitMultiplier.G
+      T:
+        meaning: cim:UnitMultiplier.T
+      P:
+        meaning: cim:UnitMultiplier.P
+      E:
+        meaning: cim:UnitMultiplier.E
+      Z:
+        meaning: cim:UnitMultiplier.Z
+      Y:
+        meaning: cim:UnitMultiplier.Y
+  UnitSymbol:
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    enum_uri: http://iec.ch/TC57/CIM100#UnitSymbol
+    permissible_values:
+      none:
+        meaning: cim:UnitSymbol.none
+      m:
+        meaning: cim:UnitSymbol.m
+      kg:
+        meaning: cim:UnitSymbol.kg
+      s:
+        meaning: cim:UnitSymbol.s
+      A:
+        meaning: cim:UnitSymbol.A
+      K:
+        meaning: cim:UnitSymbol.K
+      mol:
+        meaning: cim:UnitSymbol.mol
+      cd:
+        meaning: cim:UnitSymbol.cd
+      deg:
+        meaning: cim:UnitSymbol.deg
+      rad:
+        meaning: cim:UnitSymbol.rad
+      sr:
+        meaning: cim:UnitSymbol.sr
+      Gy:
+        meaning: cim:UnitSymbol.Gy
+      Bq:
+        meaning: cim:UnitSymbol.Bq
+      degC:
+        meaning: cim:UnitSymbol.degC
+      Sv:
+        meaning: cim:UnitSymbol.Sv
+      F:
+        meaning: cim:UnitSymbol.F
+      C:
+        meaning: cim:UnitSymbol.C
+      S:
+        meaning: cim:UnitSymbol.S
+      H:
+        meaning: cim:UnitSymbol.H
+      V:
+        meaning: cim:UnitSymbol.V
+      ohm:
+        meaning: cim:UnitSymbol.ohm
+      J:
+        meaning: cim:UnitSymbol.J
+      N:
+        meaning: cim:UnitSymbol.N
+      Hz:
+        meaning: cim:UnitSymbol.Hz
+      lx:
+        meaning: cim:UnitSymbol.lx
+      lm:
+        meaning: cim:UnitSymbol.lm
+      Wb:
+        meaning: cim:UnitSymbol.Wb
+      T:
+        meaning: cim:UnitSymbol.T
+      W:
+        meaning: cim:UnitSymbol.W
+      Pa:
+        meaning: cim:UnitSymbol.Pa
+      m2:
+        meaning: cim:UnitSymbol.m2
+      m3:
+        meaning: cim:UnitSymbol.m3
+      mPers:
+        meaning: cim:UnitSymbol.mPers
+      mPers2:
+        meaning: cim:UnitSymbol.mPers2
+      m3Pers:
+        meaning: cim:UnitSymbol.m3Pers
+      mPerm3:
+        meaning: cim:UnitSymbol.mPerm3
+      kgm:
+        meaning: cim:UnitSymbol.kgm
+      kgPerm3:
+        meaning: cim:UnitSymbol.kgPerm3
+      m2Pers:
+        meaning: cim:UnitSymbol.m2Pers
+      WPermK:
+        meaning: cim:UnitSymbol.WPermK
+      JPerK:
+        meaning: cim:UnitSymbol.JPerK
+      ppm:
+        meaning: cim:UnitSymbol.ppm
+      rotPers:
+        meaning: cim:UnitSymbol.rotPers
+      radPers:
+        meaning: cim:UnitSymbol.radPers
+      WPerm2:
+        meaning: cim:UnitSymbol.WPerm2
+      JPerm2:
+        meaning: cim:UnitSymbol.JPerm2
+      SPerm:
+        meaning: cim:UnitSymbol.SPerm
+      KPers:
+        meaning: cim:UnitSymbol.KPers
+      PaPers:
+        meaning: cim:UnitSymbol.PaPers
+      JPerkgK:
+        meaning: cim:UnitSymbol.JPerkgK
+      VA:
+        meaning: cim:UnitSymbol.VA
+      VAr:
+        meaning: cim:UnitSymbol.VAr
+      cosPhi:
+        meaning: cim:UnitSymbol.cosPhi
+      Vs:
+        meaning: cim:UnitSymbol.Vs
+      V2:
+        meaning: cim:UnitSymbol.V2
+      As:
+        meaning: cim:UnitSymbol.As
+      A2:
+        meaning: cim:UnitSymbol.A2
+      A2s:
+        meaning: cim:UnitSymbol.A2s
+      VAh:
+        meaning: cim:UnitSymbol.VAh
+      Wh:
+        meaning: cim:UnitSymbol.Wh
+      VArh:
+        meaning: cim:UnitSymbol.VArh
+      VPerHz:
+        meaning: cim:UnitSymbol.VPerHz
+      HzPers:
+        meaning: cim:UnitSymbol.HzPers
+      character:
+        meaning: cim:UnitSymbol.character
+      charPers:
+        meaning: cim:UnitSymbol.charPers
+      kgm2:
+        meaning: cim:UnitSymbol.kgm2
+      dB:
+        meaning: cim:UnitSymbol.dB
+      WPers:
+        meaning: cim:UnitSymbol.WPers
+      lPers:
+        meaning: cim:UnitSymbol.lPers
+      dBm:
+        meaning: cim:UnitSymbol.dBm
+      h:
+        meaning: cim:UnitSymbol.h
+      min:
+        meaning: cim:UnitSymbol.min
+      Q:
+        meaning: cim:UnitSymbol.Q
+      Qh:
+        meaning: cim:UnitSymbol.Qh
+      ohmm:
+        meaning: cim:UnitSymbol.ohmm
+      APerm:
+        meaning: cim:UnitSymbol.APerm
+      V2h:
+        meaning: cim:UnitSymbol.V2h
+      A2h:
+        meaning: cim:UnitSymbol.A2h
+      Ah:
+        meaning: cim:UnitSymbol.Ah
+      count:
+        meaning: cim:UnitSymbol.count
+      ft3:
+        meaning: cim:UnitSymbol.ft3
+      m3Perh:
+        meaning: cim:UnitSymbol.m3Perh
+      gal:
+        meaning: cim:UnitSymbol.gal
+      Btu:
+        meaning: cim:UnitSymbol.Btu
+      l:
+        meaning: cim:UnitSymbol.l
+      lPerh:
+        meaning: cim:UnitSymbol.lPerh
+      lPerl:
+        meaning: cim:UnitSymbol.lPerl
+      gPerg:
+        meaning: cim:UnitSymbol.gPerg
+      molPerm3:
+        meaning: cim:UnitSymbol.molPerm3
+      molPermol:
+        meaning: cim:UnitSymbol.molPermol
+      molPerkg:
+        meaning: cim:UnitSymbol.molPerkg
+      sPers:
+        meaning: cim:UnitSymbol.sPers
+      HzPerHz:
+        meaning: cim:UnitSymbol.HzPerHz
+      VPerV:
+        meaning: cim:UnitSymbol.VPerV
+      APerA:
+        meaning: cim:UnitSymbol.APerA
+      VPerVA:
+        meaning: cim:UnitSymbol.VPerVA
+      rev:
+        meaning: cim:UnitSymbol.rev
+      kat:
+        meaning: cim:UnitSymbol.kat
+      JPerkg:
+        meaning: cim:UnitSymbol.JPerkg
+      m3Uncompensated:
+        meaning: cim:UnitSymbol.m3Uncompensated
+      m3Compensated:
+        meaning: cim:UnitSymbol.m3Compensated
+      WPerW:
+        meaning: cim:UnitSymbol.WPerW
+      therm:
+        meaning: cim:UnitSymbol.therm
+      onePerm:
+        meaning: cim:UnitSymbol.onePerm
+      m3Perkg:
+        meaning: cim:UnitSymbol.m3Perkg
+      Pas:
+        meaning: cim:UnitSymbol.Pas
+      Nm:
+        meaning: cim:UnitSymbol.Nm
+      NPerm:
+        meaning: cim:UnitSymbol.NPerm
+      radPers2:
+        meaning: cim:UnitSymbol.radPers2
+      JPerm3:
+        meaning: cim:UnitSymbol.JPerm3
+      VPerm:
+        meaning: cim:UnitSymbol.VPerm
+      CPerm3:
+        meaning: cim:UnitSymbol.CPerm3
+      CPerm2:
+        meaning: cim:UnitSymbol.CPerm2
+      FPerm:
+        meaning: cim:UnitSymbol.FPerm
+      HPerm:
+        meaning: cim:UnitSymbol.HPerm
+      JPermol:
+        meaning: cim:UnitSymbol.JPermol
+      JPermolK:
+        meaning: cim:UnitSymbol.JPermolK
+      CPerkg:
+        meaning: cim:UnitSymbol.CPerkg
+      GyPers:
+        meaning: cim:UnitSymbol.GyPers
+      WPersr:
+        meaning: cim:UnitSymbol.WPersr
+      WPerm2sr:
+        meaning: cim:UnitSymbol.WPerm2sr
+      katPerm3:
+        meaning: cim:UnitSymbol.katPerm3
+      d:
+        meaning: cim:UnitSymbol.d
+      anglemin:
+        meaning: cim:UnitSymbol.anglemin
+      anglesec:
+        meaning: cim:UnitSymbol.anglesec
+      ha:
+        meaning: cim:UnitSymbol.ha
+      tonne:
+        meaning: cim:UnitSymbol.tonne
+      bar:
+        meaning: cim:UnitSymbol.bar
+      mmHg:
+        meaning: cim:UnitSymbol.mmHg
+      M:
+        meaning: cim:UnitSymbol.M
+      kn:
+        meaning: cim:UnitSymbol.kn
+      Mx:
+        meaning: cim:UnitSymbol.Mx
+      G:
+        meaning: cim:UnitSymbol.G
+      Oe:
+        meaning: cim:UnitSymbol.Oe
+      Vh:
+        meaning: cim:UnitSymbol.Vh
+      WPerA:
+        meaning: cim:UnitSymbol.WPerA
+      onePerHz:
+        meaning: cim:UnitSymbol.onePerHz
+      VPerVAr:
+        meaning: cim:UnitSymbol.VPerVAr
+      ohmPerm:
+        meaning: cim:UnitSymbol.ohmPerm
+      kgPerJ:
+        meaning: cim:UnitSymbol.kgPerJ
+      JPers:
+        meaning: cim:UnitSymbol.JPers
+  PhaseCode:
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    enum_uri: http://iec.ch/TC57/CIM100#PhaseCode
+    permissible_values:
+      ABCN:
+        meaning: cim:PhaseCode.ABCN
+      ABC:
+        meaning: cim:PhaseCode.ABC
+      ABN:
+        meaning: cim:PhaseCode.ABN
+      ACN:
+        meaning: cim:PhaseCode.ACN
+      BCN:
+        meaning: cim:PhaseCode.BCN
+      AB:
+        meaning: cim:PhaseCode.AB
+      AC:
+        meaning: cim:PhaseCode.AC
+      BC:
+        meaning: cim:PhaseCode.BC
+      AN:
+        meaning: cim:PhaseCode.AN
+      BN:
+        meaning: cim:PhaseCode.BN
+      CN:
+        meaning: cim:PhaseCode.CN
+      A:
+        meaning: cim:PhaseCode.A
+      B:
+        meaning: cim:PhaseCode.B
+      C:
+        meaning: cim:PhaseCode.C
+      N:
+        meaning: cim:PhaseCode.N
+      s1N:
+        meaning: cim:PhaseCode.s1N
+      s2N:
+        meaning: cim:PhaseCode.s2N
+      s12N:
+        meaning: cim:PhaseCode.s12N
+      s1:
+        meaning: cim:PhaseCode.s1
+      s2:
+        meaning: cim:PhaseCode.s2
+      s12:
+        meaning: cim:PhaseCode.s12
+      none:
+        meaning: cim:PhaseCode.none
+      X:
+        meaning: cim:PhaseCode.X
+      XY:
+        meaning: cim:PhaseCode.XY
+      XN:
+        meaning: cim:PhaseCode.XN
+      XYN:
+        meaning: cim:PhaseCode.XYN
+  WindingConnection:
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    enum_uri: http://iec.ch/TC57/CIM100#WindingConnection
+    permissible_values:
+      D:
+        meaning: cim:WindingConnection.D
+      Y:
+        meaning: cim:WindingConnection.Y
+      Z:
+        meaning: cim:WindingConnection.Z
+      Yn:
+        meaning: cim:WindingConnection.Yn
+      Zn:
+        meaning: cim:WindingConnection.Zn
+      A:
+        meaning: cim:WindingConnection.A
+      I:
+        meaning: cim:WindingConnection.I
+classes:
+  TransformerEnd:
+    description: A conducting connection point of a power transformer. It corresponds
+      to a physical transformer winding terminal.  In earlier CIM versions, the TransformerWinding
+      class served a similar purpose, but this class is more flexible because it associates
+      to terminal but is not a specialization of ConductingEquipment.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: IdentifiedObject
+    attributes:
+      BaseVoltage:
+        description: Base voltage of the transformer end.  This is essential for PU
+          calculation.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:TransformerEnd.BaseVoltage
+        multivalued: false
+        range: BaseVoltage
+        required: true
+      PhaseTapChanger:
+        description: Phase tap changer associated with this transformer end.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:TransformerEnd.PhaseTapChanger
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      RatioTapChanger:
+        description: Ratio tap changer associated with this transformer end.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:TransformerEnd.RatioTapChanger
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      Terminal:
+        description: Terminal of the power transformer to which this transformer end
+          belongs.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:TransformerEnd.Terminal
+        multivalued: false
+        range: Terminal
+        required: true
+      endNumber:
+        description: Number for this transformer end, corresponding to the end's order
+          in the power transformer vector group or phase angle clock number.  Highest
+          voltage winding should be 1.  Each end within a power transformer should
+          have a unique subsequent end number.   Note the transformer end number need
+          not match the terminal sequence number.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:TransformerEnd.endNumber
+        multivalued: false
+        range: integer
+        required: true
+    class_uri: cim:TransformerEnd
+  IdentifiedObject:
+    description: This is a root class to provide common identification for all classes
+      needing identification and naming attributes.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    attributes:
+      description:
+        description: The description is a free human readable text describing or naming
+          the object. It may be non unique and may not correlate to a naming hierarchy.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:IdentifiedObject.description
+        multivalued: false
+        range: string
+        required: false
+      energyIdentCodeEic:
+        description: The attribute is used for an exchange of the EIC code (Energy
+          identification Code). The length of the string is 16 characters as defined
+          by the EIC code. For details on EIC scheme please refer to ENTSO-E web site.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: eu:IdentifiedObject.energyIdentCodeEic
+        multivalued: false
+        range: string
+        required: false
+      mRID:
+        description: 'Master resource identifier issued by a model authority. The
+          mRID is unique within an exchange context. Global uniqueness is easily achieved
+          by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID
+          is strongly recommended.
+
+          For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID
+          is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.'
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:IdentifiedObject.mRID
+        multivalued: false
+        range: string
+        required: true
+      shortName:
+        description: The attribute is used for an exchange of a human readable short
+          name with length of the string 12 characters maximum.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: eu:IdentifiedObject.shortName
+        multivalued: false
+        range: string
+        required: false
+    class_uri: cim:IdentifiedObject
+  BaseVoltage:
+    description: Defines a system base voltage which is referenced.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: IdentifiedObject
+    attributes:
+      nominalVoltage:
+        description: The power system resource's base voltage.  Shall be a positive
+          value and not zero.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:BaseVoltage.nominalVoltage
+        multivalued: false
+        range: Voltage
+        required: true
+      ConductingEquipment:
+        description: All conducting equipment with this base voltage.  Use only when
+          there is no voltage level container used and only one base voltage applies.  For
+          example, not used for transformers.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:BaseVoltage.ConductingEquipment
+        multivalued: true
+        range: ConductingEquipment
+        required: false
+      VoltageLevel:
+        description: The voltage levels having this base voltage.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:BaseVoltage.VoltageLevel
+        multivalued: true
+        range: VoltageLevel
+        required: false
+      TransformerEnds:
+        description: Transformer ends at the base voltage.  This is essential for
+          PU calculation.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:BaseVoltage.TransformerEnds
+        multivalued: true
+        range: TransformerEnd
+        required: false
+    class_uri: cim:BaseVoltage
+  Voltage:
+    description: Electrical voltage, can be both AC and DC.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    attributes:
+      value:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Voltage.value
+        multivalued: false
+        range: float
+        required: false
+      multiplier:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Voltage.multiplier
+        multivalued: false
+        range: UnitMultiplier
+        required: false
+      unit:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Voltage.unit
+        multivalued: false
+        range: UnitSymbol
+        required: false
+    class_uri: cim:Voltage
+  ConductingEquipment:
+    description: The parts of the AC power system that are designed to carry current
+      or that are conductively connected through terminals.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: Equipment
+    attributes:
+      BaseVoltage:
+        description: Base voltage of this conducting equipment.  Use only when there
+          is no voltage level container used and only one base voltage applies.  For
+          example, not used for transformers.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ConductingEquipment.BaseVoltage
+        multivalued: false
+        range: BaseVoltage
+        required: false
+      Terminals:
+        description: Conducting equipment have terminals that may be connected to
+          other conducting equipment terminals via connectivity nodes or topological
+          nodes.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ConductingEquipment.Terminals
+        multivalued: true
+        range: Terminal
+        required: false
+    class_uri: cim:ConductingEquipment
+  Equipment:
+    description: The parts of a power system that are physical devices, electronic
+      or mechanical.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: PowerSystemResource
+    attributes:
+      aggregate:
+        description: "The aggregate flag provides an alternative way of representing\
+          \ an aggregated (equivalent) element. It is applicable in cases when the\
+          \ dedicated classes for equivalent equipment do not have all of the attributes\
+          \ necessary to represent the required level of detail.  In case the flag\
+          \ is set to \u201Ctrue\u201D the single instance of equipment represents\
+          \ multiple pieces of equipment that have been modelled together as an aggregate\
+          \ equivalent obtained by a network reduction procedure. Examples would be\
+          \ power transformers or synchronous machines operating in parallel modelled\
+          \ as a single aggregate power transformer or aggregate synchronous machine.\
+          \  \nThe attribute is not used for EquivalentBranch, EquivalentShunt and\
+          \ EquivalentInjection."
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Equipment.aggregate
+        multivalued: false
+        range: boolean
+        required: false
+      normallyInService:
+        description: Specifies the availability of the equipment under normal operating
+          conditions. True means the equipment is available for topology processing,
+          which determines if the equipment is energized or not. False means that
+          the equipment is treated by network applications as if it is not in the
+          model.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Equipment.normallyInService
+        multivalued: false
+        range: boolean
+        required: false
+      EquipmentContainer:
+        description: Container of this equipment.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Equipment.EquipmentContainer
+        multivalued: false
+        range: EquipmentContainer
+        required: false
+      OperationalLimitSet:
+        description: The operational limit sets associated with this equipment.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Equipment.OperationalLimitSet
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+    class_uri: cim:Equipment
+  PowerSystemResource:
+    description: A power system resource (PSR) can be an item of equipment such as
+      a switch, an equipment container containing many individual items of equipment
+      such as a substation, or an organisational entity such as sub-control area.
+      Power system resources can have measurements associated.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: IdentifiedObject
+    class_uri: cim:PowerSystemResource
+  EquipmentContainer:
+    description: A modelling construct to provide a root class for containing equipment.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ConnectivityNodeContainer
+    attributes:
+      Equipments:
+        description: Contained equipment.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:EquipmentContainer.Equipments
+        multivalued: true
+        range: Equipment
+        required: false
+    class_uri: cim:EquipmentContainer
+  ConnectivityNodeContainer:
+    description: A base class for all objects that may contain connectivity nodes
+      or topological nodes.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: PowerSystemResource
+    attributes:
+      ConnectivityNodes:
+        description: Connectivity nodes which belong to this connectivity node container.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ConnectivityNodeContainer.ConnectivityNodes
+        multivalued: true
+        range: ConnectivityNode
+        required: false
+    class_uri: cim:ConnectivityNodeContainer
+  ConnectivityNode:
+    description: Connectivity nodes are points where terminals of AC conducting equipment
+      are connected together with zero impedance.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: IdentifiedObject
+    attributes:
+      BoundaryPoint:
+        description: The boundary point associated with the connectivity node.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: eu:ConnectivityNode.BoundaryPoint
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      Terminals:
+        description: Terminals interconnected with zero impedance at a this connectivity
+          node.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ConnectivityNode.Terminals
+        multivalued: true
+        range: Terminal
+        required: false
+      ConnectivityNodeContainer:
+        description: Container of this connectivity node.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ConnectivityNode.ConnectivityNodeContainer
+        multivalued: false
+        range: ConnectivityNodeContainer
+        required: true
+    class_uri: cim:ConnectivityNode
+  Terminal:
+    description: An AC electrical connection point to a piece of conducting equipment.
+      Terminals are connected at physical connection points called connectivity nodes.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ACDCTerminal
+    attributes:
+      ConverterDCSides:
+        description: All converters' DC sides linked to this point of common coupling
+          terminal.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Terminal.ConverterDCSides
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+      AuxiliaryEquipment:
+        description: The auxiliary equipment connected to the terminal.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Terminal.AuxiliaryEquipment
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+      ConductingEquipment:
+        description: The conducting equipment of the terminal.  Conducting equipment
+          have  terminals that may be connected to other conducting equipment terminals
+          via connectivity nodes or topological nodes.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Terminal.ConductingEquipment
+        multivalued: false
+        range: ConductingEquipment
+        required: true
+      ConnectivityNode:
+        description: The connectivity node to which this terminal connects with zero
+          impedance.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Terminal.ConnectivityNode
+        multivalued: false
+        range: ConnectivityNode
+        required: false
+      RegulatingControl:
+        description: The controls regulating this terminal.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Terminal.RegulatingControl
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+      phases:
+        description: 'Represents the normal network phasing condition. If the attribute
+          is missing, three phases (ABC) shall be assumed, except for terminals of
+          grounding classes (specializations of EarthFaultCompensator, GroundDisconnector,
+          and Ground) which will be assumed to be N. Therefore, phase code ABCN is
+          explicitly declared when needed, e.g. for star point grounding equipment.
+
+          The phase code on terminals connecting same ConnectivityNode or same TopologicalNode
+          as well as for equipment between two terminals shall be consistent.'
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Terminal.phases
+        multivalued: false
+        range: PhaseCode
+        required: false
+      TransformerEnd:
+        description: All transformer ends connected at this terminal.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Terminal.TransformerEnd
+        multivalued: true
+        range: TransformerEnd
+        required: false
+      TieFlow:
+        description: The control area tie flows to which this terminal associates.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Terminal.TieFlow
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+    class_uri: cim:Terminal
+  ACDCTerminal:
+    description: An electrical connection point (AC or DC) to a piece of conducting
+      equipment. Terminals are connected at physical connection points called connectivity
+      nodes.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: IdentifiedObject
+    attributes:
+      sequenceNumber:
+        description: The orientation of the terminal connections for a multiple terminal
+          conducting equipment.  The sequence numbering starts with 1 and additional
+          terminals should follow in increasing order.   The first terminal is the
+          "starting point" for a two terminal branch.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACDCTerminal.sequenceNumber
+        multivalued: false
+        range: integer
+        required: true
+      OperationalLimitSet:
+        description: The operational limit sets at the terminal.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACDCTerminal.OperationalLimitSet
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+      BusNameMarker:
+        description: The bus name marker used to name the bus (topological node).
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACDCTerminal.BusNameMarker
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+    class_uri: cim:ACDCTerminal
+  VoltageLevel:
+    description: A collection of equipment at one common system voltage forming a
+      switchgear. The equipment typically consists of breakers, busbars, instrumentation,
+      control, regulation and protection devices as well as assemblies of all these.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: EquipmentContainer
+    attributes:
+      BaseVoltage:
+        description: The base voltage used for all equipment within the voltage level.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:VoltageLevel.BaseVoltage
+        multivalued: false
+        range: BaseVoltage
+        required: true
+      Bays:
+        description: The bays within this voltage level.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:VoltageLevel.Bays
+        multivalued: true
+        range: Bay
+        required: false
+      Substation:
+        description: The substation of the voltage level.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:VoltageLevel.Substation
+        multivalued: false
+        range: Substation
+        required: true
+      highVoltageLimit:
+        description: 'The bus bar''s high voltage limit.
+
+          The limit applies to all equipment and nodes contained in a given VoltageLevel.
+          It is not required that it is exchanged in pair with lowVoltageLimit. It
+          is preferable to use operational VoltageLimit, which prevails, if present.'
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:VoltageLevel.highVoltageLimit
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      lowVoltageLimit:
+        description: 'The bus bar''s low voltage limit.
+
+          The limit applies to all equipment and nodes contained in a given VoltageLevel.
+          It is not required that it is exchanged in pair with highVoltageLimit. It
+          is preferable to use operational VoltageLimit, which prevails, if present.'
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:VoltageLevel.lowVoltageLimit
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+    class_uri: cim:VoltageLevel
+  Bay:
+    description: A collection of power system resources (within a given substation)
+      including conducting equipment, protection relays, measurements, and telemetry.  A
+      bay typically represents a physical grouping related to modularization of equipment.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: EquipmentContainer
+    attributes:
+      VoltageLevel:
+        description: The voltage level containing this bay.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Bay.VoltageLevel
+        multivalued: false
+        range: VoltageLevel
+        required: true
+    class_uri: cim:Bay
+  Substation:
+    description: A collection of equipment for purposes other than generation or utilization,
+      through which electric energy in bulk is passed for the purposes of switching
+      or modifying its characteristics.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: EquipmentContainer
+    attributes:
+      DCConverterUnit:
+        description: The DC converter unit belonging of the substation.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Substation.DCConverterUnit
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+      Region:
+        description: The SubGeographicalRegion containing the substation.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Substation.Region
+        multivalued: false
+        range: SubGeographicalRegion
+        required: true
+      VoltageLevels:
+        description: The voltage levels within this substation.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Substation.VoltageLevels
+        multivalued: true
+        range: VoltageLevel
+        required: false
+    class_uri: cim:Substation
+  SubGeographicalRegion:
+    description: A subset of a geographical region of a power system network model.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: IdentifiedObject
+    attributes:
+      DCLines:
+        description: The DC lines in this sub-geographical region.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:SubGeographicalRegion.DCLines
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+      Region:
+        description: The geographical region which this sub-geographical region is
+          within.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:SubGeographicalRegion.Region
+        multivalued: false
+        range: GeographicalRegion
+        required: true
+      Lines:
+        description: The lines within the sub-geographical region.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:SubGeographicalRegion.Lines
+        multivalued: true
+        range: Line
+        required: false
+      Substations:
+        description: The substations in this sub-geographical region.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:SubGeographicalRegion.Substations
+        multivalued: true
+        range: Substation
+        required: false
+    class_uri: cim:SubGeographicalRegion
+  GeographicalRegion:
+    description: A geographical region of a power system network model.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: IdentifiedObject
+    attributes:
+      Regions:
+        description: All sub-geographical regions within this geographical region.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:GeographicalRegion.Regions
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+    class_uri: cim:GeographicalRegion
+  Line:
+    description: Contains equipment beyond a substation belonging to a power transmission
+      line.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: EquipmentContainer
+    attributes:
+      Region:
+        description: The sub-geographical region of the line.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Line.Region
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+    class_uri: cim:Line
+  ACLineSegment:
+    description: 'A wire or combination of wires, with consistent electrical characteristics,
+      building a single electrical system, used to carry alternating current between
+      points in the power system.
+
+      For symmetrical, transposed three phase lines, it is sufficient to use attributes
+      of the line segment, which describe impedances and admittances for the entire
+      length of the segment.  Additionally impedances can be computed by using length
+      and associated per length impedances.
+
+      The BaseVoltage at the two ends of ACLineSegments in a Line shall have the same
+      BaseVoltage.nominalVoltage. However, boundary lines may have slightly different
+      BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference
+      in general requires use of an equivalent branch.'
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: Conductor
+    attributes:
+      bch:
+        description: Positive sequence shunt (charging) susceptance, uniformly distributed,
+          of the entire line section.  This value represents the full charging over
+          the full length of the line.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.bch
+        multivalued: false
+        range: Susceptance
+        required: true
+      gch:
+        description: Positive sequence shunt (charging) conductance, uniformly distributed,
+          of the entire line section.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.gch
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      r:
+        description: Positive sequence series resistance of the entire line section.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.r
+        multivalued: false
+        range: Resistance
+        required: true
+      x:
+        description: Positive sequence series reactance of the entire line section.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.x
+        multivalued: false
+        range: Reactance
+        required: true
+      Clamp:
+        description: The clamps connected to the line segment.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.Clamp
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+      Cut:
+        description: Cuts applied to the line segment.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.Cut
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+    class_uri: cim:ACLineSegment
+  Conductor:
+    description: Combination of conducting material with consistent electrical characteristics,
+      building a single electrical system, used to carry current between points in
+      the power system.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ConductingEquipment
+    attributes:
+      length:
+        description: Segment length for calculating line section capabilities.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Conductor.length
+        multivalued: false
+        range: Length
+        required: false
+    class_uri: cim:Conductor
+  Length:
+    description: Unit of length. It shall be a positive value or zero.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    attributes:
+      value:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Length.value
+        multivalued: false
+        range: float
+        required: false
+      unit:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Length.unit
+        multivalued: false
+        range: UnitSymbol
+        required: false
+      multiplier:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Length.multiplier
+        multivalued: false
+        range: UnitMultiplier
+        required: false
+    class_uri: cim:Length
+  Susceptance:
+    description: Imaginary part of admittance.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    attributes:
+      value:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Susceptance.value
+        multivalued: false
+        range: float
+        required: false
+      unit:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Susceptance.unit
+        multivalued: false
+        range: UnitSymbol
+        required: false
+      multiplier:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Susceptance.multiplier
+        multivalued: false
+        range: UnitMultiplier
+        required: false
+    class_uri: cim:Susceptance
+  Resistance:
+    description: Resistance (real part of impedance).
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    attributes:
+      value:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Resistance.value
+        multivalued: false
+        range: float
+        required: false
+      unit:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Resistance.unit
+        multivalued: false
+        range: UnitSymbol
+        required: false
+      multiplier:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Resistance.multiplier
+        multivalued: false
+        range: UnitMultiplier
+        required: false
+    class_uri: cim:Resistance
+  Reactance:
+    description: Reactance (imaginary part of impedance), at rated frequency.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    attributes:
+      value:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Reactance.value
+        multivalued: false
+        range: float
+        required: false
+      unit:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Reactance.unit
+        multivalued: false
+        range: UnitSymbol
+        required: false
+      multiplier:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Reactance.multiplier
+        multivalued: false
+        range: UnitMultiplier
+        required: false
+    class_uri: cim:Reactance
+  PowerTransformerEnd:
+    description: 'A PowerTransformerEnd is associated with each Terminal of a PowerTransformer.
+
+      The impedance values r, r0, x, and x0 of a PowerTransformerEnd represents a
+      star equivalent as follows.
+
+      1) for a two Terminal PowerTransformer the high voltage (TransformerEnd.endNumber=1)
+      PowerTransformerEnd has non zero values on r, r0, x, and x0 while the low voltage
+      (TransformerEnd.endNumber=2) PowerTransformerEnd has zero values for r, r0,
+      x, and x0.  Parameters are always provided, even if the PowerTransformerEnds
+      have the same rated voltage.  In this case, the parameters are provided at the
+      PowerTransformerEnd which has TransformerEnd.endNumber equal to 1.
+
+      2) for a three Terminal PowerTransformer the three PowerTransformerEnds represent
+      a star equivalent with each leg in the star represented by r, r0, x, and x0
+      values.
+
+      3) For a three Terminal transformer each PowerTransformerEnd shall have g, g0,
+      b and b0 values corresponding to the no load losses distributed on the three
+      PowerTransformerEnds. The total no load loss shunt impedances may also be placed
+      at one of the PowerTransformerEnds, preferably the end numbered 1, having the
+      shunt values on end 1.  This is the preferred way.
+
+      4) for a PowerTransformer with more than three Terminals the PowerTransformerEnd
+      impedance values cannot be used. Instead use the TransformerMeshImpedance or
+      split the transformer into multiple PowerTransformers.
+
+      Each PowerTransformerEnd must be contained by a PowerTransformer. Because a
+      PowerTransformerEnd (or any other object) can not be contained by more than
+      one parent, a PowerTransformerEnd can not have an association to an EquipmentContainer
+      (Substation, VoltageLevel, etc).'
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: TransformerEnd
+    attributes:
+      PowerTransformer:
+        description: The power transformer of this power transformer end.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:PowerTransformerEnd.PowerTransformer
+        multivalued: false
+        range: PowerTransformer
+        required: true
+      b:
+        description: Magnetizing branch susceptance (B mag).  The value can be positive
+          or negative.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:PowerTransformerEnd.b
+        multivalued: false
+        range: Susceptance
+        required: true
+      connectionKind:
+        description: Kind of connection.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:PowerTransformerEnd.connectionKind
+        multivalued: false
+        range: WindingConnection
+        required: false
+      ratedS:
+        description: 'Normal apparent power rating.
+
+          The attribute shall be a positive value. For a two-winding transformer the
+          values for the high and low voltage sides shall be identical.'
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:PowerTransformerEnd.ratedS
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      g:
+        description: Magnetizing branch conductance.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:PowerTransformerEnd.g
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      ratedU:
+        description: 'Rated voltage: phase-phase for three-phase windings, and either
+          phase-phase or phase-neutral for single-phase windings.
+
+          A high voltage side, as given by TransformerEnd.endNumber, shall have a
+          ratedU that is greater than or equal to ratedU for the lower voltage sides.
+
+          The attribute shall be a positive value.'
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:PowerTransformerEnd.ratedU
+        multivalued: false
+        range: Voltage
+        required: true
+      r:
+        description: 'Resistance (star-model) of the transformer end.
+
+          The attribute shall be equal to or greater than zero for non-equivalent
+          transformers.'
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:PowerTransformerEnd.r
+        multivalued: false
+        range: Resistance
+        required: true
+      x:
+        description: Positive sequence series reactance (star-model) of the transformer
+          end.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:PowerTransformerEnd.x
+        multivalued: false
+        range: Reactance
+        required: true
+    class_uri: cim:PowerTransformerEnd
+  PowerTransformer:
+    description: 'An electrical device consisting of  two or more coupled windings,
+      with or without a magnetic core, for introducing mutual coupling between electric
+      circuits. Transformers can be used to control voltage and phase shift (active
+      power flow).
+
+      A power transformer may be composed of separate transformer tanks that need
+      not be identical.
+
+      A power transformer can be modelled with or without tanks and is intended for
+      use in both balanced and unbalanced representations.   A power transformer typically
+      has two terminals, but may have one (grounding), three or more terminals.
+
+      The inherited association ConductingEquipment.BaseVoltage should not be used.  The
+      association from TransformerEnd to BaseVoltage should be used instead.'
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ConductingEquipment
+    attributes:
+      PowerTransformerEnd:
+        description: The ends of this power transformer.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:PowerTransformer.PowerTransformerEnd
+        multivalued: true
+        range: PowerTransformerEnd
+        required: false
+    class_uri: cim:PowerTransformer
+  Disconnector:
+    description: A manually operated or motor operated mechanical switching device
+      used for changing the connections in a circuit, or for isolating a circuit or
+      equipment from a source of power. It is required to open or close circuits when
+      negligible current is broken or made.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: Switch
+    class_uri: cim:Disconnector
+  Switch:
+    description: A generic device designed to close, or open, or both, one or more
+      electric circuits.  All switches are two terminal devices including grounding
+      switches. The ACDCTerminal.connected at the two sides of the switch shall not
+      be considered for assessing switch connectivity, i.e. only Switch.open, .normalOpen
+      and .locked are relevant.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ConductingEquipment
+    attributes:
+      normalOpen:
+        description: The attribute is used in cases when no Measurement for the status
+          value is present. If the Switch has a status measurement the Discrete.normalValue
+          is expected to match with the Switch.normalOpen.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Switch.normalOpen
+        multivalued: false
+        range: boolean
+        required: true
+      ratedCurrent:
+        description: 'The maximum continuous current carrying capacity in amps governed
+          by the device material and construction.
+
+          The attribute shall be a positive value.'
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Switch.ratedCurrent
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      retained:
+        description: Branch is retained in the topological solution.  The flow through
+          retained switches will normally be calculated in power flow.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Switch.retained
+        multivalued: false
+        range: boolean
+        required: true
+      SwitchSchedules:
+        description: A Switch can be associated with SwitchSchedules.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Switch.SwitchSchedules
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+    class_uri: cim:Switch
+  EnergyConnection:
+    description: A connection of energy generation or consumption on the power system
+      model.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ConductingEquipment
+    class_uri: cim:EnergyConnection
+  EnergyConsumer:
+    description: 'Generic user of energy - a  point of consumption on the power system
+      model.
+
+      EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only
+      if there is no LoadResponseCharacteristic associated with EnergyConsumer or
+      if LoadResponseCharacteristic.exponentModel is set to False.'
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: EnergyConnection
+    attributes:
+      pfixed:
+        description: Active power of the load that is a fixed quantity and does not
+          vary as load group value varies. Load sign convention is used, i.e. positive
+          sign means flow out from a node.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:EnergyConsumer.pfixed
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      pfixedPct:
+        description: Fixed active power as a percentage of load group fixed active
+          power. Used to represent the time-varying components.  Load sign convention
+          is used, i.e. positive sign means flow out from a node.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:EnergyConsumer.pfixedPct
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      qfixed:
+        description: Reactive power of the load that is a fixed quantity and does
+          not vary as load group value varies. Load sign convention is used, i.e.
+          positive sign means flow out from a node.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:EnergyConsumer.qfixed
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      qfixedPct:
+        description: Fixed reactive power as a percentage of load group fixed reactive
+          power. Used to represent the time-varying components.  Load sign convention
+          is used, i.e. positive sign means flow out from a node.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:EnergyConsumer.qfixedPct
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      LoadResponse:
+        description: The load response characteristic of this load.  If missing, this
+          load is assumed to be constant power.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:EnergyConsumer.LoadResponse
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+    class_uri: cim:EnergyConsumer
+  Connector:
+    description: A conductor, or group of conductors, with negligible impedance, that
+      serve to connect other conducting equipment within a single substation and are
+      modelled with a single logical terminal.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ConductingEquipment
+    class_uri: cim:Connector
+  ProtectedSwitch:
+    description: A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: Switch
+    class_uri: cim:ProtectedSwitch
+  LoadBreakSwitch:
+    description: A mechanical switching device capable of making, carrying, and breaking
+      currents under normal operating conditions.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ProtectedSwitch
+    class_uri: cim:LoadBreakSwitch
+  Junction:
+    description: A point where one or more conducting equipments are connected with
+      zero resistance.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: Connector
+    class_uri: cim:Junction
+  BusbarSection:
+    description: "A conductor, or group of conductors, with negligible impedance,\
+      \ that serve to connect other conducting equipment within a single substation.\
+      \ \nVoltage measurements are typically obtained from voltage transformers that\
+      \ are connected to busbar sections. A bus bar section may have many physical\
+      \ terminals but for analysis is modelled with exactly one logical terminal."
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: Connector
+    class_uri: cim:BusbarSection
+  Breaker:
+    description: A mechanical switching device capable of making, carrying, and breaking
+      currents under normal circuit conditions and also making, carrying for a specified
+      time, and breaking currents under specified abnormal circuit conditions e.g.  those
+      of short circuit.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ProtectedSwitch
+    class_uri: cim:Breaker
+
