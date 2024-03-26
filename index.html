@@ -15,7 +15,7 @@
     
     
       
-        <title>im-core-equipment</title>
+        <title>Core Equipment Profile</title>
       
     
     
@@ -23,6 +23,10 @@
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
         
       
       
@@ -54,7 +58,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
   
     
     
@@ -64,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#im-core-equipment" class="md-skip">
+        <a href="#coreequipmentprofile" class="md-skip">
           Skip to content
         </a>
       
@@ -78,10 +82,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="im-core-equipment" class="md-header__button md-logo" aria-label="im-core-equipment" data-md-component="logo">
+    <a href="." title="Core Equipment Profile" class="md-header__button md-logo" aria-label="Core Equipment Profile" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="assets/alliander_logo_wit.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -91,7 +94,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            im-core-equipment
+            Core Equipment Profile
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -176,13 +179,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="im-core-equipment" class="md-nav__button md-logo" aria-label="im-core-equipment" data-md-component="logo">
+    <a href="." title="Core Equipment Profile" class="md-nav__button md-logo" aria-label="Core Equipment Profile" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="assets/alliander_logo_wit.png" alt="logo">
 
     </a>
-    im-core-equipment
+    Core Equipment Profile
   </label>
   
     <div class="md-nav__source">
@@ -379,10 +381,9 @@
   </a>
 
 
-<h1 id="im-core-equipment">im-core-equipment</h1>
-<p>Core Equipment Profile</p>
-<p>URI: https://w3id.org/ritger-alliander/im-core-equipment</p>
-<p>Name: im-core-equipment</p>
+<h1 id="coreequipmentprofile">CoreEquipmentProfile</h1>
+<p>URI: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</p>
+<p>Name: CoreEquipmentProfile</p>
 <h2 id="classes">Classes</h2>
 <table>
 <thead>
@@ -393,16 +394,148 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="IdentifiedObjectCollection/">IdentifiedObjectCollection</a></td>
-<td>A holder for IdentifiedObject objects</td>
+<td><a href="ACDCTerminal/">ACDCTerminal</a></td>
+<td>An electrical connection point (AC or DC) to a piece of conducting equipment</td>
 </tr>
 <tr>
-<td><a href="NamedThing/">NamedThing</a></td>
-<td>A generic grouping for any identifiable entity</td>
+<td><a href="ACLineSegment/">ACLineSegment</a></td>
+<td>A wire or combination of wires, with consistent electrical characteristics, b...</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="IdentifiedObject/">IdentifiedObject</a></td>
-<td>Represents a IdentifiedObject</td>
+<td><a href="BaseVoltage/">BaseVoltage</a></td>
+<td>Defines a system base voltage which is referenced</td>
+</tr>
+<tr>
+<td><a href="Bay/">Bay</a></td>
+<td>A collection of power system resources (within a given substation) including ...</td>
+</tr>
+<tr>
+<td><a href="Breaker/">Breaker</a></td>
+<td>A mechanical switching device capable of making, carrying, and breaking curre...</td>
+</tr>
+<tr>
+<td><a href="BusbarSection/">BusbarSection</a></td>
+<td>A conductor, or group of conductors, with negligible impedance, that serve to...</td>
+</tr>
+<tr>
+<td><a href="ConductingEquipment/">ConductingEquipment</a></td>
+<td>The parts of the AC power system that are designed to carry current or that a...</td>
+</tr>
+<tr>
+<td><a href="Conductor/">Conductor</a></td>
+<td>Combination of conducting material with consistent electrical characteristics...</td>
+</tr>
+<tr>
+<td><a href="ConnectivityNode/">ConnectivityNode</a></td>
+<td>Connectivity nodes are points where terminals of AC conducting equipment are ...</td>
+</tr>
+<tr>
+<td><a href="ConnectivityNodeContainer/">ConnectivityNodeContainer</a></td>
+<td>A base class for all objects that may contain connectivity nodes or topologic...</td>
+</tr>
+<tr>
+<td><a href="Connector/">Connector</a></td>
+<td>A conductor, or group of conductors, with negligible impedance, that serve to...</td>
+</tr>
+<tr>
+<td><a href="Disconnector/">Disconnector</a></td>
+<td>A manually operated or motor operated mechanical switching device used for ch...</td>
+</tr>
+<tr>
+<td><a href="EnergyConnection/">EnergyConnection</a></td>
+<td>A connection of energy generation or consumption on the power system model</td>
+</tr>
+<tr>
+<td><a href="EnergyConsumer/">EnergyConsumer</a></td>
+<td>Generic user of energy - a  point of consumption on the power system model</td>
+</tr>
+<tr>
+<td><a href="Equipment/">Equipment</a></td>
+<td>The parts of a power system that are physical devices, electronic or mechanic...</td>
+</tr>
+<tr>
+<td><a href="EquipmentContainer/">EquipmentContainer</a></td>
+<td>A modelling construct to provide a root class for containing equipment</td>
+</tr>
+<tr>
+<td><a href="GeographicalRegion/">GeographicalRegion</a></td>
+<td>A geographical region of a power system network model</td>
+</tr>
+<tr>
+<td><a href="IdentifiedObject/">IdentifiedObject</a></td>
+<td>This is a root class to provide common identification for all classes needing...</td>
+</tr>
+<tr>
+<td><a href="Junction/">Junction</a></td>
+<td>A point where one or more conducting equipments are connected with zero resis...</td>
+</tr>
+<tr>
+<td><a href="Length/">Length</a></td>
+<td>Unit of length</td>
+</tr>
+<tr>
+<td><a href="Line/">Line</a></td>
+<td>Contains equipment beyond a substation belonging to a power transmission line</td>
+</tr>
+<tr>
+<td><a href="LoadBreakSwitch/">LoadBreakSwitch</a></td>
+<td>A mechanical switching device capable of making, carrying, and breaking curre...</td>
+</tr>
+<tr>
+<td><a href="PowerSystemResource/">PowerSystemResource</a></td>
+<td>A power system resource (PSR) can be an item of equipment such as a switch, a...</td>
+</tr>
+<tr>
+<td><a href="PowerTransformer/">PowerTransformer</a></td>
+<td>An electrical device consisting of  two or more coupled windings, with or wit...</td>
+</tr>
+<tr>
+<td><a href="PowerTransformerEnd/">PowerTransformerEnd</a></td>
+<td>A PowerTransformerEnd is associated with each Terminal of a PowerTransformer</td>
+</tr>
+<tr>
+<td><a href="ProtectedSwitch/">ProtectedSwitch</a></td>
+<td>A ProtectedSwitch is a switching device that can be operated by ProtectionEqu...</td>
+</tr>
+<tr>
+<td><a href="Reactance/">Reactance</a></td>
+<td>Reactance (imaginary part of impedance), at rated frequency</td>
+</tr>
+<tr>
+<td><a href="Resistance/">Resistance</a></td>
+<td>Resistance (real part of impedance)</td>
+</tr>
+<tr>
+<td><a href="SubGeographicalRegion/">SubGeographicalRegion</a></td>
+<td>A subset of a geographical region of a power system network model</td>
+</tr>
+<tr>
+<td><a href="Substation/">Substation</a></td>
+<td>A collection of equipment for purposes other than generation or utilization, ...</td>
+</tr>
+<tr>
+<td><a href="Susceptance/">Susceptance</a></td>
+<td>Imaginary part of admittance</td>
+</tr>
+<tr>
+<td><a href="Switch/">Switch</a></td>
+<td>A generic device designed to close, or open, or both, one or more electric ci...</td>
+</tr>
+<tr>
+<td><a href="Terminal/">Terminal</a></td>
+<td>An AC electrical connection point to a piece of conducting equipment</td>
+</tr>
+<tr>
+<td><a href="TransformerEnd/">TransformerEnd</a></td>
+<td>A conducting connection point of a power transformer</td>
+</tr>
+<tr>
+<td><a href="Voltage/">Voltage</a></td>
+<td>Electrical voltage, can be both AC and DC</td>
+</tr>
+<tr>
+<td><a href="VoltageLevel/">VoltageLevel</a></td>
+<td>A collection of equipment at one common system voltage forming a switchgear</td>
 </tr>
 </tbody>
 </table>
@@ -416,36 +549,276 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="age_in_years/">age_in_years</a></td>
-<td>Number of years since birth</td>
+<td><a href="Equipment.aggregate/">aggregate</a></td>
+<td>The aggregate flag provides an alternative way of representing an aggregated ...</td>
 </tr>
 <tr>
-<td><a href="birth_date/">birth_date</a></td>
-<td>Date on which a person is born</td>
+<td><a href="Terminal.AuxiliaryEquipment/">AuxiliaryEquipment</a></td>
+<td>The auxiliary equipment connected to the terminal</td>
 </tr>
 <tr>
-<td><a href="description/">description</a></td>
-<td>A human-readable description for a thing</td>
+<td><a href="PowerTransformerEnd.b/">b</a></td>
+<td>Magnetizing branch susceptance (B mag)</td>
 </tr>
 <tr>
-<td><a href="entries/">entries</a></td>
+<td><a href="TransformerEnd.BaseVoltage/">BaseVoltage</a></td>
+<td>Base voltage of the transformer end</td>
+</tr>
+<tr>
+<td><a href="VoltageLevel.Bays/">Bays</a></td>
+<td>The bays within this voltage level</td>
+</tr>
+<tr>
+<td><a href="ACLineSegment.bch/">bch</a></td>
+<td>Positive sequence shunt (charging) susceptance, uniformly distributed, of the...</td>
+</tr>
+<tr>
+<td><a href="ConnectivityNode.BoundaryPoint/">BoundaryPoint</a></td>
+<td>The boundary point associated with the connectivity node</td>
+</tr>
+<tr>
+<td><a href="ACDCTerminal.BusNameMarker/">BusNameMarker</a></td>
+<td>The bus name marker used to name the bus (topological node)</td>
+</tr>
+<tr>
+<td><a href="ACLineSegment.Clamp/">Clamp</a></td>
+<td>The clamps connected to the line segment</td>
+</tr>
+<tr>
+<td><a href="BaseVoltage.ConductingEquipment/">ConductingEquipment</a></td>
+<td>All conducting equipment with this base voltage</td>
+</tr>
+<tr>
+<td><a href="PowerTransformerEnd.connectionKind/">connectionKind</a></td>
+<td>Kind of connection</td>
+</tr>
+<tr>
+<td><a href="Terminal.ConnectivityNode/">ConnectivityNode</a></td>
+<td>The connectivity node to which this terminal connects with zero impedance</td>
+</tr>
+<tr>
+<td><a href="ConnectivityNode.ConnectivityNodeContainer/">ConnectivityNodeContainer</a></td>
+<td>Container of this connectivity node</td>
+</tr>
+<tr>
+<td><a href="ConnectivityNodeContainer.ConnectivityNodes/">ConnectivityNodes</a></td>
+<td>Connectivity nodes which belong to this connectivity node container</td>
+</tr>
+<tr>
+<td><a href="Terminal.ConverterDCSides/">ConverterDCSides</a></td>
+<td>All converters' DC sides linked to this point of common coupling terminal</td>
+</tr>
+<tr>
+<td><a href="ACLineSegment.Cut/">Cut</a></td>
+<td>Cuts applied to the line segment</td>
+</tr>
+<tr>
+<td><a href="Substation.DCConverterUnit/">DCConverterUnit</a></td>
+<td>The DC converter unit belonging of the substation</td>
+</tr>
+<tr>
+<td><a href="SubGeographicalRegion.DCLines/">DCLines</a></td>
+<td>The DC lines in this sub-geographical region</td>
+</tr>
+<tr>
+<td><a href="IdentifiedObject.description/">description</a></td>
+<td>The description is a free human readable text describing or naming the object</td>
+</tr>
+<tr>
+<td><a href="TransformerEnd.endNumber/">endNumber</a></td>
+<td>Number for this transformer end, corresponding to the end's order in the powe...</td>
+</tr>
+<tr>
+<td><a href="IdentifiedObject.energyIdentCodeEic/">energyIdentCodeEic</a></td>
+<td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
+</tr>
+<tr>
+<td><a href="Equipment.EquipmentContainer/">EquipmentContainer</a></td>
+<td>Container of this equipment</td>
+</tr>
+<tr>
+<td><a href="EquipmentContainer.Equipments/">Equipments</a></td>
+<td>Contained equipment</td>
+</tr>
+<tr>
+<td><a href="PowerTransformerEnd.g/">g</a></td>
+<td>Magnetizing branch conductance</td>
+</tr>
+<tr>
+<td><a href="ACLineSegment.gch/">gch</a></td>
+<td>Positive sequence shunt (charging) conductance, uniformly distributed, of the...</td>
+</tr>
+<tr>
+<td><a href="VoltageLevel.highVoltageLimit/">highVoltageLimit</a></td>
+<td>The bus bar's high voltage limit</td>
+</tr>
+<tr>
+<td><a href="Conductor.length/">length</a></td>
+<td>Segment length for calculating line section capabilities</td>
+</tr>
+<tr>
+<td><a href="SubGeographicalRegion.Lines/">Lines</a></td>
+<td>The lines within the sub-geographical region</td>
+</tr>
+<tr>
+<td><a href="EnergyConsumer.LoadResponse/">LoadResponse</a></td>
+<td>The load response characteristic of this load</td>
+</tr>
+<tr>
+<td><a href="VoltageLevel.lowVoltageLimit/">lowVoltageLimit</a></td>
+<td>The bus bar's low voltage limit</td>
+</tr>
+<tr>
+<td><a href="IdentifiedObject.mRID/">mRID</a></td>
+<td>Master resource identifier issued by a model authority</td>
+</tr>
+<tr>
+<td><a href="Voltage.multiplier/">multiplier</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="id/">id</a></td>
-<td>A unique identifier for a thing</td>
+<td><a href="BaseVoltage.nominalVoltage/">nominalVoltage</a></td>
+<td>The power system resource's base voltage</td>
 </tr>
 <tr>
-<td><a href="name/">name</a></td>
-<td>A human-readable name for a thing</td>
+<td><a href="Equipment.normallyInService/">normallyInService</a></td>
+<td>Specifies the availability of the equipment under normal operating conditions</td>
 </tr>
 <tr>
-<td><a href="primary_email/">primary_email</a></td>
-<td>The main email address of a person</td>
+<td><a href="Switch.normalOpen/">normalOpen</a></td>
+<td>The attribute is used in cases when no Measurement for the status value is pr...</td>
 </tr>
 <tr>
-<td><a href="vital_status/">vital_status</a></td>
-<td>living or dead status</td>
+<td><a href="Equipment.OperationalLimitSet/">OperationalLimitSet</a></td>
+<td>The operational limit sets associated with this equipment</td>
+</tr>
+<tr>
+<td><a href="EnergyConsumer.pfixed/">pfixed</a></td>
+<td>Active power of the load that is a fixed quantity and does not vary as load g...</td>
+</tr>
+<tr>
+<td><a href="EnergyConsumer.pfixedPct/">pfixedPct</a></td>
+<td>Fixed active power as a percentage of load group fixed active power</td>
+</tr>
+<tr>
+<td><a href="Terminal.phases/">phases</a></td>
+<td>Represents the normal network phasing condition</td>
+</tr>
+<tr>
+<td><a href="TransformerEnd.PhaseTapChanger/">PhaseTapChanger</a></td>
+<td>Phase tap changer associated with this transformer end</td>
+</tr>
+<tr>
+<td><a href="PowerTransformerEnd.PowerTransformer/">PowerTransformer</a></td>
+<td>The power transformer of this power transformer end</td>
+</tr>
+<tr>
+<td><a href="PowerTransformer.PowerTransformerEnd/">PowerTransformerEnd</a></td>
+<td>The ends of this power transformer</td>
+</tr>
+<tr>
+<td><a href="EnergyConsumer.qfixed/">qfixed</a></td>
+<td>Reactive power of the load that is a fixed quantity and does not vary as load...</td>
+</tr>
+<tr>
+<td><a href="EnergyConsumer.qfixedPct/">qfixedPct</a></td>
+<td>Fixed reactive power as a percentage of load group fixed reactive power</td>
+</tr>
+<tr>
+<td><a href="ACLineSegment.r/">r</a></td>
+<td>Positive sequence series resistance of the entire line section</td>
+</tr>
+<tr>
+<td><a href="Switch.ratedCurrent/">ratedCurrent</a></td>
+<td>The maximum continuous current carrying capacity in amps governed by the devi...</td>
+</tr>
+<tr>
+<td><a href="PowerTransformerEnd.ratedS/">ratedS</a></td>
+<td>Normal apparent power rating</td>
+</tr>
+<tr>
+<td><a href="PowerTransformerEnd.ratedU/">ratedU</a></td>
+<td>Rated voltage: phase-phase for three-phase windings, and either phase-phase o...</td>
+</tr>
+<tr>
+<td><a href="TransformerEnd.RatioTapChanger/">RatioTapChanger</a></td>
+<td>Ratio tap changer associated with this transformer end</td>
+</tr>
+<tr>
+<td><a href="Substation.Region/">Region</a></td>
+<td>The SubGeographicalRegion containing the substation</td>
+</tr>
+<tr>
+<td><a href="GeographicalRegion.Regions/">Regions</a></td>
+<td>All sub-geographical regions within this geographical region</td>
+</tr>
+<tr>
+<td><a href="Terminal.RegulatingControl/">RegulatingControl</a></td>
+<td>The controls regulating this terminal</td>
+</tr>
+<tr>
+<td><a href="Switch.retained/">retained</a></td>
+<td>Branch is retained in the topological solution</td>
+</tr>
+<tr>
+<td><a href="ACDCTerminal.sequenceNumber/">sequenceNumber</a></td>
+<td>The orientation of the terminal connections for a multiple terminal conductin...</td>
+</tr>
+<tr>
+<td><a href="IdentifiedObject.shortName/">shortName</a></td>
+<td>The attribute is used for an exchange of a human readable short name with len...</td>
+</tr>
+<tr>
+<td><a href="VoltageLevel.Substation/">Substation</a></td>
+<td>The substation of the voltage level</td>
+</tr>
+<tr>
+<td><a href="SubGeographicalRegion.Substations/">Substations</a></td>
+<td>The substations in this sub-geographical region</td>
+</tr>
+<tr>
+<td><a href="Switch.SwitchSchedules/">SwitchSchedules</a></td>
+<td>A Switch can be associated with SwitchSchedules</td>
+</tr>
+<tr>
+<td><a href="TransformerEnd.Terminal/">Terminal</a></td>
+<td>Terminal of the power transformer to which this transformer end belongs</td>
+</tr>
+<tr>
+<td><a href="ConductingEquipment.Terminals/">Terminals</a></td>
+<td>Conducting equipment have terminals that may be connected to other conducting...</td>
+</tr>
+<tr>
+<td><a href="Terminal.TieFlow/">TieFlow</a></td>
+<td>The control area tie flows to which this terminal associates</td>
+</tr>
+<tr>
+<td><a href="Terminal.TransformerEnd/">TransformerEnd</a></td>
+<td>All transformer ends connected at this terminal</td>
+</tr>
+<tr>
+<td><a href="BaseVoltage.TransformerEnds/">TransformerEnds</a></td>
+<td>Transformer ends at the base voltage</td>
+</tr>
+<tr>
+<td><a href="Voltage.unit/">unit</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Voltage.value/">value</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="BaseVoltage.VoltageLevel/">VoltageLevel</a></td>
+<td>The voltage levels having this base voltage</td>
+</tr>
+<tr>
+<td><a href="Substation.VoltageLevels/">VoltageLevels</a></td>
+<td>The voltage levels within this substation</td>
+</tr>
+<tr>
+<td><a href="ACLineSegment.x/">x</a></td>
+<td>Positive sequence series reactance of the entire line section</td>
 </tr>
 </tbody>
 </table>
@@ -459,7 +832,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="PersonStatus/">PersonStatus</a></td>
+<td><a href="PhaseCode/">PhaseCode</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="UnitMultiplier/">UnitMultiplier</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="UnitSymbol/">UnitSymbol</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="WindingConnection/">WindingConnection</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -528,6 +913,10 @@
 <tr>
 <td><a href="Objectidentifier/">Objectidentifier</a></td>
 <td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="ReplacedByProfiler/">ReplacedByProfiler</a></td>
+<td>Range was replaced by the profiler</td>
 </tr>
 <tr>
 <td><a href="Sparqlpath/">Sparqlpath</a></td>
