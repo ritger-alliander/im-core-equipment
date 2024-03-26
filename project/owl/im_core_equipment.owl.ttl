@@ -1,0 +1,182 @@
+@prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix im_core_equipment: <https://w3id.org/ritger-alliander/im-core-equipment/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+im_core_equipment:IdentifiedObjectCollection a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "IdentifiedObjectCollection" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom im_core_equipment:IdentifiedObject ;
+            owl:onProperty im_core_equipment:entries ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty im_core_equipment:entries ] ;
+    skos:definition "A holder for IdentifiedObject objects" ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+im_core_equipment:IdentifiedObject a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "IdentifiedObject" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty im_core_equipment:birth_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty im_core_equipment:primary_email ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty im_core_equipment:primary_email ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom im_core_equipment:PersonStatus ;
+            owl:onProperty im_core_equipment:vital_status ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Integer ;
+            owl:onProperty im_core_equipment:age_in_years ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty im_core_equipment:vital_status ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty im_core_equipment:age_in_years ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty im_core_equipment:birth_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty im_core_equipment:age_in_years ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Date ;
+            owl:onProperty im_core_equipment:birth_date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:onDatatype xsd:string ;
+                    owl:withRestrictions ( [ xsd:pattern "^\\S+@[\\S+\\.]+\\S+" ] ) ] ;
+            owl:onProperty im_core_equipment:primary_email ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty im_core_equipment:vital_status ],
+        im_core_equipment:NamedThing ;
+    skos:definition "Represents a IdentifiedObject" ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+im_core_equipment:NamedThing a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "NamedThing" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty im_core_equipment:id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty im_core_equipment:id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty im_core_equipment:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty im_core_equipment:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty im_core_equipment:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty im_core_equipment:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty im_core_equipment:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty im_core_equipment:id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty im_core_equipment:name ] ;
+    skos:definition "A generic grouping for any identifiable entity" ;
+    skos:exactMatch schema1:Thing ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+PATO:0001421 a owl:Class,
+        im_core_equipment:PersonStatus ;
+    rdfs:label "ALIVE" ;
+    rdfs:subClassOf im_core_equipment:PersonStatus .
+
+PATO:0001422 a owl:Class,
+        im_core_equipment:PersonStatus ;
+    rdfs:label "DEAD" ;
+    rdfs:subClassOf im_core_equipment:PersonStatus .
+
+<https://w3id.org/ritger-alliander/im-core-equipment/PersonStatus#UNKNOWN> a owl:Class,
+        im_core_equipment:PersonStatus ;
+    rdfs:label "UNKNOWN" ;
+    rdfs:subClassOf im_core_equipment:PersonStatus .
+
+im_core_equipment:entries a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "entries" ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+im_core_equipment:age_in_years a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "age_in_years" ;
+    rdfs:range linkml:Integer ;
+    skos:definition "Number of years since birth" ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+im_core_equipment:birth_date a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "birth_date" ;
+    rdfs:range linkml:Date ;
+    skos:definition "Date on which a person is born" ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+im_core_equipment:description a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "description" ;
+    skos:definition "A human-readable description for a thing" ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+im_core_equipment:id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "id" ;
+    rdfs:range linkml:Uriorcurie ;
+    skos:definition "A unique identifier for a thing" ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+im_core_equipment:name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "name" ;
+    skos:definition "A human-readable name for a thing" ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+im_core_equipment:primary_email a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "primary_email" ;
+    skos:definition "The main email address of a person" ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+im_core_equipment:vital_status a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "vital_status" ;
+    rdfs:range im_core_equipment:PersonStatus ;
+    skos:definition "living or dead status" ;
+    skos:inScheme <https://w3id.org/ritger-alliander/im-core-equipment> .
+
+im_core_equipment:PersonStatus a owl:Class,
+        linkml:EnumDefinition ;
+    owl:unionOf ( PATO:0001421 PATO:0001422 <https://w3id.org/ritger-alliander/im-core-equipment/PersonStatus#UNKNOWN> ) ;
+    linkml:permissible_values PATO:0001421,
+        PATO:0001422,
+        <https://w3id.org/ritger-alliander/im-core-equipment/PersonStatus#UNKNOWN> .
+
+<https://w3id.org/ritger-alliander/im-core-equipment> a owl:Ontology ;
+    rdfs:label "im-core-equipment" ;
+    dcterms:license "Apache Software License 2.0" ;
+    dcterms:title "im-core-equipment" ;
+    rdfs:seeAlso <https://ritger-alliander.github.io/im-core-equipment> ;
+    skos:definition "Core Equipment Profile" .
+
