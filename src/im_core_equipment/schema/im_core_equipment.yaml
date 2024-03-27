@@ -1,4 +1,6 @@
 name: CoreEquipmentProfile
+description: This vocabulary is describing the core equipment profile from IEC 61970-600-2.
+title: Core Equipment Vocabulary
 id: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
 imports:
 - linkml:types
@@ -38,6 +40,62 @@ types:
     base: str
     uri: xsd:string
 enums:
+  PhaseCode:
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    enum_uri: http://iec.ch/TC57/CIM100#PhaseCode
+    permissible_values:
+      ABCN:
+        meaning: cim:PhaseCode.ABCN
+      ABC:
+        meaning: cim:PhaseCode.ABC
+      ABN:
+        meaning: cim:PhaseCode.ABN
+      ACN:
+        meaning: cim:PhaseCode.ACN
+      BCN:
+        meaning: cim:PhaseCode.BCN
+      AB:
+        meaning: cim:PhaseCode.AB
+      AC:
+        meaning: cim:PhaseCode.AC
+      BC:
+        meaning: cim:PhaseCode.BC
+      AN:
+        meaning: cim:PhaseCode.AN
+      BN:
+        meaning: cim:PhaseCode.BN
+      CN:
+        meaning: cim:PhaseCode.CN
+      A:
+        meaning: cim:PhaseCode.A
+      B:
+        meaning: cim:PhaseCode.B
+      C:
+        meaning: cim:PhaseCode.C
+      N:
+        meaning: cim:PhaseCode.N
+      s1N:
+        meaning: cim:PhaseCode.s1N
+      s2N:
+        meaning: cim:PhaseCode.s2N
+      s12N:
+        meaning: cim:PhaseCode.s12N
+      s1:
+        meaning: cim:PhaseCode.s1
+      s2:
+        meaning: cim:PhaseCode.s2
+      s12:
+        meaning: cim:PhaseCode.s12
+      none:
+        meaning: cim:PhaseCode.none
+      X:
+        meaning: cim:PhaseCode.X
+      XY:
+        meaning: cim:PhaseCode.XY
+      XN:
+        meaning: cim:PhaseCode.XN
+      XYN:
+        meaning: cim:PhaseCode.XYN
   UnitMultiplier:
     from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
     enum_uri: http://iec.ch/TC57/CIM100#UnitMultiplier
@@ -370,62 +428,6 @@ enums:
         meaning: cim:UnitSymbol.kgPerJ
       JPers:
         meaning: cim:UnitSymbol.JPers
-  PhaseCode:
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    enum_uri: http://iec.ch/TC57/CIM100#PhaseCode
-    permissible_values:
-      ABCN:
-        meaning: cim:PhaseCode.ABCN
-      ABC:
-        meaning: cim:PhaseCode.ABC
-      ABN:
-        meaning: cim:PhaseCode.ABN
-      ACN:
-        meaning: cim:PhaseCode.ACN
-      BCN:
-        meaning: cim:PhaseCode.BCN
-      AB:
-        meaning: cim:PhaseCode.AB
-      AC:
-        meaning: cim:PhaseCode.AC
-      BC:
-        meaning: cim:PhaseCode.BC
-      AN:
-        meaning: cim:PhaseCode.AN
-      BN:
-        meaning: cim:PhaseCode.BN
-      CN:
-        meaning: cim:PhaseCode.CN
-      A:
-        meaning: cim:PhaseCode.A
-      B:
-        meaning: cim:PhaseCode.B
-      C:
-        meaning: cim:PhaseCode.C
-      N:
-        meaning: cim:PhaseCode.N
-      s1N:
-        meaning: cim:PhaseCode.s1N
-      s2N:
-        meaning: cim:PhaseCode.s2N
-      s12N:
-        meaning: cim:PhaseCode.s12N
-      s1:
-        meaning: cim:PhaseCode.s1
-      s2:
-        meaning: cim:PhaseCode.s2
-      s12:
-        meaning: cim:PhaseCode.s12
-      none:
-        meaning: cim:PhaseCode.none
-      X:
-        meaning: cim:PhaseCode.X
-      XY:
-        meaning: cim:PhaseCode.XY
-      XN:
-        meaning: cim:PhaseCode.XN
-      XYN:
-        meaning: cim:PhaseCode.XYN
   WindingConnection:
     from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
     enum_uri: http://iec.ch/TC57/CIM100#WindingConnection
@@ -445,56 +447,6 @@ enums:
       I:
         meaning: cim:WindingConnection.I
 classes:
-  TransformerEnd:
-    description: A conducting connection point of a power transformer. It corresponds
-      to a physical transformer winding terminal.  In earlier CIM versions, the TransformerWinding
-      class served a similar purpose, but this class is more flexible because it associates
-      to terminal but is not a specialization of ConductingEquipment.
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    is_a: IdentifiedObject
-    attributes:
-      BaseVoltage:
-        description: Base voltage of the transformer end.  This is essential for PU
-          calculation.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:TransformerEnd.BaseVoltage
-        multivalued: false
-        range: BaseVoltage
-        required: true
-      PhaseTapChanger:
-        description: Phase tap changer associated with this transformer end.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:TransformerEnd.PhaseTapChanger
-        multivalued: false
-        range: replaced_by_profiler
-        required: false
-      RatioTapChanger:
-        description: Ratio tap changer associated with this transformer end.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:TransformerEnd.RatioTapChanger
-        multivalued: false
-        range: replaced_by_profiler
-        required: false
-      Terminal:
-        description: Terminal of the power transformer to which this transformer end
-          belongs.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:TransformerEnd.Terminal
-        multivalued: false
-        range: Terminal
-        required: true
-      endNumber:
-        description: Number for this transformer end, corresponding to the end's order
-          in the power transformer vector group or phase angle clock number.  Highest
-          voltage winding should be 1.  Each end within a power transformer should
-          have a unique subsequent end number.   Note the transformer end number need
-          not match the terminal sequence number.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:TransformerEnd.endNumber
-        multivalued: false
-        range: integer
-        required: true
-    class_uri: cim:TransformerEnd
   IdentifiedObject:
     description: This is a root class to provide common identification for all classes
       needing identification and naming attributes.
@@ -539,67 +491,32 @@ classes:
         range: string
         required: false
     class_uri: cim:IdentifiedObject
-  BaseVoltage:
-    description: Defines a system base voltage which is referenced.
+  PowerTransformer:
+    description: 'An electrical device consisting of  two or more coupled windings,
+      with or without a magnetic core, for introducing mutual coupling between electric
+      circuits. Transformers can be used to control voltage and phase shift (active
+      power flow).
+
+      A power transformer may be composed of separate transformer tanks that need
+      not be identical.
+
+      A power transformer can be modelled with or without tanks and is intended for
+      use in both balanced and unbalanced representations.   A power transformer typically
+      has two terminals, but may have one (grounding), three or more terminals.
+
+      The inherited association ConductingEquipment.BaseVoltage should not be used.  The
+      association from TransformerEnd to BaseVoltage should be used instead.'
     from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    is_a: IdentifiedObject
+    is_a: ConductingEquipment
     attributes:
-      nominalVoltage:
-        description: The power system resource's base voltage.  Shall be a positive
-          value and not zero.
+      PowerTransformerEnd:
+        description: The ends of this power transformer.
         from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:BaseVoltage.nominalVoltage
-        multivalued: false
-        range: Voltage
-        required: true
-      ConductingEquipment:
-        description: All conducting equipment with this base voltage.  Use only when
-          there is no voltage level container used and only one base voltage applies.  For
-          example, not used for transformers.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:BaseVoltage.ConductingEquipment
+        slot_uri: cim:PowerTransformer.PowerTransformerEnd
         multivalued: true
-        range: ConductingEquipment
+        range: PowerTransformerEnd
         required: false
-      VoltageLevel:
-        description: The voltage levels having this base voltage.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:BaseVoltage.VoltageLevel
-        multivalued: true
-        range: VoltageLevel
-        required: false
-      TransformerEnds:
-        description: Transformer ends at the base voltage.  This is essential for
-          PU calculation.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:BaseVoltage.TransformerEnds
-        multivalued: true
-        range: TransformerEnd
-        required: false
-    class_uri: cim:BaseVoltage
-  Voltage:
-    description: Electrical voltage, can be both AC and DC.
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    attributes:
-      value:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Voltage.value
-        multivalued: false
-        range: float
-        required: false
-      multiplier:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Voltage.multiplier
-        multivalued: false
-        range: UnitMultiplier
-        required: false
-      unit:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Voltage.unit
-        multivalued: false
-        range: UnitSymbol
-        required: false
-    class_uri: cim:Voltage
+    class_uri: cim:PowerTransformer
   ConductingEquipment:
     description: The parts of the AC power system that are designed to carry current
       or that are conductively connected through terminals.
@@ -844,6 +761,117 @@ classes:
         range: replaced_by_profiler
         required: false
     class_uri: cim:ACDCTerminal
+  TransformerEnd:
+    description: A conducting connection point of a power transformer. It corresponds
+      to a physical transformer winding terminal.  In earlier CIM versions, the TransformerWinding
+      class served a similar purpose, but this class is more flexible because it associates
+      to terminal but is not a specialization of ConductingEquipment.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: IdentifiedObject
+    attributes:
+      BaseVoltage:
+        description: Base voltage of the transformer end.  This is essential for PU
+          calculation.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:TransformerEnd.BaseVoltage
+        multivalued: false
+        range: BaseVoltage
+        required: true
+      PhaseTapChanger:
+        description: Phase tap changer associated with this transformer end.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:TransformerEnd.PhaseTapChanger
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      RatioTapChanger:
+        description: Ratio tap changer associated with this transformer end.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:TransformerEnd.RatioTapChanger
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      Terminal:
+        description: Terminal of the power transformer to which this transformer end
+          belongs.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:TransformerEnd.Terminal
+        multivalued: false
+        range: Terminal
+        required: true
+      endNumber:
+        description: Number for this transformer end, corresponding to the end's order
+          in the power transformer vector group or phase angle clock number.  Highest
+          voltage winding should be 1.  Each end within a power transformer should
+          have a unique subsequent end number.   Note the transformer end number need
+          not match the terminal sequence number.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:TransformerEnd.endNumber
+        multivalued: false
+        range: integer
+        required: true
+    class_uri: cim:TransformerEnd
+  BaseVoltage:
+    description: Defines a system base voltage which is referenced.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: IdentifiedObject
+    attributes:
+      nominalVoltage:
+        description: The power system resource's base voltage.  Shall be a positive
+          value and not zero.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:BaseVoltage.nominalVoltage
+        multivalued: false
+        range: Voltage
+        required: true
+      ConductingEquipment:
+        description: All conducting equipment with this base voltage.  Use only when
+          there is no voltage level container used and only one base voltage applies.  For
+          example, not used for transformers.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:BaseVoltage.ConductingEquipment
+        multivalued: true
+        range: ConductingEquipment
+        required: false
+      VoltageLevel:
+        description: The voltage levels having this base voltage.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:BaseVoltage.VoltageLevel
+        multivalued: true
+        range: VoltageLevel
+        required: false
+      TransformerEnds:
+        description: Transformer ends at the base voltage.  This is essential for
+          PU calculation.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:BaseVoltage.TransformerEnds
+        multivalued: true
+        range: TransformerEnd
+        required: false
+    class_uri: cim:BaseVoltage
+  Voltage:
+    description: Electrical voltage, can be both AC and DC.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    attributes:
+      value:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Voltage.value
+        multivalued: false
+        range: float
+        required: false
+      multiplier:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Voltage.multiplier
+        multivalued: false
+        range: UnitMultiplier
+        required: false
+      unit:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Voltage.unit
+        multivalued: false
+        range: UnitSymbol
+        required: false
+    class_uri: cim:Voltage
   VoltageLevel:
     description: A collection of equipment at one common system voltage forming a
       switchgear. The equipment typically consists of breakers, busbars, instrumentation,
@@ -1001,176 +1029,6 @@ classes:
         range: replaced_by_profiler
         required: false
     class_uri: cim:Line
-  ACLineSegment:
-    description: 'A wire or combination of wires, with consistent electrical characteristics,
-      building a single electrical system, used to carry alternating current between
-      points in the power system.
-
-      For symmetrical, transposed three phase lines, it is sufficient to use attributes
-      of the line segment, which describe impedances and admittances for the entire
-      length of the segment.  Additionally impedances can be computed by using length
-      and associated per length impedances.
-
-      The BaseVoltage at the two ends of ACLineSegments in a Line shall have the same
-      BaseVoltage.nominalVoltage. However, boundary lines may have slightly different
-      BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference
-      in general requires use of an equivalent branch.'
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    is_a: Conductor
-    attributes:
-      bch:
-        description: Positive sequence shunt (charging) susceptance, uniformly distributed,
-          of the entire line section.  This value represents the full charging over
-          the full length of the line.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:ACLineSegment.bch
-        multivalued: false
-        range: Susceptance
-        required: true
-      gch:
-        description: Positive sequence shunt (charging) conductance, uniformly distributed,
-          of the entire line section.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:ACLineSegment.gch
-        multivalued: false
-        range: replaced_by_profiler
-        required: false
-      r:
-        description: Positive sequence series resistance of the entire line section.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:ACLineSegment.r
-        multivalued: false
-        range: Resistance
-        required: true
-      x:
-        description: Positive sequence series reactance of the entire line section.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:ACLineSegment.x
-        multivalued: false
-        range: Reactance
-        required: true
-      Clamp:
-        description: The clamps connected to the line segment.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:ACLineSegment.Clamp
-        multivalued: true
-        range: replaced_by_profiler
-        required: false
-      Cut:
-        description: Cuts applied to the line segment.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:ACLineSegment.Cut
-        multivalued: true
-        range: replaced_by_profiler
-        required: false
-    class_uri: cim:ACLineSegment
-  Conductor:
-    description: Combination of conducting material with consistent electrical characteristics,
-      building a single electrical system, used to carry current between points in
-      the power system.
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    is_a: ConductingEquipment
-    attributes:
-      length:
-        description: Segment length for calculating line section capabilities.
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Conductor.length
-        multivalued: false
-        range: Length
-        required: false
-    class_uri: cim:Conductor
-  Length:
-    description: Unit of length. It shall be a positive value or zero.
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    attributes:
-      value:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Length.value
-        multivalued: false
-        range: float
-        required: false
-      unit:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Length.unit
-        multivalued: false
-        range: UnitSymbol
-        required: false
-      multiplier:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Length.multiplier
-        multivalued: false
-        range: UnitMultiplier
-        required: false
-    class_uri: cim:Length
-  Susceptance:
-    description: Imaginary part of admittance.
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    attributes:
-      value:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Susceptance.value
-        multivalued: false
-        range: float
-        required: false
-      unit:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Susceptance.unit
-        multivalued: false
-        range: UnitSymbol
-        required: false
-      multiplier:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Susceptance.multiplier
-        multivalued: false
-        range: UnitMultiplier
-        required: false
-    class_uri: cim:Susceptance
-  Resistance:
-    description: Resistance (real part of impedance).
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    attributes:
-      value:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Resistance.value
-        multivalued: false
-        range: float
-        required: false
-      unit:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Resistance.unit
-        multivalued: false
-        range: UnitSymbol
-        required: false
-      multiplier:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Resistance.multiplier
-        multivalued: false
-        range: UnitMultiplier
-        required: false
-    class_uri: cim:Resistance
-  Reactance:
-    description: Reactance (imaginary part of impedance), at rated frequency.
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    attributes:
-      value:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Reactance.value
-        multivalued: false
-        range: float
-        required: false
-      unit:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Reactance.unit
-        multivalued: false
-        range: UnitSymbol
-        required: false
-      multiplier:
-        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:Reactance.multiplier
-        multivalued: false
-        range: UnitMultiplier
-        required: false
-    class_uri: cim:Reactance
   PowerTransformerEnd:
     description: 'A PowerTransformerEnd is associated with each Terminal of a PowerTransformer.
 
@@ -1276,40 +1134,86 @@ classes:
         range: Reactance
         required: true
     class_uri: cim:PowerTransformerEnd
-  PowerTransformer:
-    description: 'An electrical device consisting of  two or more coupled windings,
-      with or without a magnetic core, for introducing mutual coupling between electric
-      circuits. Transformers can be used to control voltage and phase shift (active
-      power flow).
-
-      A power transformer may be composed of separate transformer tanks that need
-      not be identical.
-
-      A power transformer can be modelled with or without tanks and is intended for
-      use in both balanced and unbalanced representations.   A power transformer typically
-      has two terminals, but may have one (grounding), three or more terminals.
-
-      The inherited association ConductingEquipment.BaseVoltage should not be used.  The
-      association from TransformerEnd to BaseVoltage should be used instead.'
+  Susceptance:
+    description: Imaginary part of admittance.
     from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    is_a: ConductingEquipment
     attributes:
-      PowerTransformerEnd:
-        description: The ends of this power transformer.
+      value:
         from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-        slot_uri: cim:PowerTransformer.PowerTransformerEnd
-        multivalued: true
-        range: PowerTransformerEnd
+        slot_uri: cim:Susceptance.value
+        multivalued: false
+        range: float
         required: false
-    class_uri: cim:PowerTransformer
-  Disconnector:
-    description: A manually operated or motor operated mechanical switching device
-      used for changing the connections in a circuit, or for isolating a circuit or
-      equipment from a source of power. It is required to open or close circuits when
-      negligible current is broken or made.
+      unit:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Susceptance.unit
+        multivalued: false
+        range: UnitSymbol
+        required: false
+      multiplier:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Susceptance.multiplier
+        multivalued: false
+        range: UnitMultiplier
+        required: false
+    class_uri: cim:Susceptance
+  Resistance:
+    description: Resistance (real part of impedance).
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    attributes:
+      value:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Resistance.value
+        multivalued: false
+        range: float
+        required: false
+      unit:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Resistance.unit
+        multivalued: false
+        range: UnitSymbol
+        required: false
+      multiplier:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Resistance.multiplier
+        multivalued: false
+        range: UnitMultiplier
+        required: false
+    class_uri: cim:Resistance
+  Reactance:
+    description: Reactance (imaginary part of impedance), at rated frequency.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    attributes:
+      value:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Reactance.value
+        multivalued: false
+        range: float
+        required: false
+      unit:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Reactance.unit
+        multivalued: false
+        range: UnitSymbol
+        required: false
+      multiplier:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Reactance.multiplier
+        multivalued: false
+        range: UnitMultiplier
+        required: false
+    class_uri: cim:Reactance
+  LoadBreakSwitch:
+    description: A mechanical switching device capable of making, carrying, and breaking
+      currents under normal operating conditions.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ProtectedSwitch
+    class_uri: cim:LoadBreakSwitch
+  ProtectedSwitch:
+    description: A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.
     from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
     is_a: Switch
-    class_uri: cim:Disconnector
+    class_uri: cim:ProtectedSwitch
   Switch:
     description: A generic device designed to close, or open, or both, one or more
       electric circuits.  All switches are two terminal devices including grounding
@@ -1354,12 +1258,6 @@ classes:
         range: replaced_by_profiler
         required: false
     class_uri: cim:Switch
-  EnergyConnection:
-    description: A connection of energy generation or consumption on the power system
-      model.
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    is_a: ConductingEquipment
-    class_uri: cim:EnergyConnection
   EnergyConsumer:
     description: 'Generic user of energy - a  point of consumption on the power system
       model.
@@ -1415,6 +1313,49 @@ classes:
         range: replaced_by_profiler
         required: false
     class_uri: cim:EnergyConsumer
+  EnergyConnection:
+    description: A connection of energy generation or consumption on the power system
+      model.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ConductingEquipment
+    class_uri: cim:EnergyConnection
+  Disconnector:
+    description: A manually operated or motor operated mechanical switching device
+      used for changing the connections in a circuit, or for isolating a circuit or
+      equipment from a source of power. It is required to open or close circuits when
+      negligible current is broken or made.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: Switch
+    class_uri: cim:Disconnector
+  Length:
+    description: Unit of length. It shall be a positive value or zero.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    attributes:
+      value:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Length.value
+        multivalued: false
+        range: float
+        required: false
+      unit:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Length.unit
+        multivalued: false
+        range: UnitSymbol
+        required: false
+      multiplier:
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Length.multiplier
+        multivalued: false
+        range: UnitMultiplier
+        required: false
+    class_uri: cim:Length
+  Junction:
+    description: A point where one or more conducting equipments are connected with
+      zero resistance.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: Connector
+    class_uri: cim:Junction
   Connector:
     description: A conductor, or group of conductors, with negligible impedance, that
       serve to connect other conducting equipment within a single substation and are
@@ -1422,23 +1363,6 @@ classes:
     from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
     is_a: ConductingEquipment
     class_uri: cim:Connector
-  ProtectedSwitch:
-    description: A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    is_a: Switch
-    class_uri: cim:ProtectedSwitch
-  LoadBreakSwitch:
-    description: A mechanical switching device capable of making, carrying, and breaking
-      currents under normal operating conditions.
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    is_a: ProtectedSwitch
-    class_uri: cim:LoadBreakSwitch
-  Junction:
-    description: A point where one or more conducting equipments are connected with
-      zero resistance.
-    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
-    is_a: Connector
-    class_uri: cim:Junction
   BusbarSection:
     description: "A conductor, or group of conductors, with negligible impedance,\
       \ that serve to connect other conducting equipment within a single substation.\
@@ -1448,6 +1372,84 @@ classes:
     from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
     is_a: Connector
     class_uri: cim:BusbarSection
+  Conductor:
+    description: Combination of conducting material with consistent electrical characteristics,
+      building a single electrical system, used to carry current between points in
+      the power system.
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: ConductingEquipment
+    attributes:
+      length:
+        description: Segment length for calculating line section capabilities.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:Conductor.length
+        multivalued: false
+        range: Length
+        required: false
+    class_uri: cim:Conductor
+  ACLineSegment:
+    description: 'A wire or combination of wires, with consistent electrical characteristics,
+      building a single electrical system, used to carry alternating current between
+      points in the power system.
+
+      For symmetrical, transposed three phase lines, it is sufficient to use attributes
+      of the line segment, which describe impedances and admittances for the entire
+      length of the segment.  Additionally impedances can be computed by using length
+      and associated per length impedances.
+
+      The BaseVoltage at the two ends of ACLineSegments in a Line shall have the same
+      BaseVoltage.nominalVoltage. However, boundary lines may have slightly different
+      BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference
+      in general requires use of an equivalent branch.'
+    from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+    is_a: Conductor
+    attributes:
+      bch:
+        description: Positive sequence shunt (charging) susceptance, uniformly distributed,
+          of the entire line section.  This value represents the full charging over
+          the full length of the line.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.bch
+        multivalued: false
+        range: Susceptance
+        required: true
+      gch:
+        description: Positive sequence shunt (charging) conductance, uniformly distributed,
+          of the entire line section.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.gch
+        multivalued: false
+        range: replaced_by_profiler
+        required: false
+      r:
+        description: Positive sequence series resistance of the entire line section.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.r
+        multivalued: false
+        range: Resistance
+        required: true
+      x:
+        description: Positive sequence series reactance of the entire line section.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.x
+        multivalued: false
+        range: Reactance
+        required: true
+      Clamp:
+        description: The clamps connected to the line segment.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.Clamp
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+      Cut:
+        description: Cuts applied to the line segment.
+        from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
+        slot_uri: cim:ACLineSegment.Cut
+        multivalued: true
+        range: replaced_by_profiler
+        required: false
+    class_uri: cim:ACLineSegment
   Breaker:
     description: A mechanical switching device capable of making, carrying, and breaking
       currents under normal circuit conditions and also making, carrying for a specified
