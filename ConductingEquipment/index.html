@@ -213,11 +213,11 @@
       Equipment &lt;|-- ConductingEquipment
 
 
-      ConductingEquipment &lt;|-- Conductor
       ConductingEquipment &lt;|-- PowerTransformer
       ConductingEquipment &lt;|-- Switch
       ConductingEquipment &lt;|-- EnergyConnection
       ConductingEquipment &lt;|-- Connector
+      ConductingEquipment &lt;|-- Conductor
 
 
       ConductingEquipment : Equipment.aggregate
@@ -253,11 +253,11 @@
 <li><a href="../PowerSystemResource/">PowerSystemResource</a><ul>
 <li><a href="../Equipment/">Equipment</a><ul>
 <li><strong>ConductingEquipment</strong><ul>
-<li><a href="../Conductor/">Conductor</a></li>
 <li><a href="../PowerTransformer/">PowerTransformer</a></li>
 <li><a href="../Switch/">Switch</a></li>
 <li><a href="../EnergyConnection/">EnergyConnection</a></li>
 <li><a href="../Connector/">Connector</a></li>
+<li><a href="../Conductor/">Conductor</a></li>
 </ul>
 </li>
 </ul>
@@ -279,7 +279,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="ConductingEquipment.BaseVoltage.md">BaseVoltage</a></td>
+<td><a href="../ConductingEquipment.BaseVoltage/">BaseVoltage</a></td>
 <td>0..1 <br/> <a href="../BaseVoltage/">BaseVoltage</a></td>
 <td>Base voltage of this conducting equipment</td>
 <td>direct</td>
@@ -352,13 +352,13 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../BaseVoltage/">BaseVoltage</a></td>
+<td><a href="../Terminal/">Terminal</a></td>
 <td><a href="./">ConductingEquipment</a></td>
 <td>range</td>
 <td><a href="./">ConductingEquipment</a></td>
 </tr>
 <tr>
-<td><a href="../Terminal/">Terminal</a></td>
+<td><a href="../BaseVoltage/">BaseVoltage</a></td>
 <td><a href="./">ConductingEquipment</a></td>
 <td>range</td>
 <td><a href="./">ConductingEquipment</a></td>
@@ -406,11 +406,12 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">no voltage level container used and only one base voltage applies.  For example,</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">not used for transformers.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:ConductingEquipment.BaseVoltage</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TransformerEnd</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConductingEquipment</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TransformerEnd</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VoltageLevel</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
@@ -445,13 +446,14 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">no voltage level container used and only one base voltage applies.  For example,</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">not used for transformers.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:ConductingEquipment.BaseVoltage</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConductingEquipment</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TransformerEnd</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConductingEquipment</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TransformerEnd</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VoltageLevel</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>

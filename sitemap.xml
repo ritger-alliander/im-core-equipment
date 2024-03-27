@@ -2,657 +2,657 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ACDCTerminal.BusNameMarker/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ACDCTerminal/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ACDCTerminal.sequenceNumber/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ACLineSegment.Clamp/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ACLineSegment.Cut/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ACLineSegment.bch/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ACLineSegment.gch/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ACLineSegment/</loc>
-         <lastmod>2024-03-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ritger-alliander.github.io/im-core-equipment/ACLineSegment.r/</loc>
-         <lastmod>2024-03-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ritger-alliander.github.io/im-core-equipment/ACLineSegment.x/</loc>
-         <lastmod>2024-03-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ritger-alliander.github.io/im-core-equipment/BaseVoltage.ConductingEquipment/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/BaseVoltage.TransformerEnds/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/BaseVoltage.VoltageLevel/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/BaseVoltage/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/BaseVoltage.nominalVoltage/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Bay/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Boolean/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Breaker/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/BusbarSection/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ritger-alliander.github.io/im-core-equipment/ConductingEquipment.BaseVoltage/</loc>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ConductingEquipment.Terminals/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ConductingEquipment/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Conductor.length/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Conductor/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ConnectivityNode.BoundaryPoint/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ConnectivityNode.ConnectivityNodeContainer/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ConnectivityNode/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ConnectivityNodeContainer.ConnectivityNodes/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ConnectivityNodeContainer/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Connector/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/CoreEquipmentProfile/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Curie/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Date/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/DateOrDatetime/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Datetime/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Decimal/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Disconnector/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Double/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/EnergyConnection/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/EnergyConsumer.LoadResponse/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/EnergyConsumer/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/EnergyConsumer.pfixed/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/EnergyConsumer.pfixedPct/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/EnergyConsumer.qfixed/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/EnergyConsumer.qfixedPct/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Equipment.EquipmentContainer/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Equipment.OperationalLimitSet/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Equipment.aggregate/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Equipment/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Equipment.normallyInService/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/EquipmentContainer.Equipments/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/EquipmentContainer/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Float/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/GeographicalRegion.Regions/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/GeographicalRegion/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/IdentifiedObject.description/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/IdentifiedObject.energyIdentCodeEic/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/IdentifiedObject.mRID/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/IdentifiedObject/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/IdentifiedObject.shortName/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Integer/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Jsonpath/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Jsonpointer/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Junction/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Length/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Line/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/LoadBreakSwitch/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Ncname/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Nodeidentifier/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Objectidentifier/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PhaseCode/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PowerSystemResource/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformer.PowerTransformerEnd/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformer/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformerEnd.PowerTransformer/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformerEnd.b/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformerEnd.connectionKind/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformerEnd.g/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformerEnd/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformerEnd.r/</loc>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformerEnd.ratedS/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformerEnd.ratedU/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ritger-alliander.github.io/im-core-equipment/PowerTransformerEnd.x/</loc>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ProtectedSwitch/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Reactance/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/ReplacedByProfiler/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Resistance/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Sparqlpath/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/String/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/SubGeographicalRegion.DCLines/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/SubGeographicalRegion.Lines/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/SubGeographicalRegion.Substations/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/SubGeographicalRegion/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Substation.DCConverterUnit/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Substation.Region/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Substation.VoltageLevels/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Substation/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Susceptance/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Switch.SwitchSchedules/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Switch/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Switch.normalOpen/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Switch.ratedCurrent/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Switch.retained/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Terminal.AuxiliaryEquipment/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ritger-alliander.github.io/im-core-equipment/Terminal.ConductingEquipment/</loc>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Terminal.ConnectivityNode/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Terminal.ConverterDCSides/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Terminal.RegulatingControl/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Terminal.TieFlow/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Terminal.TransformerEnd/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Terminal/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Terminal.phases/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Time/</loc>
-         <lastmod>2024-03-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ritger-alliander.github.io/im-core-equipment/TransformerEnd.BaseVoltage/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/TransformerEnd.PhaseTapChanger/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/TransformerEnd.RatioTapChanger/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/TransformerEnd.Terminal/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/TransformerEnd.endNumber/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/TransformerEnd/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/UnitMultiplier/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/UnitSymbol/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Uri/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Uriorcurie/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Voltage/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Voltage.multiplier/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Voltage.unit/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/Voltage.value/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/VoltageLevel.Bays/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/VoltageLevel.Substation/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/VoltageLevel.highVoltageLimit/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/VoltageLevel.lowVoltageLimit/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/VoltageLevel/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/WindingConnection/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ritger-alliander.github.io/im-core-equipment/about/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

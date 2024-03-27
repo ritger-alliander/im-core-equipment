@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#coreequipmentprofile" class="md-skip">
+        <a href="#core-equipment-vocabulary" class="md-skip">
           Skip to content
         </a>
       
@@ -381,7 +381,8 @@
   </a>
 
 
-<h1 id="coreequipmentprofile">CoreEquipmentProfile</h1>
+<h1 id="core-equipment-vocabulary">Core Equipment Vocabulary</h1>
+<p>This vocabulary is describing the core equipment profile from IEC 61970-600-2.</p>
 <p>URI: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</p>
 <p>Name: CoreEquipmentProfile</p>
 <h2 id="classes">Classes</h2>
@@ -561,8 +562,8 @@
 <td>Magnetizing branch susceptance (B mag)</td>
 </tr>
 <tr>
-<td><a href="TransformerEnd.BaseVoltage/">BaseVoltage</a></td>
-<td>Base voltage of the transformer end</td>
+<td><a href="ConductingEquipment.BaseVoltage/">BaseVoltage</a></td>
+<td>Base voltage of this conducting equipment</td>
 </tr>
 <tr>
 <td><a href="VoltageLevel.Bays/">Bays</a></td>
@@ -585,8 +586,8 @@
 <td>The clamps connected to the line segment</td>
 </tr>
 <tr>
-<td><a href="BaseVoltage.ConductingEquipment/">ConductingEquipment</a></td>
-<td>All conducting equipment with this base voltage</td>
+<td><a href="Terminal.ConductingEquipment/">ConductingEquipment</a></td>
+<td>The conducting equipment of the terminal</td>
 </tr>
 <tr>
 <td><a href="PowerTransformerEnd.connectionKind/">connectionKind</a></td>
@@ -725,8 +726,8 @@
 <td>Fixed reactive power as a percentage of load group fixed reactive power</td>
 </tr>
 <tr>
-<td><a href="ACLineSegment.r/">r</a></td>
-<td>Positive sequence series resistance of the entire line section</td>
+<td><a href="PowerTransformerEnd.r/">r</a></td>
+<td>Resistance (star-model) of the transformer end</td>
 </tr>
 <tr>
 <td><a href="Switch.ratedCurrent/">ratedCurrent</a></td>
@@ -817,8 +818,8 @@
 <td>The voltage levels within this substation</td>
 </tr>
 <tr>
-<td><a href="ACLineSegment.x/">x</a></td>
-<td>Positive sequence series reactance of the entire line section</td>
+<td><a href="PowerTransformerEnd.x/">x</a></td>
+<td>Positive sequence series reactance (star-model) of the transformer end</td>
 </tr>
 </tbody>
 </table>
