@@ -1047,6 +1047,8 @@ classes:
       line.
     from_schema: http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile
     is_a: EquipmentContainer
+    aliases:
+      - Kabel
     attributes:
       region:
         description: The sub-geographical region of the line.
