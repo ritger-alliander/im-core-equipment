@@ -224,8 +224,6 @@
 
       BaseVoltage : nominal_voltage
 
-          BaseVoltage --&gt; Voltage : nominal_voltage
-
       BaseVoltage : short_name
 
       BaseVoltage : transformer_ends
@@ -233,8 +231,6 @@
           BaseVoltage --&gt; TransformerEnd : transformer_ends
 
       BaseVoltage : voltage_level
-
-          BaseVoltage --&gt; VoltageLevel : voltage_level
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -257,7 +253,7 @@
 <tbody>
 <tr>
 <td><a href="../nominal_voltage/">nominal_voltage</a></td>
-<td>1..1 <br/> <a href="../Voltage/">Voltage</a></td>
+<td>1..1 <br/> <a href="../Float/">Float</a></td>
 <td>The power system resource's base voltage</td>
 <td>direct</td>
 </tr>
@@ -269,7 +265,7 @@
 </tr>
 <tr>
 <td><a href="../voltage_level/">voltage_level</a></td>
-<td>0..* <br/> <a href="../VoltageLevel/">VoltageLevel</a></td>
+<td>0..* <br/> <a href="../Float/">Float</a></td>
 <td>The voltage levels having this base voltage</td>
 <td>direct</td>
 </tr>
@@ -317,19 +313,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Disconnector/">Disconnector</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
-<td>range</td>
-<td><a href="./">BaseVoltage</a></td>
-</tr>
-<tr>
-<td><a href="../Switch/">Switch</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
-<td>range</td>
-<td><a href="./">BaseVoltage</a></td>
-</tr>
-<tr>
-<td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
+<td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
 <td><a href="../base_voltage/">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
@@ -341,49 +325,13 @@
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
+<td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
+<td><a href="../base_voltage/">base_voltage</a></td>
+<td>range</td>
+<td><a href="./">BaseVoltage</a></td>
+</tr>
+<tr>
 <td><a href="../VoltageLevel/">VoltageLevel</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
-<td>range</td>
-<td><a href="./">BaseVoltage</a></td>
-</tr>
-<tr>
-<td><a href="../Junction/">Junction</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
-<td>range</td>
-<td><a href="./">BaseVoltage</a></td>
-</tr>
-<tr>
-<td><a href="../Connector/">Connector</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
-<td>range</td>
-<td><a href="./">BaseVoltage</a></td>
-</tr>
-<tr>
-<td><a href="../BusbarSection/">BusbarSection</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
-<td>range</td>
-<td><a href="./">BaseVoltage</a></td>
-</tr>
-<tr>
-<td><a href="../Conductor/">Conductor</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
-<td>range</td>
-<td><a href="./">BaseVoltage</a></td>
-</tr>
-<tr>
-<td><a href="../LoadBreakSwitch/">LoadBreakSwitch</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
-<td>range</td>
-<td><a href="./">BaseVoltage</a></td>
-</tr>
-<tr>
-<td><a href="../ProtectedSwitch/">ProtectedSwitch</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
-<td>range</td>
-<td><a href="./">BaseVoltage</a></td>
-</tr>
-<tr>
-<td><a href="../EnergyConnection/">EnergyConnection</a></td>
 <td><a href="../base_voltage/">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
@@ -395,13 +343,19 @@
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
-<td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
+<td><a href="../Conductor/">Conductor</a></td>
 <td><a href="../base_voltage/">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
-<td><a href="../Breaker/">Breaker</a></td>
+<td><a href="../ProtectedSwitch/">ProtectedSwitch</a></td>
+<td><a href="../base_voltage/">base_voltage</a></td>
+<td>range</td>
+<td><a href="./">BaseVoltage</a></td>
+</tr>
+<tr>
+<td><a href="../Switch/">Switch</a></td>
 <td><a href="../base_voltage/">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
@@ -413,7 +367,49 @@
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
+<td><a href="../EnergyConnection/">EnergyConnection</a></td>
+<td><a href="../base_voltage/">base_voltage</a></td>
+<td>range</td>
+<td><a href="./">BaseVoltage</a></td>
+</tr>
+<tr>
+<td><a href="../Breaker/">Breaker</a></td>
+<td><a href="../base_voltage/">base_voltage</a></td>
+<td>range</td>
+<td><a href="./">BaseVoltage</a></td>
+</tr>
+<tr>
+<td><a href="../Connector/">Connector</a></td>
+<td><a href="../base_voltage/">base_voltage</a></td>
+<td>range</td>
+<td><a href="./">BaseVoltage</a></td>
+</tr>
+<tr>
+<td><a href="../Disconnector/">Disconnector</a></td>
+<td><a href="../base_voltage/">base_voltage</a></td>
+<td>range</td>
+<td><a href="./">BaseVoltage</a></td>
+</tr>
+<tr>
+<td><a href="../BusbarSection/">BusbarSection</a></td>
+<td><a href="../base_voltage/">base_voltage</a></td>
+<td>range</td>
+<td><a href="./">BaseVoltage</a></td>
+</tr>
+<tr>
 <td><a href="../ACLineSegment/">ACLineSegment</a></td>
+<td><a href="../base_voltage/">base_voltage</a></td>
+<td>range</td>
+<td><a href="./">BaseVoltage</a></td>
+</tr>
+<tr>
+<td><a href="../Junction/">Junction</a></td>
+<td><a href="../base_voltage/">base_voltage</a></td>
+<td>range</td>
+<td><a href="./">BaseVoltage</a></td>
+</tr>
+<tr>
+<td><a href="../LoadBreakSwitch/">LoadBreakSwitch</a></td>
 <td><a href="../base_voltage/">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
@@ -464,7 +460,7 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Voltage</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">conducting_equipment</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conducting_equipment</span>
@@ -472,11 +468,12 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is no voltage level container used and only one base voltage applies.  For example,</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">not used for transformers.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:BaseVoltage.ConductingEquipment</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConductingEquipment</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">voltage_level</span><span class="p">:</span>
@@ -489,7 +486,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bay</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VoltageLevel</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">transformer_ends</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer_ends</span>
@@ -525,7 +522,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Voltage</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">conducting_equipment</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conducting_equipment</span>
@@ -533,13 +530,14 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is no voltage level container used and only one base voltage applies.  For example,</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">not used for transformers.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:BaseVoltage.ConductingEquipment</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conducting_equipment</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConductingEquipment</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">voltage_level</span><span class="p">:</span>
@@ -554,7 +552,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bay</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VoltageLevel</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">transformer_ends</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer_ends</span>
@@ -612,7 +610,7 @@
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:IdentifiedObject.mRID</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mrid</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseVoltage</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>

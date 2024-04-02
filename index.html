@@ -459,20 +459,12 @@
 <td>A modelling construct to provide a root class for containing equipment</td>
 </tr>
 <tr>
-<td><a href="GeographicalRegion/">GeographicalRegion</a></td>
-<td>A geographical region of a power system network model</td>
-</tr>
-<tr>
 <td><a href="IdentifiedObject/">IdentifiedObject</a></td>
 <td>This is a root class to provide common identification for all classes needing...</td>
 </tr>
 <tr>
 <td><a href="Junction/">Junction</a></td>
 <td>A point where one or more conducting equipments are connected with zero resis...</td>
-</tr>
-<tr>
-<td><a href="Length/">Length</a></td>
-<td>Unit of length</td>
 </tr>
 <tr>
 <td><a href="Line/">Line</a></td>
@@ -499,24 +491,8 @@
 <td>A ProtectedSwitch is a switching device that can be operated by ProtectionEqu...</td>
 </tr>
 <tr>
-<td><a href="Reactance/">Reactance</a></td>
-<td>Reactance (imaginary part of impedance), at rated frequency</td>
-</tr>
-<tr>
-<td><a href="Resistance/">Resistance</a></td>
-<td>Resistance (real part of impedance)</td>
-</tr>
-<tr>
-<td><a href="SubGeographicalRegion/">SubGeographicalRegion</a></td>
-<td>A subset of a geographical region of a power system network model</td>
-</tr>
-<tr>
 <td><a href="Substation/">Substation</a></td>
 <td>A collection of equipment for purposes other than generation or utilization, ...</td>
-</tr>
-<tr>
-<td><a href="Susceptance/">Susceptance</a></td>
-<td>Imaginary part of admittance</td>
 </tr>
 <tr>
 <td><a href="Switch/">Switch</a></td>
@@ -529,10 +505,6 @@
 <tr>
 <td><a href="TransformerEnd/">TransformerEnd</a></td>
 <td>A conducting connection point of a power transformer</td>
-</tr>
-<tr>
-<td><a href="Voltage/">Voltage</a></td>
-<td>Electrical voltage, can be both AC and DC</td>
 </tr>
 <tr>
 <td><a href="VoltageLevel/">VoltageLevel</a></td>
@@ -554,16 +526,12 @@
 <td>The aggregate flag provides an alternative way of representing an aggregated ...</td>
 </tr>
 <tr>
-<td><a href="auxiliary_equipment/">auxiliary_equipment</a></td>
-<td>The auxiliary equipment connected to the terminal</td>
-</tr>
-<tr>
 <td><a href="b/">b</a></td>
 <td>Magnetizing branch susceptance (B mag)</td>
 </tr>
 <tr>
 <td><a href="base_voltage/">base_voltage</a></td>
-<td>Base voltage of this conducting equipment</td>
+<td>Base voltage of the transformer end</td>
 </tr>
 <tr>
 <td><a href="bays/">bays</a></td>
@@ -574,24 +542,8 @@
 <td>Positive sequence shunt (charging) susceptance, uniformly distributed, of the...</td>
 </tr>
 <tr>
-<td><a href="boundary_point/">boundary_point</a></td>
-<td>The boundary point associated with the connectivity node</td>
-</tr>
-<tr>
-<td><a href="bus_name_marker/">bus_name_marker</a></td>
-<td>The bus name marker used to name the bus (topological node)</td>
-</tr>
-<tr>
-<td><a href="clamp/">clamp</a></td>
-<td>The clamps connected to the line segment</td>
-</tr>
-<tr>
 <td><a href="conducting_equipment/">conducting_equipment</a></td>
-<td>The conducting equipment of the terminal</td>
-</tr>
-<tr>
-<td><a href="connection_kind/">connection_kind</a></td>
-<td>Kind of connection</td>
+<td>All conducting equipment with this base voltage</td>
 </tr>
 <tr>
 <td><a href="connectivity_node/">connectivity_node</a></td>
@@ -604,22 +556,6 @@
 <tr>
 <td><a href="connectivity_nodes/">connectivity_nodes</a></td>
 <td>Connectivity nodes which belong to this connectivity node container</td>
-</tr>
-<tr>
-<td><a href="converter_d_c_sides/">converter_d_c_sides</a></td>
-<td>All converters' DC sides linked to this point of common coupling terminal</td>
-</tr>
-<tr>
-<td><a href="cut/">cut</a></td>
-<td>Cuts applied to the line segment</td>
-</tr>
-<tr>
-<td><a href="d_c_converter_unit/">d_c_converter_unit</a></td>
-<td>The DC converter unit belonging of the substation</td>
-</tr>
-<tr>
-<td><a href="d_c_lines/">d_c_lines</a></td>
-<td>The DC lines in this sub-geographical region</td>
 </tr>
 <tr>
 <td><a href="description/">description</a></td>
@@ -658,24 +594,12 @@
 <td>Segment length for calculating line section capabilities</td>
 </tr>
 <tr>
-<td><a href="lines/">lines</a></td>
-<td>The lines within the sub-geographical region</td>
-</tr>
-<tr>
-<td><a href="load_response/">load_response</a></td>
-<td>The load response characteristic of this load</td>
-</tr>
-<tr>
 <td><a href="low_voltage_limit/">low_voltage_limit</a></td>
 <td>The bus bar's low voltage limit</td>
 </tr>
 <tr>
 <td><a href="mrid/">mrid</a></td>
 <td>Master resource identifier issued by a model authority</td>
-</tr>
-<tr>
-<td><a href="multiplier/">multiplier</a></td>
-<td></td>
 </tr>
 <tr>
 <td><a href="nominal_voltage/">nominal_voltage</a></td>
@@ -690,10 +614,6 @@
 <td>Specifies the availability of the equipment under normal operating conditions</td>
 </tr>
 <tr>
-<td><a href="operational_limit_set/">operational_limit_set</a></td>
-<td>The operational limit sets associated with this equipment</td>
-</tr>
-<tr>
 <td><a href="pfixed/">pfixed</a></td>
 <td>Active power of the load that is a fixed quantity and does not vary as load g...</td>
 </tr>
@@ -702,20 +622,8 @@
 <td>Fixed active power as a percentage of load group fixed active power</td>
 </tr>
 <tr>
-<td><a href="phase_tap_changer/">phase_tap_changer</a></td>
-<td>Phase tap changer associated with this transformer end</td>
-</tr>
-<tr>
-<td><a href="phases/">phases</a></td>
-<td>Represents the normal network phasing condition</td>
-</tr>
-<tr>
 <td><a href="power_transformer/">power_transformer</a></td>
 <td>The power transformer of this power transformer end</td>
-</tr>
-<tr>
-<td><a href="power_transformer_end/">power_transformer_end</a></td>
-<td>The ends of this power transformer</td>
 </tr>
 <tr>
 <td><a href="qfixed/">qfixed</a></td>
@@ -742,22 +650,6 @@
 <td>Rated voltage: phase-phase for three-phase windings, and either phase-phase o...</td>
 </tr>
 <tr>
-<td><a href="ratio_tap_changer/">ratio_tap_changer</a></td>
-<td>Ratio tap changer associated with this transformer end</td>
-</tr>
-<tr>
-<td><a href="region/">region</a></td>
-<td>The SubGeographicalRegion containing the substation</td>
-</tr>
-<tr>
-<td><a href="regions/">regions</a></td>
-<td>All sub-geographical regions within this geographical region</td>
-</tr>
-<tr>
-<td><a href="regulating_control/">regulating_control</a></td>
-<td>The controls regulating this terminal</td>
-</tr>
-<tr>
 <td><a href="retained/">retained</a></td>
 <td>Branch is retained in the topological solution</td>
 </tr>
@@ -774,14 +666,6 @@
 <td>The substation of the voltage level</td>
 </tr>
 <tr>
-<td><a href="substations/">substations</a></td>
-<td>The substations in this sub-geographical region</td>
-</tr>
-<tr>
-<td><a href="switch_schedules/">switch_schedules</a></td>
-<td>A Switch can be associated with SwitchSchedules</td>
-</tr>
-<tr>
 <td><a href="terminal/">terminal</a></td>
 <td>Terminal of the power transformer to which this transformer end belongs</td>
 </tr>
@@ -790,32 +674,12 @@
 <td>Conducting equipment have terminals that may be connected to other conducting...</td>
 </tr>
 <tr>
-<td><a href="tie_flow/">tie_flow</a></td>
-<td>The control area tie flows to which this terminal associates</td>
-</tr>
-<tr>
-<td><a href="transformer_end/">transformer_end</a></td>
-<td>All transformer ends connected at this terminal</td>
-</tr>
-<tr>
 <td><a href="transformer_ends/">transformer_ends</a></td>
 <td>Transformer ends at the base voltage</td>
 </tr>
 <tr>
-<td><a href="unit/">unit</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="value/">value</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="voltage_level/">voltage_level</a></td>
 <td>The voltage levels having this base voltage</td>
-</tr>
-<tr>
-<td><a href="voltage_levels/">voltage_levels</a></td>
-<td>The voltage levels within this substation</td>
 </tr>
 <tr>
 <td><a href="x/">x</a></td>
@@ -914,10 +778,6 @@
 <tr>
 <td><a href="Objectidentifier/">Objectidentifier</a></td>
 <td>A URI or CURIE that represents an object in the model</td>
-</tr>
-<tr>
-<td><a href="ReplacedByProfiler/">ReplacedByProfiler</a></td>
-<td>Range was replaced by the profiler</td>
 </tr>
 <tr>
 <td><a href="Sparqlpath/">Sparqlpath</a></td>

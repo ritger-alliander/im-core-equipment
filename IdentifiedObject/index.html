@@ -205,13 +205,11 @@
 <p>URI: <a href="http://iec.ch/TC57/CIM100#IdentifiedObject">cim:IdentifiedObject</a></p>
 <pre class="mermaid"><code> classDiagram
     class IdentifiedObject
+      IdentifiedObject &lt;|-- TransformerEnd
+      IdentifiedObject &lt;|-- BaseVoltage
       IdentifiedObject &lt;|-- PowerSystemResource
       IdentifiedObject &lt;|-- ConnectivityNode
       IdentifiedObject &lt;|-- ACDCTerminal
-      IdentifiedObject &lt;|-- TransformerEnd
-      IdentifiedObject &lt;|-- BaseVoltage
-      IdentifiedObject &lt;|-- SubGeographicalRegion
-      IdentifiedObject &lt;|-- GeographicalRegion
 
       IdentifiedObject : description
 
@@ -225,13 +223,11 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><strong>IdentifiedObject</strong><ul>
+<li><a href="../TransformerEnd/">TransformerEnd</a></li>
+<li><a href="../BaseVoltage/">BaseVoltage</a></li>
 <li><a href="../PowerSystemResource/">PowerSystemResource</a></li>
 <li><a href="../ConnectivityNode/">ConnectivityNode</a></li>
 <li><a href="../ACDCTerminal/">ACDCTerminal</a></li>
-<li><a href="../TransformerEnd/">TransformerEnd</a></li>
-<li><a href="../BaseVoltage/">BaseVoltage</a></li>
-<li><a href="../SubGeographicalRegion/">SubGeographicalRegion</a></li>
-<li><a href="../GeographicalRegion/">GeographicalRegion</a></li>
 </ul>
 </li>
 </ul>
@@ -345,6 +341,7 @@
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:IdentifiedObject.mRID</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
@@ -415,7 +412,7 @@
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:IdentifiedObject.mRID</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mrid</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
