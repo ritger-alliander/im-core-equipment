@@ -280,70 +280,46 @@
 
 
 <h1 id="about-the-core-equipment-vocabulary">About the Core Equipment Vocabulary</h1>
-<p>This part defines the IEC 61970-450-series and IEC 61968-13 related profiles
-that are included in CGMES. It includes the references to published standards
-and additional constraints defined to the relevant standard. If the relevant
-edition of a standard is not published, it also includes the profile definition
-and the standard’s constraints.</p>
+<p>This is the IEC 61970-452 core equipment profile.</p>
 <p><img alt="Core Equipment Main" src="../assets/core_equipment-20240327.png" /></p>
-<p>There are various levels at which an exchange of power system data/models is
-necessary. A pan-European model exchange level covers the territory of all
-system operators (TSOs and DSOs). Regional model exchanges can be realised
-between different TSOs in one or more synchronous areas. A model exchange on
-the national level includes interfaces between TSOs (in case there are multiple
-TSOs on a national level) as well as between different DSOs.</p>
-<p>The purpose of model exchanges is not only to exchange the data from one
-authority to another but also to satisfy the ultimate goal, namely, to perform
-common studies using shared data. All parties involved in the process should be
-able to perform the same types of studies and share project tasks between
-different parties which are using different power system analysis applications.
-Indeed, the interoperability between different applications used in the
-exchange process is therefore crucial in both reaching seamless data exchange
-and obtaining comparable study results when using this data. The CGMES covers
-these European and system operators (TSOs and DSOs) business processes by
-defining the following main types of exchanges valid for a particular study or
-process:</p>
+<p>An application supporting CGMES shall meet the following requirements and
+constraints:</p>
 <ul>
-<li>Exchange of boundary set: An exchange of a boundary Set is necessary to
-  prepare an exchange of an internal system operator model and to merge a
-  common grid model. E.g. the ENTSO-E Network Modelling Database (NMD) is used
-  to maintain the Boundary Set covering the pan-European area where all TSOs
-  negotiate and agree on the boundary information.</li>
-<li>Exchange of an internal TSO model, i.e. individual grid model (IGM2): A
-  number of business processes require each TSO to provide models of its
-  internal territory. To describe its internal territory in a single
-  stand-alone exchange, a TSO is treated as a single model authority set and
-  shall be able to exchange datasets complying with profiles defined in the
-  CGMES. The TSO prepares its internal model in such a way that it is easily
-  and unambiguously combined with other TSO internal models to make up complete
-  models for analytical purposes. This type of exchange can also be applied for
-  the interface between a TSO and a DSO, where models covering transmission or
-  distribution parts of the power system can be exchanged based on a mutual
-  agreement between the TSOs and the DSOs. In this case, and if a TSO requests
-  a DSO model, the DSO would provide its model in accordance with CGMES
-  definitions.</li>
-<li>Exchange of a common grid model: A common grid model refers to the concept of
-  having one model which can be used for multiple purposes. The specification
-  describes what is needed to create a merge model of multiple TSOs' Individual
-  Grid Models (IGM) of their responsible territory into a regional or
-  pan-European model. Various business processes will require specific
-  implementation of the profiles part of the CGMES and the exchange of
-  respective instance files to meet interoperability inside the business
-  process. The Common Grid Model meta-model description will ensure
-  interoperability across the business process.</li>
+<li>Model exchange containing node-breaker, bus-branch and hybrid (mixed
+  bus-branch and node-breaker) model representations;</li>
+<li>One model authority set containing modelling parts representing different
+  granularity, i.e. different subsets of the model can be modelled in detail
+  as a node-breaker model while other subsets can be with bus-branch level of
+  detail;</li>
+<li>ConnectivityNode object instances shall be included in Core Equipment profile
+  instance;</li>
+<li>TopologicalNode object instances are representing a given result of a
+  topology processing (EXCH1, EXCH2) or a designed topology;</li>
+<li>The association end Terminal.ConnectivityNode is optional in the Core
+  Equipment profile instance. However, a model including topology requires
+  Terminals to have an association to either ConnectivityNode, TopologyNode or
+  both;</li>
+<li>The association end ConnectivityNode.TopologicalNode is required in the
+  Topology profile distribution;</li>
+<li>The association end Terminal.TopologicalNode is optional, while at least one
+  instance of TopologicalNode.Terminal is required;</li>
+<li>The association end Terminal.TopologicalNode is required in cases where a
+  RegulatingControl is associated with a Terminal; Justification and
+  consequence:</li>
+<li>ConnectivityNode is a required class in Core Equipment instance data.
+  Therefore, all model representations are built with ConnectivityNode-s;
+  Historically there is assumption that ConnectivityNode-s are for node-breaker
+  style modelling only (whereas TopologicalNode-s are for bus-branch modelling,
+  typically resulting from topology processing on node-breaker models, with
+  buses used to construct the admittance matrix for power flow).
+  ConnectivityNode-s can actually be used for both modelling styles, which is
+  the prescribed way of describing electrical connectivity of
+  ConductingEquipment. For pure bus-branch models, this will mean one
+  additional object (ConnectivityNode) per existing TopologicalNode.</li>
+<li>The header information provided in the attribute Model.profile does not give
+  any information about the model authority set model representation
+  (bus-branch, node-breaker or hybrid).</li>
 </ul>
-<p>Business processes (e.g. system development planning, protection planning,
-operational planning, operation, fault study/simulation, market operation,
-etc.) are, of course, more complex than these operations, but what is important
-to note is that all processes are supported using only these basic kinds of
-interoperation. In addition, business processes shall define or precise, where
-necessary, the content of the data exchange within the scope of the defined
-profiles. For instance, OperationalLimitSet can be used to constraint any
-conducting equipment. It is up to the business process to define if any
-equipment is mandatory to have operational limits. Note that each power system
-model normally consists of multiple datasets (distribution) as defined in CIM
-standards and further specified by CGMES.</p>
-<p>The CGMES supports node-breaker (NB) and bus-branch (BB) model exchanges.</p>
 
 
 

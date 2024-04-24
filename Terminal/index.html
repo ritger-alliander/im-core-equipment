@@ -224,11 +224,23 @@
 
       Terminal : energy_ident_code_eic
 
-      Terminal : mrid
+      Terminal : m_rid
+
+      Terminal : names
+
+          Terminal --&gt; Name : names
+
+      Terminal : phases
+
+          Terminal --&gt; PhaseCode : phases
 
       Terminal : sequence_number
 
       Terminal : short_name
+
+      Terminal : transformer_end
+
+          Terminal --&gt; TransformerEnd : transformer_end
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -265,6 +277,18 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../phases/">phases</a></td>
+<td>0..1 <br/> <a href="../PhaseCode/">PhaseCode</a></td>
+<td>Represents the normal network phasing condition</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../transformer_end/">transformer_end</a></td>
+<td>0..* <br/> <a href="../TransformerEnd/">TransformerEnd</a></td>
+<td>All transformer ends connected at this terminal</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../sequence_number/">sequence_number</a></td>
 <td>1..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>The orientation of the terminal connections for a multiple terminal conductin...</td>
@@ -283,7 +307,7 @@
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../mrid/">mrid</a></td>
+<td><a href="../m_rid/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -292,6 +316,12 @@
 <td><a href="../short_name/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
+<td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
+</tr>
+<tr>
+<td><a href="../names/">names</a></td>
+<td>0..* <br/> <a href="../Name/">Name</a></td>
+<td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 </tbody>
@@ -308,14 +338,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
-<td><a href="../terminal/">terminal</a></td>
+<td><a href="../ACLineSegment/">ACLineSegment</a></td>
+<td><a href="../terminals/">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
-<td><a href="../TransformerEnd/">TransformerEnd</a></td>
-<td><a href="../terminal/">terminal</a></td>
+<td><a href="../Conductor/">Conductor</a></td>
+<td><a href="../terminals/">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
@@ -326,19 +356,19 @@
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
+<td><a href="../TransformerEnd/">TransformerEnd</a></td>
+<td><a href="../terminal/">terminal</a></td>
+<td>range</td>
+<td><a href="./">Terminal</a></td>
+</tr>
+<tr>
 <td><a href="../ConnectivityNode/">ConnectivityNode</a></td>
 <td><a href="../terminals/">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
-<td><a href="../PowerTransformer/">PowerTransformer</a></td>
-<td><a href="../terminals/">terminals</a></td>
-<td>range</td>
-<td><a href="./">Terminal</a></td>
-</tr>
-<tr>
-<td><a href="../Conductor/">Conductor</a></td>
+<td><a href="../Breaker/">Breaker</a></td>
 <td><a href="../terminals/">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
@@ -356,19 +386,7 @@
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
-<td><a href="../EnergyConsumer/">EnergyConsumer</a></td>
-<td><a href="../terminals/">terminals</a></td>
-<td>range</td>
-<td><a href="./">Terminal</a></td>
-</tr>
-<tr>
-<td><a href="../EnergyConnection/">EnergyConnection</a></td>
-<td><a href="../terminals/">terminals</a></td>
-<td>range</td>
-<td><a href="./">Terminal</a></td>
-</tr>
-<tr>
-<td><a href="../Breaker/">Breaker</a></td>
+<td><a href="../BusbarSection/">BusbarSection</a></td>
 <td><a href="../terminals/">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
@@ -386,13 +404,13 @@
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
-<td><a href="../BusbarSection/">BusbarSection</a></td>
+<td><a href="../EnergyConsumer/">EnergyConsumer</a></td>
 <td><a href="../terminals/">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
-<td><a href="../ACLineSegment/">ACLineSegment</a></td>
+<td><a href="../EnergyConnection/">EnergyConnection</a></td>
 <td><a href="../terminals/">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
@@ -406,6 +424,18 @@
 <tr>
 <td><a href="../LoadBreakSwitch/">LoadBreakSwitch</a></td>
 <td><a href="../terminals/">terminals</a></td>
+<td>range</td>
+<td><a href="./">Terminal</a></td>
+</tr>
+<tr>
+<td><a href="../PowerTransformer/">PowerTransformer</a></td>
+<td><a href="../terminals/">terminals</a></td>
+<td>range</td>
+<td><a href="./">Terminal</a></td>
+</tr>
+<tr>
+<td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
+<td><a href="../terminal/">terminal</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
@@ -470,6 +500,35 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConnectivityNode</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">phases</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phases</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">normal</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">phasing</span><span class="nv"> </span><span class="s">condition.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">missing,</span><span class="nv"> </span><span class="s">three</span><span class="nv"> </span><span class="s">phases</span><span class="nv"> </span><span class="s">(ABC)</span><span class="nv"> </span><span class="s">shall</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">assumed,</span><span class="nv"> </span><span class="s">except</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">terminals</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">grounding</span>
+<span class="w">      </span><span class="s">classes</span><span class="nv"> </span><span class="s">(specializations</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">EarthFaultCompensator,</span><span class="nv"> </span><span class="s">GroundDisconnector,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Ground)</span>
+<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">assumed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">N.</span><span class="nv"> </span><span class="s">Therefore,</span><span class="nv"> </span><span class="s">phase</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">ABCN</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">explicitly</span><span class="nv"> </span><span class="s">declared</span>
+<span class="w">      </span><span class="s">when</span><span class="nv"> </span><span class="s">needed,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">star</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">grounding</span><span class="nv"> </span><span class="s">equipment.</span>
+
+<span class="w">      </span><span class="s">The</span><span class="nv"> </span><span class="s">phase</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">terminals</span><span class="nv"> </span><span class="s">connecting</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">ConnectivityNode</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">TopologicalNode</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">well</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">equipment</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">two</span><span class="nv"> </span><span class="s">terminals</span><span class="nv"> </span><span class="s">shall</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">consistent.'</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:Terminal.phases</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PhaseCode</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">transformer_end</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer_end</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">All transformer ends connected at this terminal.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:Terminal.TransformerEnd</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TransformerEnd</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:Terminal</span>
 </code></pre></div>
 </details>
@@ -510,6 +569,39 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConnectivityNode</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">phases</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phases</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">normal</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">phasing</span><span class="nv"> </span><span class="s">condition.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">missing,</span><span class="nv"> </span><span class="s">three</span><span class="nv"> </span><span class="s">phases</span><span class="nv"> </span><span class="s">(ABC)</span><span class="nv"> </span><span class="s">shall</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">assumed,</span><span class="nv"> </span><span class="s">except</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">terminals</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">grounding</span>
+<span class="w">      </span><span class="s">classes</span><span class="nv"> </span><span class="s">(specializations</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">EarthFaultCompensator,</span><span class="nv"> </span><span class="s">GroundDisconnector,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Ground)</span>
+<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">assumed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">N.</span><span class="nv"> </span><span class="s">Therefore,</span><span class="nv"> </span><span class="s">phase</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">ABCN</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">explicitly</span><span class="nv"> </span><span class="s">declared</span>
+<span class="w">      </span><span class="s">when</span><span class="nv"> </span><span class="s">needed,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">star</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">grounding</span><span class="nv"> </span><span class="s">equipment.</span>
+
+<span class="w">      </span><span class="s">The</span><span class="nv"> </span><span class="s">phase</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">terminals</span><span class="nv"> </span><span class="s">connecting</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">ConnectivityNode</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">TopologicalNode</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">well</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">equipment</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">two</span><span class="nv"> </span><span class="s">terminals</span><span class="nv"> </span><span class="s">shall</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">consistent.'</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:Terminal.phases</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phases</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PhaseCode</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">transformer_end</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer_end</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">All transformer ends connected at this terminal.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:Terminal.TransformerEnd</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transformer_end</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TransformerEnd</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">sequence_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sequence_number</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The orientation of the terminal connections for a multiple terminal</span>
@@ -538,6 +630,8 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameTypeAuthority</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">energy_ident_code_eic</span><span class="p">:</span>
@@ -555,8 +649,8 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">  </span><span class="nt">mrid</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mrid</span>
+<span class="w">  </span><span class="nt">m_rid</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">m_rid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Master</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">issued</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">authority.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">mRID</span>
 <span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">exchange</span><span class="nv"> </span><span class="s">context.</span><span class="nv"> </span><span class="s">Global</span><span class="nv"> </span><span class="s">uniqueness</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">easily</span><span class="nv"> </span><span class="s">achieved</span><span class="nv"> </span><span class="s">by</span>
 <span class="w">      </span><span class="s">using</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">UUID,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">4122,</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">mRID.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">UUID</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">strongly</span>
@@ -568,8 +662,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:IdentifiedObject.mRID</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">m_rid</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
@@ -588,6 +681,20 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">names</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">names</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">All names of this identified object.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://iec.ch/TC57/ns/CIM/CoreEquipment-EU#Package_CoreEquipmentProfile</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:IdentifiedObject.Names</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">names</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminal</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:Terminal</span>
 </code></pre></div>
