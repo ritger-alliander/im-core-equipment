@@ -1,6 +1,6 @@
 # im-core-equipment
 
-Core Equipment Profile
+Core Equipment Profile based on CGMES.
 
 ## Website
 
