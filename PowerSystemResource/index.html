@@ -208,27 +208,32 @@
 <h1 id="class-powersystemresource">Class: PowerSystemResource</h1>
 <p><em>A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#PowerSystemResource">cim:PowerSystemResource</a></p>
-<pre class="mermaid"><code> classDiagram
-    class PowerSystemResource
-      IdentifiedObject &lt;|-- PowerSystemResource
+<pre class="mermaid"><code>erDiagram
+PowerSystemResource {
+    string description  
+    string energy_ident_code_eic  
+    string m_rid  
+    string short_name  
+}
+Name {
 
+}
+IdentifiedObject {
+    string description  
+    string energy_ident_code_eic  
+    string m_rid  
+    string short_name  
+}
+NameType {
+    string description  
+}
 
-      PowerSystemResource &lt;|-- ConnectivityNodeContainer
-      PowerSystemResource &lt;|-- Equipment
-
-
-      PowerSystemResource : description
-
-      PowerSystemResource : energy_ident_code_eic
-
-      PowerSystemResource : m_rid
-
-      PowerSystemResource : names
-
-          PowerSystemResource --&gt; Name : names
-
-      PowerSystemResource : short_name
-
+PowerSystemResource ||--}o Name : "names"
+Name ||--|| NameType : "name_type"
+Name ||--|| IdentifiedObject : "identified_object"
+IdentifiedObject ||--}o Name : "names"
+NameType ||--|o NameTypeAuthority : "name_type_authority"
+NameType ||--}o Name : "names"
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

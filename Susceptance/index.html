@@ -203,17 +203,13 @@
 <h1 id="class-susceptance">Class: Susceptance</h1>
 <p><em>Imaginary part of admittance.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Susceptance">cim:Susceptance</a></p>
-<pre class="mermaid"><code> classDiagram
-    class Susceptance
-      Susceptance : multiplier
+<pre class="mermaid"><code>erDiagram
+Susceptance {
+    float value  
+    UnitSymbol unit  
+    UnitMultiplier multiplier  
+}
 
-          Susceptance --&gt; UnitMultiplier : multiplier
-
-      Susceptance : unit
-
-          Susceptance --&gt; UnitSymbol : unit
-
-      Susceptance : value
 
 </code></pre>
 <!-- no inheritance hierarchy -->

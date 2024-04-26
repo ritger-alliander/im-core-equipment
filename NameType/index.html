@@ -207,18 +207,29 @@ _</p>
 _</p>
 <p>__</p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#NameType">cim:NameType</a></p>
-<pre class="mermaid"><code> classDiagram
-    class NameType
-      NameType : description
+<pre class="mermaid"><code>erDiagram
+NameType {
+    string description  
+}
+Name {
 
-      NameType : name_type_authority
+}
+IdentifiedObject {
+    string description  
+    string energy_ident_code_eic  
+    string m_rid  
+    string short_name  
+}
+NameTypeAuthority {
+    string description  
+}
 
-          NameType --&gt; NameTypeAuthority : name_type_authority
-
-      NameType : names
-
-          NameType --&gt; Name : names
-
+NameType ||--|o NameTypeAuthority : "name_type_authority"
+NameType ||--}o Name : "names"
+Name ||--|| NameType : "name_type"
+Name ||--|| IdentifiedObject : "identified_object"
+IdentifiedObject ||--}o Name : "names"
+NameTypeAuthority ||--}o NameType : "name_types"
 </code></pre>
 <!-- no inheritance hierarchy -->
 <h2 id="slots">Slots</h2>

@@ -205,14 +205,22 @@
 _</p>
 <p>__</p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#NameTypeAuthority">cim:NameTypeAuthority</a></p>
-<pre class="mermaid"><code> classDiagram
-    class NameTypeAuthority
-      NameTypeAuthority : description
+<pre class="mermaid"><code>erDiagram
+NameTypeAuthority {
+    string description  
+}
+NameType {
+    string description  
+}
+Name {
 
-      NameTypeAuthority : name_types
+}
 
-          NameTypeAuthority --&gt; NameType : name_types
-
+NameTypeAuthority ||--}o NameType : "name_types"
+NameType ||--|o NameTypeAuthority : "name_type_authority"
+NameType ||--}o Name : "names"
+Name ||--|| NameType : "name_type"
+Name ||--|| IdentifiedObject : "identified_object"
 </code></pre>
 <!-- no inheritance hierarchy -->
 <h2 id="slots">Slots</h2>

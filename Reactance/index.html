@@ -203,17 +203,13 @@
 <h1 id="class-reactance">Class: Reactance</h1>
 <p><em>Reactance (imaginary part of impedance), at rated frequency.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Reactance">cim:Reactance</a></p>
-<pre class="mermaid"><code> classDiagram
-    class Reactance
-      Reactance : multiplier
+<pre class="mermaid"><code>erDiagram
+Reactance {
+    float value  
+    UnitSymbol unit  
+    UnitMultiplier multiplier  
+}
 
-          Reactance --&gt; UnitMultiplier : multiplier
-
-      Reactance : unit
-
-          Reactance --&gt; UnitSymbol : unit
-
-      Reactance : value
 
 </code></pre>
 <!-- no inheritance hierarchy -->

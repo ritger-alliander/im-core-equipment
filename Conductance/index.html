@@ -203,17 +203,13 @@
 <h1 id="class-conductance">Class: Conductance</h1>
 <p><em>Factor by which voltage must be multiplied to give corresponding power lost from a circuit. Real part of admittance.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Conductance">cim:Conductance</a></p>
-<pre class="mermaid"><code> classDiagram
-    class Conductance
-      Conductance : multiplier
+<pre class="mermaid"><code>erDiagram
+Conductance {
+    float value  
+    UnitSymbol unit  
+    UnitMultiplier multiplier  
+}
 
-          Conductance --&gt; UnitMultiplier : multiplier
-
-      Conductance : unit
-
-          Conductance --&gt; UnitSymbol : unit
-
-      Conductance : value
 
 </code></pre>
 <!-- no inheritance hierarchy -->

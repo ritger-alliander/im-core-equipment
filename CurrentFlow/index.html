@@ -203,17 +203,13 @@
 <h1 id="class-currentflow">Class: CurrentFlow</h1>
 <p><em>Electrical current with sign convention: positive flow is out of the conducting equipment into the connectivity node. Can be both AC and DC.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#CurrentFlow">cim:CurrentFlow</a></p>
-<pre class="mermaid"><code> classDiagram
-    class CurrentFlow
-      CurrentFlow : multiplier
+<pre class="mermaid"><code>erDiagram
+CurrentFlow {
+    float value  
+    UnitMultiplier multiplier  
+    UnitSymbol unit  
+}
 
-          CurrentFlow --&gt; UnitMultiplier : multiplier
-
-      CurrentFlow : unit
-
-          CurrentFlow --&gt; UnitSymbol : unit
-
-      CurrentFlow : value
 
 </code></pre>
 <!-- no inheritance hierarchy -->

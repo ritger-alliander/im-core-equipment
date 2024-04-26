@@ -209,31 +209,40 @@ _</p>
 _</p>
 <p><em>- as attributes of a type asset (generic type of an asset as used in designs/extension planning).</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#AssetInfo">cim:AssetInfo</a></p>
-<pre class="mermaid"><code> classDiagram
-    class AssetInfo
-      IdentifiedObject &lt;|-- AssetInfo
+<pre class="mermaid"><code>erDiagram
+AssetInfo {
+    string description  
+    string energy_ident_code_eic  
+    string m_rid  
+    string short_name  
+}
+Name {
 
+}
+IdentifiedObject {
+    string description  
+    string energy_ident_code_eic  
+    string m_rid  
+    string short_name  
+}
+NameType {
+    string description  
+}
+PowerSystemResource {
+    string description  
+    string energy_ident_code_eic  
+    string m_rid  
+    string short_name  
+}
 
-      AssetInfo &lt;|-- BusbarSectionInfo
-      AssetInfo &lt;|-- WireInfo
-
-
-      AssetInfo : description
-
-      AssetInfo : energy_ident_code_eic
-
-      AssetInfo : m_rid
-
-      AssetInfo : names
-
-          AssetInfo --&gt; Name : names
-
-      AssetInfo : power_system_resources
-
-          AssetInfo --&gt; PowerSystemResource : power_system_resources
-
-      AssetInfo : short_name
-
+AssetInfo ||--}o PowerSystemResource : "power_system_resources"
+AssetInfo ||--}o Name : "names"
+Name ||--|| NameType : "name_type"
+Name ||--|| IdentifiedObject : "identified_object"
+IdentifiedObject ||--}o Name : "names"
+NameType ||--|o NameTypeAuthority : "name_type_authority"
+NameType ||--}o Name : "names"
+PowerSystemResource ||--}o Name : "names"
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

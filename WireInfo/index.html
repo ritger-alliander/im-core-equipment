@@ -205,62 +205,61 @@
 _</p>
 <p>__</p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#WireInfo">cim:WireInfo</a></p>
-<pre class="mermaid"><code> classDiagram
-    class WireInfo
-      AssetInfo &lt;|-- WireInfo
+<pre class="mermaid"><code>erDiagram
+WireInfo {
+    integer core_strand_count  
+    boolean insulated  
+    WireInsulationKind insulation_material  
+    WireMaterialKind material  
+    string size_description  
+    integer strand_count  
+    string description  
+    string energy_ident_code_eic  
+    string m_rid  
+    string short_name  
+}
+Name {
 
-      WireInfo : core_radius
+}
+IdentifiedObject {
+    string description  
+    string energy_ident_code_eic  
+    string m_rid  
+    string short_name  
+}
+NameType {
+    string description  
+}
+PowerSystemResource {
+    string description  
+    string energy_ident_code_eic  
+    string m_rid  
+    string short_name  
+}
+CurrentFlow {
+    float value  
+    UnitMultiplier multiplier  
+    UnitSymbol unit  
+}
+Length {
+    float value  
+    UnitSymbol unit  
+    UnitMultiplier multiplier  
+}
 
-          WireInfo --&gt; Length : core_radius
-
-      WireInfo : core_strand_count
-
-      WireInfo : description
-
-      WireInfo : energy_ident_code_eic
-
-      WireInfo : gmr
-
-          WireInfo --&gt; Length : gmr
-
-      WireInfo : insulated
-
-      WireInfo : insulation_material
-
-          WireInfo --&gt; WireInsulationKind : insulation_material
-
-      WireInfo : insulation_thickness
-
-          WireInfo --&gt; Length : insulation_thickness
-
-      WireInfo : m_rid
-
-      WireInfo : material
-
-          WireInfo --&gt; WireMaterialKind : material
-
-      WireInfo : names
-
-          WireInfo --&gt; Name : names
-
-      WireInfo : power_system_resources
-
-          WireInfo --&gt; PowerSystemResource : power_system_resources
-
-      WireInfo : radius
-
-          WireInfo --&gt; Length : radius
-
-      WireInfo : rated_current
-
-          WireInfo --&gt; CurrentFlow : rated_current
-
-      WireInfo : short_name
-
-      WireInfo : size_description
-
-      WireInfo : strand_count
-
+WireInfo ||--|o Length : "core_radius"
+WireInfo ||--|o Length : "gmr"
+WireInfo ||--|o Length : "insulation_thickness"
+WireInfo ||--|o Length : "radius"
+WireInfo ||--|o CurrentFlow : "rated_current"
+WireInfo ||--}o PowerSystemResource : "power_system_resources"
+WireInfo ||--}o Name : "names"
+Name ||--|| NameType : "name_type"
+Name ||--|| IdentifiedObject : "identified_object"
+IdentifiedObject ||--}o Name : "names"
+NameType ||--|o NameTypeAuthority : "name_type_authority"
+NameType ||--}o Name : "names"
+PowerSystemResource ||--}o Name : "names"
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

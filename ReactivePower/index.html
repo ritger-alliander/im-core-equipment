@@ -203,17 +203,13 @@
 <h1 id="class-reactivepower">Class: ReactivePower</h1>
 <p><em>Product of RMS value of the voltage and the RMS value of the quadrature component of the current.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#ReactivePower">cim:ReactivePower</a></p>
-<pre class="mermaid"><code> classDiagram
-    class ReactivePower
-      ReactivePower : multiplier
+<pre class="mermaid"><code>erDiagram
+ReactivePower {
+    float value  
+    UnitSymbol unit  
+    UnitMultiplier multiplier  
+}
 
-          ReactivePower --&gt; UnitMultiplier : multiplier
-
-      ReactivePower : unit
-
-          ReactivePower --&gt; UnitSymbol : unit
-
-      ReactivePower : value
 
 </code></pre>
 <!-- no inheritance hierarchy -->

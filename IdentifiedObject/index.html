@@ -208,27 +208,25 @@
 <h1 id="class-identifiedobject">Class: IdentifiedObject</h1>
 <p><em>This is a root class to provide common identification for all classes needing identification and naming attributes.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#IdentifiedObject">cim:IdentifiedObject</a></p>
-<pre class="mermaid"><code> classDiagram
-    class IdentifiedObject
-      IdentifiedObject &lt;|-- BaseVoltage
-      IdentifiedObject &lt;|-- TransformerEnd
-      IdentifiedObject &lt;|-- ConnectivityNode
-      IdentifiedObject &lt;|-- PowerSystemResource
-      IdentifiedObject &lt;|-- ACDCTerminal
-      IdentifiedObject &lt;|-- AssetInfo
+<pre class="mermaid"><code>erDiagram
+IdentifiedObject {
+    string description  
+    string energy_ident_code_eic  
+    string m_rid  
+    string short_name  
+}
+Name {
 
-      IdentifiedObject : description
+}
+NameType {
+    string description  
+}
 
-      IdentifiedObject : energy_ident_code_eic
-
-      IdentifiedObject : m_rid
-
-      IdentifiedObject : names
-
-          IdentifiedObject --&gt; Name : names
-
-      IdentifiedObject : short_name
-
+IdentifiedObject ||--}o Name : "names"
+Name ||--|| NameType : "name_type"
+Name ||--|| IdentifiedObject : "identified_object"
+NameType ||--|o NameTypeAuthority : "name_type_authority"
+NameType ||--}o Name : "names"
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

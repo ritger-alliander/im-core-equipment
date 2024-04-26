@@ -203,17 +203,13 @@
 <h1 id="class-activepower">Class: ActivePower</h1>
 <p><em>Product of RMS value of the voltage and the RMS value of the in-phase component of the current.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#ActivePower">cim:ActivePower</a></p>
-<pre class="mermaid"><code> classDiagram
-    class ActivePower
-      ActivePower : multiplier
+<pre class="mermaid"><code>erDiagram
+ActivePower {
+    float value  
+    UnitMultiplier multiplier  
+    UnitSymbol unit  
+}
 
-          ActivePower --&gt; UnitMultiplier : multiplier
-
-      ActivePower : unit
-
-          ActivePower --&gt; UnitSymbol : unit
-
-      ActivePower : value
 
 </code></pre>
 <!-- no inheritance hierarchy -->
