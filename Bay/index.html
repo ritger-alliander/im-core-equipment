@@ -208,123 +208,34 @@
 <h1 id="class-bay">Class: Bay</h1>
 <p><em>A collection of power system resources (within a given substation) including conducting equipment, protection relays, measurements, and telemetry.  A bay typically represents a physical grouping related to modularization of equipment.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Bay">cim:Bay</a></p>
-<pre class="mermaid"><code>erDiagram
-Bay {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Name {
+<pre class="mermaid"><code> classDiagram
+    class Bay
+      EquipmentContainer &lt;|-- Bay
 
-}
-IdentifiedObject {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-NameType {
-    string description  
-}
-ConnectivityNode {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-ConnectivityNodeContainer {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Terminal {
-    PhaseCode phases  
-    integer sequence_number  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Equipment {
-    boolean aggregate  
-    boolean normally_in_service  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-EquipmentContainer {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-VoltageLevel {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Voltage {
-    float value  
-    UnitMultiplier multiplier  
-    UnitSymbol unit  
-}
-Substation {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-BaseVoltage {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
+      Bay : connectivity_nodes
 
-Bay ||--|| VoltageLevel : "voltage_level"
-Bay ||--}o Equipment : "equipments"
-Bay ||--}o ConnectivityNode : "connectivity_nodes"
-Bay ||--}o Name : "names"
-Name ||--|| NameType : "name_type"
-Name ||--|| IdentifiedObject : "identified_object"
-IdentifiedObject ||--}o Name : "names"
-NameType ||--|o NameTypeAuthority : "name_type_authority"
-NameType ||--}o Name : "names"
-ConnectivityNode ||--}o Terminal : "terminals"
-ConnectivityNode ||--|| ConnectivityNodeContainer : "connectivity_node_container"
-ConnectivityNode ||--}o Name : "names"
-ConnectivityNodeContainer ||--}o ConnectivityNode : "connectivity_nodes"
-ConnectivityNodeContainer ||--}o Name : "names"
-Terminal ||--|| ConductingEquipment : "conducting_equipment"
-Terminal ||--|o ConnectivityNode : "connectivity_node"
-Terminal ||--}o TransformerEnd : "transformer_end"
-Terminal ||--}o Name : "names"
-Equipment ||--|o EquipmentContainer : "equipment_container"
-Equipment ||--}o Name : "names"
-EquipmentContainer ||--}o Equipment : "equipments"
-EquipmentContainer ||--}o ConnectivityNode : "connectivity_nodes"
-EquipmentContainer ||--}o Name : "names"
-VoltageLevel ||--|| BaseVoltage : "base_voltage"
-VoltageLevel ||--}o Bay : "bays"
-VoltageLevel ||--|| Substation : "substation"
-VoltageLevel ||--|o Voltage : "high_voltage_limit"
-VoltageLevel ||--|o Voltage : "low_voltage_limit"
-VoltageLevel ||--}o Equipment : "equipments"
-VoltageLevel ||--}o ConnectivityNode : "connectivity_nodes"
-VoltageLevel ||--}o Name : "names"
-Substation ||--}o VoltageLevel : "voltage_levels"
-Substation ||--}o Equipment : "equipments"
-Substation ||--}o ConnectivityNode : "connectivity_nodes"
-Substation ||--}o Name : "names"
-BaseVoltage ||--|| Voltage : "nominal_voltage"
-BaseVoltage ||--}o ConductingEquipment : "conducting_equipment"
-BaseVoltage ||--}o VoltageLevel : "voltage_level"
-BaseVoltage ||--}o TransformerEnd : "transformer_ends"
-BaseVoltage ||--}o Name : "names"
+          Bay --&gt; ConnectivityNode : connectivity_nodes
+
+      Bay : description
+
+      Bay : energy_ident_code_eic
+
+      Bay : equipments
+
+          Bay --&gt; Equipment : equipments
+
+      Bay : m_rid
+
+      Bay : names
+
+          Bay --&gt; Name : names
+
+      Bay : short_name
+
+      Bay : voltage_level
+
+          Bay --&gt; VoltageLevel : voltage_level
+
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

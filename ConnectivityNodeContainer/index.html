@@ -208,54 +208,30 @@
 <h1 id="class-connectivitynodecontainer">Class: ConnectivityNodeContainer</h1>
 <p><em>A base class for all objects that may contain connectivity nodes or topological nodes.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#ConnectivityNodeContainer">cim:ConnectivityNodeContainer</a></p>
-<pre class="mermaid"><code>erDiagram
-ConnectivityNodeContainer {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Name {
+<pre class="mermaid"><code> classDiagram
+    class ConnectivityNodeContainer
+      PowerSystemResource &lt;|-- ConnectivityNodeContainer
 
-}
-IdentifiedObject {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-NameType {
-    string description  
-}
-ConnectivityNode {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Terminal {
-    PhaseCode phases  
-    integer sequence_number  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
 
-ConnectivityNodeContainer ||--}o ConnectivityNode : "connectivity_nodes"
-ConnectivityNodeContainer ||--}o Name : "names"
-Name ||--|| NameType : "name_type"
-Name ||--|| IdentifiedObject : "identified_object"
-IdentifiedObject ||--}o Name : "names"
-NameType ||--|o NameTypeAuthority : "name_type_authority"
-NameType ||--}o Name : "names"
-ConnectivityNode ||--}o Terminal : "terminals"
-ConnectivityNode ||--|| ConnectivityNodeContainer : "connectivity_node_container"
-ConnectivityNode ||--}o Name : "names"
-Terminal ||--|| ConductingEquipment : "conducting_equipment"
-Terminal ||--|o ConnectivityNode : "connectivity_node"
-Terminal ||--}o TransformerEnd : "transformer_end"
-Terminal ||--}o Name : "names"
+      ConnectivityNodeContainer &lt;|-- EquipmentContainer
+
+
+      ConnectivityNodeContainer : connectivity_nodes
+
+          ConnectivityNodeContainer --&gt; ConnectivityNode : connectivity_nodes
+
+      ConnectivityNodeContainer : description
+
+      ConnectivityNodeContainer : energy_ident_code_eic
+
+      ConnectivityNodeContainer : m_rid
+
+      ConnectivityNodeContainer : names
+
+          ConnectivityNodeContainer --&gt; Name : names
+
+      ConnectivityNodeContainer : short_name
+
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

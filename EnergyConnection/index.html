@@ -203,129 +203,42 @@
 <h1 id="class-energyconnection">Class: EnergyConnection</h1>
 <p><em>A connection of energy generation or consumption on the power system model.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#EnergyConnection">cim:EnergyConnection</a></p>
-<pre class="mermaid"><code>erDiagram
-EnergyConnection {
-    boolean aggregate  
-    boolean normally_in_service  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Name {
+<pre class="mermaid"><code> classDiagram
+    class EnergyConnection
+      ConductingEquipment &lt;|-- EnergyConnection
 
-}
-IdentifiedObject {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-NameType {
-    string description  
-}
-EquipmentContainer {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-ConnectivityNode {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Equipment {
-    boolean aggregate  
-    boolean normally_in_service  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Terminal {
-    PhaseCode phases  
-    integer sequence_number  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-TransformerEnd {
-    integer end_number  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-ConductingEquipment {
-    boolean aggregate  
-    boolean normally_in_service  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-BaseVoltage {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-VoltageLevel {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Voltage {
-    float value  
-    UnitMultiplier multiplier  
-    UnitSymbol unit  
-}
 
-EnergyConnection ||--|o BaseVoltage : "base_voltage"
-EnergyConnection ||--}o Terminal : "terminals"
-EnergyConnection ||--|o EquipmentContainer : "equipment_container"
-EnergyConnection ||--}o Name : "names"
-Name ||--|| NameType : "name_type"
-Name ||--|| IdentifiedObject : "identified_object"
-IdentifiedObject ||--}o Name : "names"
-NameType ||--|o NameTypeAuthority : "name_type_authority"
-NameType ||--}o Name : "names"
-EquipmentContainer ||--}o Equipment : "equipments"
-EquipmentContainer ||--}o ConnectivityNode : "connectivity_nodes"
-EquipmentContainer ||--}o Name : "names"
-ConnectivityNode ||--}o Terminal : "terminals"
-ConnectivityNode ||--|| ConnectivityNodeContainer : "connectivity_node_container"
-ConnectivityNode ||--}o Name : "names"
-Equipment ||--|o EquipmentContainer : "equipment_container"
-Equipment ||--}o Name : "names"
-Terminal ||--|| ConductingEquipment : "conducting_equipment"
-Terminal ||--|o ConnectivityNode : "connectivity_node"
-Terminal ||--}o TransformerEnd : "transformer_end"
-Terminal ||--}o Name : "names"
-TransformerEnd ||--|| BaseVoltage : "base_voltage"
-TransformerEnd ||--|| Terminal : "terminal"
-TransformerEnd ||--}o Name : "names"
-ConductingEquipment ||--|o BaseVoltage : "base_voltage"
-ConductingEquipment ||--}o Terminal : "terminals"
-ConductingEquipment ||--|o EquipmentContainer : "equipment_container"
-ConductingEquipment ||--}o Name : "names"
-BaseVoltage ||--|| Voltage : "nominal_voltage"
-BaseVoltage ||--}o ConductingEquipment : "conducting_equipment"
-BaseVoltage ||--}o VoltageLevel : "voltage_level"
-BaseVoltage ||--}o TransformerEnd : "transformer_ends"
-BaseVoltage ||--}o Name : "names"
-VoltageLevel ||--|| BaseVoltage : "base_voltage"
-VoltageLevel ||--}o Bay : "bays"
-VoltageLevel ||--|| Substation : "substation"
-VoltageLevel ||--|o Voltage : "high_voltage_limit"
-VoltageLevel ||--|o Voltage : "low_voltage_limit"
-VoltageLevel ||--}o Equipment : "equipments"
-VoltageLevel ||--}o ConnectivityNode : "connectivity_nodes"
-VoltageLevel ||--}o Name : "names"
+      EnergyConnection &lt;|-- EnergyConsumer
+
+
+      EnergyConnection : aggregate
+
+      EnergyConnection : base_voltage
+
+          EnergyConnection --&gt; BaseVoltage : base_voltage
+
+      EnergyConnection : description
+
+      EnergyConnection : energy_ident_code_eic
+
+      EnergyConnection : equipment_container
+
+          EnergyConnection --&gt; EquipmentContainer : equipment_container
+
+      EnergyConnection : m_rid
+
+      EnergyConnection : names
+
+          EnergyConnection --&gt; Name : names
+
+      EnergyConnection : normally_in_service
+
+      EnergyConnection : short_name
+
+      EnergyConnection : terminals
+
+          EnergyConnection --&gt; Terminal : terminals
+
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

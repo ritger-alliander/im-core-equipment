@@ -203,13 +203,17 @@
 <h1 id="class-percent">Class: PerCent</h1>
 <p><em>Percentage on a defined base.   For example, specify as 100 to indicate at the defined base.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#PerCent">cim:PerCent</a></p>
-<pre class="mermaid"><code>erDiagram
-PerCent {
-    float value  
-    UnitSymbol unit  
-    UnitMultiplier multiplier  
-}
+<pre class="mermaid"><code> classDiagram
+    class PerCent
+      PerCent : multiplier
 
+          PerCent --&gt; UnitMultiplier : multiplier
+
+      PerCent : unit
+
+          PerCent --&gt; UnitSymbol : unit
+
+      PerCent : value
 
 </code></pre>
 <!-- no inheritance hierarchy -->

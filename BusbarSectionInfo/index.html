@@ -205,52 +205,34 @@
 _</p>
 <p>__</p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#BusbarSectionInfo">cim:BusbarSectionInfo</a></p>
-<pre class="mermaid"><code>erDiagram
-BusbarSectionInfo {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Name {
+<pre class="mermaid"><code> classDiagram
+    class BusbarSectionInfo
+      AssetInfo &lt;|-- BusbarSectionInfo
 
-}
-IdentifiedObject {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-NameType {
-    string description  
-}
-PowerSystemResource {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Voltage {
-    float value  
-    UnitMultiplier multiplier  
-    UnitSymbol unit  
-}
-CurrentFlow {
-    float value  
-    UnitMultiplier multiplier  
-    UnitSymbol unit  
-}
+      BusbarSectionInfo : description
 
-BusbarSectionInfo ||--|o CurrentFlow : "rated_current"
-BusbarSectionInfo ||--|o Voltage : "rated_voltage"
-BusbarSectionInfo ||--}o PowerSystemResource : "power_system_resources"
-BusbarSectionInfo ||--}o Name : "names"
-Name ||--|| NameType : "name_type"
-Name ||--|| IdentifiedObject : "identified_object"
-IdentifiedObject ||--}o Name : "names"
-NameType ||--|o NameTypeAuthority : "name_type_authority"
-NameType ||--}o Name : "names"
-PowerSystemResource ||--}o Name : "names"
+      BusbarSectionInfo : energy_ident_code_eic
+
+      BusbarSectionInfo : m_rid
+
+      BusbarSectionInfo : names
+
+          BusbarSectionInfo --&gt; Name : names
+
+      BusbarSectionInfo : power_system_resources
+
+          BusbarSectionInfo --&gt; PowerSystemResource : power_system_resources
+
+      BusbarSectionInfo : rated_current
+
+          BusbarSectionInfo --&gt; CurrentFlow : rated_current
+
+      BusbarSectionInfo : rated_voltage
+
+          BusbarSectionInfo --&gt; Voltage : rated_voltage
+
+      BusbarSectionInfo : short_name
+
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

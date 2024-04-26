@@ -203,13 +203,17 @@
 <h1 id="class-resistance">Class: Resistance</h1>
 <p><em>Resistance (real part of impedance).</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Resistance">cim:Resistance</a></p>
-<pre class="mermaid"><code>erDiagram
-Resistance {
-    float value  
-    UnitSymbol unit  
-    UnitMultiplier multiplier  
-}
+<pre class="mermaid"><code> classDiagram
+    class Resistance
+      Resistance : multiplier
 
+          Resistance --&gt; UnitMultiplier : multiplier
+
+      Resistance : unit
+
+          Resistance --&gt; UnitSymbol : unit
+
+      Resistance : value
 
 </code></pre>
 <!-- no inheritance hierarchy -->

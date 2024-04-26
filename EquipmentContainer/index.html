@@ -208,73 +208,37 @@
 <h1 id="class-equipmentcontainer">Class: EquipmentContainer</h1>
 <p><em>A modelling construct to provide a root class for containing equipment.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#EquipmentContainer">cim:EquipmentContainer</a></p>
-<pre class="mermaid"><code>erDiagram
-EquipmentContainer {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Name {
+<pre class="mermaid"><code> classDiagram
+    class EquipmentContainer
+      ConnectivityNodeContainer &lt;|-- EquipmentContainer
 
-}
-IdentifiedObject {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-NameType {
-    string description  
-}
-ConnectivityNode {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-ConnectivityNodeContainer {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Terminal {
-    PhaseCode phases  
-    integer sequence_number  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Equipment {
-    boolean aggregate  
-    boolean normally_in_service  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
 
-EquipmentContainer ||--}o Equipment : "equipments"
-EquipmentContainer ||--}o ConnectivityNode : "connectivity_nodes"
-EquipmentContainer ||--}o Name : "names"
-Name ||--|| NameType : "name_type"
-Name ||--|| IdentifiedObject : "identified_object"
-IdentifiedObject ||--}o Name : "names"
-NameType ||--|o NameTypeAuthority : "name_type_authority"
-NameType ||--}o Name : "names"
-ConnectivityNode ||--}o Terminal : "terminals"
-ConnectivityNode ||--|| ConnectivityNodeContainer : "connectivity_node_container"
-ConnectivityNode ||--}o Name : "names"
-ConnectivityNodeContainer ||--}o ConnectivityNode : "connectivity_nodes"
-ConnectivityNodeContainer ||--}o Name : "names"
-Terminal ||--|| ConductingEquipment : "conducting_equipment"
-Terminal ||--|o ConnectivityNode : "connectivity_node"
-Terminal ||--}o TransformerEnd : "transformer_end"
-Terminal ||--}o Name : "names"
-Equipment ||--|o EquipmentContainer : "equipment_container"
-Equipment ||--}o Name : "names"
+      EquipmentContainer &lt;|-- VoltageLevel
+      EquipmentContainer &lt;|-- Bay
+      EquipmentContainer &lt;|-- Substation
+      EquipmentContainer &lt;|-- Line
+
+
+      EquipmentContainer : connectivity_nodes
+
+          EquipmentContainer --&gt; ConnectivityNode : connectivity_nodes
+
+      EquipmentContainer : description
+
+      EquipmentContainer : energy_ident_code_eic
+
+      EquipmentContainer : equipments
+
+          EquipmentContainer --&gt; Equipment : equipments
+
+      EquipmentContainer : m_rid
+
+      EquipmentContainer : names
+
+          EquipmentContainer --&gt; Name : names
+
+      EquipmentContainer : short_name
+
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

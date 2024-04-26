@@ -208,53 +208,34 @@
 <h1 id="class-equipment">Class: Equipment</h1>
 <p><em>The parts of a power system that are physical devices, electronic or mechanical.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Equipment">cim:Equipment</a></p>
-<pre class="mermaid"><code>erDiagram
-Equipment {
-    boolean aggregate  
-    boolean normally_in_service  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Name {
+<pre class="mermaid"><code> classDiagram
+    class Equipment
+      PowerSystemResource &lt;|-- Equipment
 
-}
-IdentifiedObject {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-NameType {
-    string description  
-}
-EquipmentContainer {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-ConnectivityNode {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
 
-Equipment ||--|o EquipmentContainer : "equipment_container"
-Equipment ||--}o Name : "names"
-Name ||--|| NameType : "name_type"
-Name ||--|| IdentifiedObject : "identified_object"
-IdentifiedObject ||--}o Name : "names"
-NameType ||--|o NameTypeAuthority : "name_type_authority"
-NameType ||--}o Name : "names"
-EquipmentContainer ||--}o Equipment : "equipments"
-EquipmentContainer ||--}o ConnectivityNode : "connectivity_nodes"
-EquipmentContainer ||--}o Name : "names"
-ConnectivityNode ||--}o Terminal : "terminals"
-ConnectivityNode ||--|| ConnectivityNodeContainer : "connectivity_node_container"
-ConnectivityNode ||--}o Name : "names"
+      Equipment &lt;|-- ConductingEquipment
+
+
+      Equipment : aggregate
+
+      Equipment : description
+
+      Equipment : energy_ident_code_eic
+
+      Equipment : equipment_container
+
+          Equipment --&gt; EquipmentContainer : equipment_container
+
+      Equipment : m_rid
+
+      Equipment : names
+
+          Equipment --&gt; Name : names
+
+      Equipment : normally_in_service
+
+      Equipment : short_name
+
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

@@ -205,159 +205,58 @@
 <p><em>For symmetrical, transposed three phase lines, it is sufficient to use attributes of the line segment, which describe impedances and admittances for the entire length of the segment.  Additionally impedances can be computed by using length and associated per length impedances.</em></p>
 <p><em>The BaseVoltage at the two ends of ACLineSegments in a Line shall have the same BaseVoltage.nominalVoltage. However, boundary lines may have slightly different BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference in general requires use of an equivalent branch.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#ACLineSegment">cim:ACLineSegment</a></p>
-<pre class="mermaid"><code>erDiagram
-ACLineSegment {
-    boolean aggregate  
-    boolean normally_in_service  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Name {
+<pre class="mermaid"><code> classDiagram
+    class ACLineSegment
+      Conductor &lt;|-- ACLineSegment
 
-}
-IdentifiedObject {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-NameType {
-    string description  
-}
-EquipmentContainer {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-ConnectivityNode {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Equipment {
-    boolean aggregate  
-    boolean normally_in_service  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Terminal {
-    PhaseCode phases  
-    integer sequence_number  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-TransformerEnd {
-    integer end_number  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-ConductingEquipment {
-    boolean aggregate  
-    boolean normally_in_service  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-BaseVoltage {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-VoltageLevel {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Voltage {
-    float value  
-    UnitMultiplier multiplier  
-    UnitSymbol unit  
-}
-Length {
-    float value  
-    UnitSymbol unit  
-    UnitMultiplier multiplier  
-}
-Reactance {
-    float value  
-    UnitSymbol unit  
-    UnitMultiplier multiplier  
-}
-Resistance {
-    float value  
-    UnitSymbol unit  
-    UnitMultiplier multiplier  
-}
-Conductance {
-    float value  
-    UnitSymbol unit  
-    UnitMultiplier multiplier  
-}
-Susceptance {
-    float value  
-    UnitSymbol unit  
-    UnitMultiplier multiplier  
-}
+      ACLineSegment : aggregate
 
-ACLineSegment ||--|| Susceptance : "bch"
-ACLineSegment ||--|o Conductance : "gch"
-ACLineSegment ||--|| Resistance : "r"
-ACLineSegment ||--|| Reactance : "x"
-ACLineSegment ||--|o Length : "length"
-ACLineSegment ||--|o BaseVoltage : "base_voltage"
-ACLineSegment ||--}o Terminal : "terminals"
-ACLineSegment ||--|o EquipmentContainer : "equipment_container"
-ACLineSegment ||--}o Name : "names"
-Name ||--|| NameType : "name_type"
-Name ||--|| IdentifiedObject : "identified_object"
-IdentifiedObject ||--}o Name : "names"
-NameType ||--|o NameTypeAuthority : "name_type_authority"
-NameType ||--}o Name : "names"
-EquipmentContainer ||--}o Equipment : "equipments"
-EquipmentContainer ||--}o ConnectivityNode : "connectivity_nodes"
-EquipmentContainer ||--}o Name : "names"
-ConnectivityNode ||--}o Terminal : "terminals"
-ConnectivityNode ||--|| ConnectivityNodeContainer : "connectivity_node_container"
-ConnectivityNode ||--}o Name : "names"
-Equipment ||--|o EquipmentContainer : "equipment_container"
-Equipment ||--}o Name : "names"
-Terminal ||--|| ConductingEquipment : "conducting_equipment"
-Terminal ||--|o ConnectivityNode : "connectivity_node"
-Terminal ||--}o TransformerEnd : "transformer_end"
-Terminal ||--}o Name : "names"
-TransformerEnd ||--|| BaseVoltage : "base_voltage"
-TransformerEnd ||--|| Terminal : "terminal"
-TransformerEnd ||--}o Name : "names"
-ConductingEquipment ||--|o BaseVoltage : "base_voltage"
-ConductingEquipment ||--}o Terminal : "terminals"
-ConductingEquipment ||--|o EquipmentContainer : "equipment_container"
-ConductingEquipment ||--}o Name : "names"
-BaseVoltage ||--|| Voltage : "nominal_voltage"
-BaseVoltage ||--}o ConductingEquipment : "conducting_equipment"
-BaseVoltage ||--}o VoltageLevel : "voltage_level"
-BaseVoltage ||--}o TransformerEnd : "transformer_ends"
-BaseVoltage ||--}o Name : "names"
-VoltageLevel ||--|| BaseVoltage : "base_voltage"
-VoltageLevel ||--}o Bay : "bays"
-VoltageLevel ||--|| Substation : "substation"
-VoltageLevel ||--|o Voltage : "high_voltage_limit"
-VoltageLevel ||--|o Voltage : "low_voltage_limit"
-VoltageLevel ||--}o Equipment : "equipments"
-VoltageLevel ||--}o ConnectivityNode : "connectivity_nodes"
-VoltageLevel ||--}o Name : "names"
+      ACLineSegment : base_voltage
+
+          ACLineSegment --&gt; BaseVoltage : base_voltage
+
+      ACLineSegment : bch
+
+          ACLineSegment --&gt; Susceptance : bch
+
+      ACLineSegment : description
+
+      ACLineSegment : energy_ident_code_eic
+
+      ACLineSegment : equipment_container
+
+          ACLineSegment --&gt; EquipmentContainer : equipment_container
+
+      ACLineSegment : gch
+
+          ACLineSegment --&gt; Conductance : gch
+
+      ACLineSegment : length
+
+          ACLineSegment --&gt; Length : length
+
+      ACLineSegment : m_rid
+
+      ACLineSegment : names
+
+          ACLineSegment --&gt; Name : names
+
+      ACLineSegment : normally_in_service
+
+      ACLineSegment : r
+
+          ACLineSegment --&gt; Resistance : r
+
+      ACLineSegment : short_name
+
+      ACLineSegment : terminals
+
+          ACLineSegment --&gt; Terminal : terminals
+
+      ACLineSegment : x
+
+          ACLineSegment --&gt; Reactance : x
+
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

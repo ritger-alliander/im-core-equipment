@@ -203,33 +203,28 @@
 <h1 id="class-acdcterminal">Class: ACDCTerminal</h1>
 <p><em>An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#ACDCTerminal">cim:ACDCTerminal</a></p>
-<pre class="mermaid"><code>erDiagram
-ACDCTerminal {
-    integer sequence_number  
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-Name {
+<pre class="mermaid"><code> classDiagram
+    class ACDCTerminal
+      IdentifiedObject &lt;|-- ACDCTerminal
 
-}
-IdentifiedObject {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-NameType {
-    string description  
-}
 
-ACDCTerminal ||--}o Name : "names"
-Name ||--|| NameType : "name_type"
-Name ||--|| IdentifiedObject : "identified_object"
-IdentifiedObject ||--}o Name : "names"
-NameType ||--|o NameTypeAuthority : "name_type_authority"
-NameType ||--}o Name : "names"
+      ACDCTerminal &lt;|-- Terminal
+
+
+      ACDCTerminal : description
+
+      ACDCTerminal : energy_ident_code_eic
+
+      ACDCTerminal : m_rid
+
+      ACDCTerminal : names
+
+          ACDCTerminal --&gt; Name : names
+
+      ACDCTerminal : sequence_number
+
+      ACDCTerminal : short_name
+
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>

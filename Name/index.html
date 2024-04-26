@@ -205,29 +205,16 @@
 _</p>
 <p>__</p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Name">cim:Name</a></p>
-<pre class="mermaid"><code>erDiagram
-Name {
+<pre class="mermaid"><code> classDiagram
+    class Name
+      Name : identified_object
 
-}
-IdentifiedObject {
-    string description  
-    string energy_ident_code_eic  
-    string m_rid  
-    string short_name  
-}
-NameType {
-    string description  
-}
-NameTypeAuthority {
-    string description  
-}
+          Name --&gt; IdentifiedObject : identified_object
 
-Name ||--|| NameType : "name_type"
-Name ||--|| IdentifiedObject : "identified_object"
-IdentifiedObject ||--}o Name : "names"
-NameType ||--|o NameTypeAuthority : "name_type_authority"
-NameType ||--}o Name : "names"
-NameTypeAuthority ||--}o NameType : "name_types"
+      Name : name_type
+
+          Name --&gt; NameType : name_type
+
 </code></pre>
 <!-- no inheritance hierarchy -->
 <h2 id="slots">Slots</h2>

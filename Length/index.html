@@ -203,13 +203,17 @@
 <h1 id="class-length">Class: Length</h1>
 <p><em>Unit of length. It shall be a positive value or zero.</em></p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Length">cim:Length</a></p>
-<pre class="mermaid"><code>erDiagram
-Length {
-    float value  
-    UnitSymbol unit  
-    UnitMultiplier multiplier  
-}
+<pre class="mermaid"><code> classDiagram
+    class Length
+      Length : multiplier
 
+          Length --&gt; UnitMultiplier : multiplier
+
+      Length : unit
+
+          Length --&gt; UnitSymbol : unit
+
+      Length : value
 
 </code></pre>
 <!-- no inheritance hierarchy -->
