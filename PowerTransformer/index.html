@@ -215,37 +215,37 @@
     class PowerTransformer
       ConductingEquipment &lt;|-- PowerTransformer
 
-      PowerTransformer : aggregate
+      PowerTransformer : Equipment.aggregate
 
-      PowerTransformer : base_voltage
+      PowerTransformer : ConductingEquipment.BaseVoltage
 
-          PowerTransformer --&gt; BaseVoltage : base_voltage
+          PowerTransformer --&gt; BaseVoltage : ConductingEquipment.BaseVoltage
 
-      PowerTransformer : description
+      PowerTransformer : IdentifiedObject.description
 
-      PowerTransformer : energy_ident_code_eic
+      PowerTransformer : IdentifiedObject.energyIdentCodeEic
 
-      PowerTransformer : equipment_container
+      PowerTransformer : Equipment.EquipmentContainer
 
-          PowerTransformer --&gt; EquipmentContainer : equipment_container
+          PowerTransformer --&gt; EquipmentContainer : Equipment.EquipmentContainer
 
-      PowerTransformer : m_rid
+      PowerTransformer : IdentifiedObject.mRID
 
-      PowerTransformer : names
+      PowerTransformer : IdentifiedObject.Names
 
-          PowerTransformer --&gt; Name : names
+          PowerTransformer --&gt; Name : IdentifiedObject.Names
 
-      PowerTransformer : normally_in_service
+      PowerTransformer : Equipment.normallyInService
 
-      PowerTransformer : power_transformer_end
+      PowerTransformer : PowerTransformer.PowerTransformerEnd
 
-          PowerTransformer --&gt; PowerTransformerEnd : power_transformer_end
+          PowerTransformer --&gt; PowerTransformerEnd : PowerTransformer.PowerTransformerEnd
 
-      PowerTransformer : short_name
+      PowerTransformer : IdentifiedObject.shortName
 
-      PowerTransformer : terminals
+      PowerTransformer : ConductingEquipment.Terminals
 
-          PowerTransformer --&gt; Terminal : terminals
+          PowerTransformer --&gt; Terminal : ConductingEquipment.Terminals
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -276,67 +276,67 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../power_transformer_end/">power_transformer_end</a></td>
+<td><a href="../PowerTransformer.PowerTransformerEnd/">power_transformer_end</a></td>
 <td>0..* <br/> <a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
 <td>The ends of this power transformer</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="../ConductingEquipment.BaseVoltage/">base_voltage</a></td>
 <td>0..1 <br/> <a href="../BaseVoltage/">BaseVoltage</a></td>
 <td>Base voltage of this conducting equipment</td>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
 </tr>
 <tr>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="../ConductingEquipment.Terminals/">terminals</a></td>
 <td>0..* <br/> <a href="../Terminal/">Terminal</a></td>
 <td>Conducting equipment have terminals that may be connected to other conducting...</td>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
 </tr>
 <tr>
-<td><a href="../aggregate/">aggregate</a></td>
+<td><a href="../Equipment.aggregate/">aggregate</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>The aggregate flag provides an alternative way of representing an aggregated ...</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../normally_in_service/">normally_in_service</a></td>
+<td><a href="../Equipment.normallyInService/">normally_in_service</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>Specifies the availability of the equipment under normal operating conditions</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>0..1 <br/> <a href="../EquipmentContainer/">EquipmentContainer</a></td>
 <td>Container of this equipment</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -356,7 +356,7 @@
 <tbody>
 <tr>
 <td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
-<td><a href="../power_transformer/">power_transformer</a></td>
+<td><a href="../PowerTransformerEnd.PowerTransformer/">power_transformer</a></td>
 <td>range</td>
 <td><a href="./">PowerTransformer</a></td>
 </tr>

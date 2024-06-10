@@ -209,15 +209,15 @@ _</p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#NameType">cim:NameType</a></p>
 <pre class="mermaid"><code> classDiagram
     class NameType
-      NameType : description
+      NameType : NameType.description
 
-      NameType : name_type_authority
+      NameType : NameType.NameTypeAuthority
 
-          NameType --&gt; NameTypeAuthority : name_type_authority
+          NameType --&gt; NameTypeAuthority : NameType.NameTypeAuthority
 
-      NameType : names
+      NameType : NameType.Names
 
-          NameType --&gt; Name : names
+          NameType --&gt; Name : NameType.Names
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -233,19 +233,19 @@ _</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="NameType.description.md">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>Description of the name type</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../name_type_authority/">name_type_authority</a></td>
+<td><a href="../NameType.NameTypeAuthority/">name_type_authority</a></td>
 <td>0..1 <br/> <a href="../NameTypeAuthority/">NameTypeAuthority</a></td>
 <td>Authority responsible for managing names of this type</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="NameType.Names.md">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this type</td>
 <td>direct</td>
@@ -265,13 +265,13 @@ _</p>
 <tbody>
 <tr>
 <td><a href="../Name/">Name</a></td>
-<td><a href="../name_type/">name_type</a></td>
+<td><a href="../Name.NameType/">name_type</a></td>
 <td>range</td>
 <td><a href="./">NameType</a></td>
 </tr>
 <tr>
 <td><a href="../NameTypeAuthority/">NameTypeAuthority</a></td>
-<td><a href="../name_types/">name_types</a></td>
+<td><a href="../NameTypeAuthority.NameTypes/">name_types</a></td>
 <td>range</td>
 <td><a href="./">NameType</a></td>
 </tr>

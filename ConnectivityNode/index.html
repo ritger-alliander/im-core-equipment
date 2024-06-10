@@ -212,25 +212,25 @@
     class ConnectivityNode
       IdentifiedObject &lt;|-- ConnectivityNode
 
-      ConnectivityNode : connectivity_node_container
+      ConnectivityNode : ConnectivityNode.ConnectivityNodeContainer
 
-          ConnectivityNode --&gt; ConnectivityNodeContainer : connectivity_node_container
+          ConnectivityNode --&gt; ConnectivityNodeContainer : ConnectivityNode.ConnectivityNodeContainer
 
-      ConnectivityNode : description
+      ConnectivityNode : IdentifiedObject.description
 
-      ConnectivityNode : energy_ident_code_eic
+      ConnectivityNode : IdentifiedObject.energyIdentCodeEic
 
-      ConnectivityNode : m_rid
+      ConnectivityNode : IdentifiedObject.mRID
 
-      ConnectivityNode : names
+      ConnectivityNode : IdentifiedObject.Names
 
-          ConnectivityNode --&gt; Name : names
+          ConnectivityNode --&gt; Name : IdentifiedObject.Names
 
-      ConnectivityNode : short_name
+      ConnectivityNode : IdentifiedObject.shortName
 
-      ConnectivityNode : terminals
+      ConnectivityNode : ConnectivityNode.Terminals
 
-          ConnectivityNode --&gt; Terminal : terminals
+          ConnectivityNode --&gt; Terminal : ConnectivityNode.Terminals
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -252,43 +252,43 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="ConnectivityNode.Terminals.md">terminals</a></td>
 <td>0..* <br/> <a href="../Terminal/">Terminal</a></td>
 <td>Terminals interconnected with zero impedance at a this connectivity node</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../connectivity_node_container/">connectivity_node_container</a></td>
+<td><a href="../ConnectivityNode.ConnectivityNodeContainer/">connectivity_node_container</a></td>
 <td>1..1 <br/> <a href="../ConnectivityNodeContainer/">ConnectivityNodeContainer</a></td>
 <td>Container of this connectivity node</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -308,43 +308,43 @@
 <tbody>
 <tr>
 <td><a href="../VoltageLevel/">VoltageLevel</a></td>
-<td><a href="../connectivity_nodes/">connectivity_nodes</a></td>
+<td><a href="../ConnectivityNodeContainer.ConnectivityNodes/">connectivity_nodes</a></td>
 <td>range</td>
 <td><a href="./">ConnectivityNode</a></td>
 </tr>
 <tr>
 <td><a href="../Bay/">Bay</a></td>
-<td><a href="../connectivity_nodes/">connectivity_nodes</a></td>
+<td><a href="../ConnectivityNodeContainer.ConnectivityNodes/">connectivity_nodes</a></td>
 <td>range</td>
 <td><a href="./">ConnectivityNode</a></td>
 </tr>
 <tr>
 <td><a href="../Substation/">Substation</a></td>
-<td><a href="../connectivity_nodes/">connectivity_nodes</a></td>
+<td><a href="../ConnectivityNodeContainer.ConnectivityNodes/">connectivity_nodes</a></td>
 <td>range</td>
 <td><a href="./">ConnectivityNode</a></td>
 </tr>
 <tr>
 <td><a href="../Terminal/">Terminal</a></td>
-<td><a href="../connectivity_node/">connectivity_node</a></td>
+<td><a href="../Terminal.ConnectivityNode/">connectivity_node</a></td>
 <td>range</td>
 <td><a href="./">ConnectivityNode</a></td>
 </tr>
 <tr>
 <td><a href="../ConnectivityNodeContainer/">ConnectivityNodeContainer</a></td>
-<td><a href="../connectivity_nodes/">connectivity_nodes</a></td>
+<td><a href="../ConnectivityNodeContainer.ConnectivityNodes/">connectivity_nodes</a></td>
 <td>range</td>
 <td><a href="./">ConnectivityNode</a></td>
 </tr>
 <tr>
 <td><a href="../EquipmentContainer/">EquipmentContainer</a></td>
-<td><a href="../connectivity_nodes/">connectivity_nodes</a></td>
+<td><a href="../ConnectivityNodeContainer.ConnectivityNodes/">connectivity_nodes</a></td>
 <td>range</td>
 <td><a href="./">ConnectivityNode</a></td>
 </tr>
 <tr>
 <td><a href="../Line/">Line</a></td>
-<td><a href="../connectivity_nodes/">connectivity_nodes</a></td>
+<td><a href="../ConnectivityNodeContainer.ConnectivityNodes/">connectivity_nodes</a></td>
 <td>range</td>
 <td><a href="./">ConnectivityNode</a></td>
 </tr>

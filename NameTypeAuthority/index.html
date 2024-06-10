@@ -207,11 +207,11 @@ _</p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#NameTypeAuthority">cim:NameTypeAuthority</a></p>
 <pre class="mermaid"><code> classDiagram
     class NameTypeAuthority
-      NameTypeAuthority : description
+      NameTypeAuthority : NameTypeAuthority.description
 
-      NameTypeAuthority : name_types
+      NameTypeAuthority : NameTypeAuthority.NameTypes
 
-          NameTypeAuthority --&gt; NameType : name_types
+          NameTypeAuthority --&gt; NameType : NameTypeAuthority.NameTypes
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -227,13 +227,13 @@ _</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="NameTypeAuthority.description.md">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>Description of the name type authority</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../name_types/">name_types</a></td>
+<td><a href="../NameTypeAuthority.NameTypes/">name_types</a></td>
 <td>0..* <br/> <a href="../NameType/">NameType</a></td>
 <td>All name types managed by this authority</td>
 <td>direct</td>
@@ -253,7 +253,7 @@ _</p>
 <tbody>
 <tr>
 <td><a href="../NameType/">NameType</a></td>
-<td><a href="../name_type_authority/">name_type_authority</a></td>
+<td><a href="../NameType.NameTypeAuthority/">name_type_authority</a></td>
 <td>range</td>
 <td><a href="./">NameTypeAuthority</a></td>
 </tr>

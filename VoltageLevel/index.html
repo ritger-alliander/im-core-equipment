@@ -212,45 +212,45 @@
     class VoltageLevel
       EquipmentContainer &lt;|-- VoltageLevel
 
-      VoltageLevel : base_voltage
+      VoltageLevel : VoltageLevel.BaseVoltage
 
-          VoltageLevel --&gt; BaseVoltage : base_voltage
+          VoltageLevel --&gt; BaseVoltage : VoltageLevel.BaseVoltage
 
-      VoltageLevel : bays
+      VoltageLevel : VoltageLevel.Bays
 
-          VoltageLevel --&gt; Bay : bays
+          VoltageLevel --&gt; Bay : VoltageLevel.Bays
 
-      VoltageLevel : connectivity_nodes
+      VoltageLevel : ConnectivityNodeContainer.ConnectivityNodes
 
-          VoltageLevel --&gt; ConnectivityNode : connectivity_nodes
+          VoltageLevel --&gt; ConnectivityNode : ConnectivityNodeContainer.ConnectivityNodes
 
-      VoltageLevel : description
+      VoltageLevel : IdentifiedObject.description
 
-      VoltageLevel : energy_ident_code_eic
+      VoltageLevel : IdentifiedObject.energyIdentCodeEic
 
-      VoltageLevel : equipments
+      VoltageLevel : EquipmentContainer.Equipments
 
-          VoltageLevel --&gt; Equipment : equipments
+          VoltageLevel --&gt; Equipment : EquipmentContainer.Equipments
 
-      VoltageLevel : high_voltage_limit
+      VoltageLevel : VoltageLevel.highVoltageLimit
 
-          VoltageLevel --&gt; Voltage : high_voltage_limit
+          VoltageLevel --&gt; Voltage : VoltageLevel.highVoltageLimit
 
-      VoltageLevel : low_voltage_limit
+      VoltageLevel : VoltageLevel.lowVoltageLimit
 
-          VoltageLevel --&gt; Voltage : low_voltage_limit
+          VoltageLevel --&gt; Voltage : VoltageLevel.lowVoltageLimit
 
-      VoltageLevel : m_rid
+      VoltageLevel : IdentifiedObject.mRID
 
-      VoltageLevel : names
+      VoltageLevel : IdentifiedObject.Names
 
-          VoltageLevel --&gt; Name : names
+          VoltageLevel --&gt; Name : IdentifiedObject.Names
 
-      VoltageLevel : short_name
+      VoltageLevel : IdentifiedObject.shortName
 
-      VoltageLevel : substation
+      VoltageLevel : VoltageLevel.Substation
 
-          VoltageLevel --&gt; Substation : substation
+          VoltageLevel --&gt; Substation : VoltageLevel.Substation
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -281,73 +281,73 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="VoltageLevel.BaseVoltage.md">base_voltage</a></td>
 <td>1..1 <br/> <a href="../BaseVoltage/">BaseVoltage</a></td>
 <td>The base voltage used for all equipment within the voltage level</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../bays/">bays</a></td>
+<td><a href="../VoltageLevel.Bays/">bays</a></td>
 <td>0..* <br/> <a href="../Bay/">Bay</a></td>
 <td>The bays within this voltage level</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../substation/">substation</a></td>
+<td><a href="../VoltageLevel.Substation/">substation</a></td>
 <td>1..1 <br/> <a href="../Substation/">Substation</a></td>
 <td>The substation of the voltage level</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../high_voltage_limit/">high_voltage_limit</a></td>
+<td><a href="../VoltageLevel.highVoltageLimit/">high_voltage_limit</a></td>
 <td>0..1 <br/> <a href="../Voltage/">Voltage</a></td>
 <td>The bus bar's high voltage limit</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../low_voltage_limit/">low_voltage_limit</a></td>
+<td><a href="../VoltageLevel.lowVoltageLimit/">low_voltage_limit</a></td>
 <td>0..1 <br/> <a href="../Voltage/">Voltage</a></td>
 <td>The bus bar's low voltage limit</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../equipments/">equipments</a></td>
+<td><a href="../EquipmentContainer.Equipments/">equipments</a></td>
 <td>0..* <br/> <a href="../Equipment/">Equipment</a></td>
 <td>Contained equipment</td>
 <td><a href="../EquipmentContainer/">EquipmentContainer</a></td>
 </tr>
 <tr>
-<td><a href="../connectivity_nodes/">connectivity_nodes</a></td>
+<td><a href="../ConnectivityNodeContainer.ConnectivityNodes/">connectivity_nodes</a></td>
 <td>0..* <br/> <a href="../ConnectivityNode/">ConnectivityNode</a></td>
 <td>Connectivity nodes which belong to this connectivity node container</td>
 <td><a href="../ConnectivityNodeContainer/">ConnectivityNodeContainer</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -367,19 +367,19 @@
 <tbody>
 <tr>
 <td><a href="../BaseVoltage/">BaseVoltage</a></td>
-<td><a href="../voltage_level/">voltage_level</a></td>
+<td><a href="voltage_level.md">voltage_level</a></td>
 <td>range</td>
 <td><a href="./">VoltageLevel</a></td>
 </tr>
 <tr>
 <td><a href="../Bay/">Bay</a></td>
-<td><a href="../voltage_level/">voltage_level</a></td>
+<td><a href="voltage_level.md">voltage_level</a></td>
 <td>range</td>
 <td><a href="./">VoltageLevel</a></td>
 </tr>
 <tr>
 <td><a href="../Substation/">Substation</a></td>
-<td><a href="../voltage_levels/">voltage_levels</a></td>
+<td><a href="../Substation.VoltageLevels/">voltage_levels</a></td>
 <td>range</td>
 <td><a href="./">VoltageLevel</a></td>
 </tr>

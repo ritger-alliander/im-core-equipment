@@ -212,33 +212,33 @@
     class BaseVoltage
       IdentifiedObject &lt;|-- BaseVoltage
 
-      BaseVoltage : conducting_equipment
+      BaseVoltage : BaseVoltage.ConductingEquipment
 
-          BaseVoltage --&gt; ConductingEquipment : conducting_equipment
+          BaseVoltage --&gt; ConductingEquipment : BaseVoltage.ConductingEquipment
 
-      BaseVoltage : description
+      BaseVoltage : IdentifiedObject.description
 
-      BaseVoltage : energy_ident_code_eic
+      BaseVoltage : IdentifiedObject.energyIdentCodeEic
 
-      BaseVoltage : m_rid
+      BaseVoltage : IdentifiedObject.mRID
 
-      BaseVoltage : names
+      BaseVoltage : IdentifiedObject.Names
 
-          BaseVoltage --&gt; Name : names
+          BaseVoltage --&gt; Name : IdentifiedObject.Names
 
-      BaseVoltage : nominal_voltage
+      BaseVoltage : BaseVoltage.nominalVoltage
 
-          BaseVoltage --&gt; Voltage : nominal_voltage
+          BaseVoltage --&gt; Voltage : BaseVoltage.nominalVoltage
 
-      BaseVoltage : short_name
+      BaseVoltage : IdentifiedObject.shortName
 
-      BaseVoltage : transformer_ends
+      BaseVoltage : BaseVoltage.TransformerEnds
 
-          BaseVoltage --&gt; TransformerEnd : transformer_ends
+          BaseVoltage --&gt; TransformerEnd : BaseVoltage.TransformerEnds
 
-      BaseVoltage : voltage_level
+      BaseVoltage : BaseVoltage.VoltageLevel
 
-          BaseVoltage --&gt; VoltageLevel : voltage_level
+          BaseVoltage --&gt; VoltageLevel : BaseVoltage.VoltageLevel
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -260,55 +260,55 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../nominal_voltage/">nominal_voltage</a></td>
+<td><a href="../BaseVoltage.nominalVoltage/">nominal_voltage</a></td>
 <td>1..1 <br/> <a href="../Voltage/">Voltage</a></td>
 <td>The power system resource's base voltage</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../conducting_equipment/">conducting_equipment</a></td>
+<td><a href="../BaseVoltage.ConductingEquipment/">conducting_equipment</a></td>
 <td>0..* <br/> <a href="../ConductingEquipment/">ConductingEquipment</a></td>
 <td>All conducting equipment with this base voltage</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../voltage_level/">voltage_level</a></td>
+<td><a href="../BaseVoltage.VoltageLevel/">voltage_level</a></td>
 <td>0..* <br/> <a href="../VoltageLevel/">VoltageLevel</a></td>
 <td>The voltage levels having this base voltage</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../transformer_ends/">transformer_ends</a></td>
+<td><a href="../BaseVoltage.TransformerEnds/">transformer_ends</a></td>
 <td>0..* <br/> <a href="../TransformerEnd/">TransformerEnd</a></td>
 <td>Transformer ends at the base voltage</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -328,103 +328,103 @@
 <tbody>
 <tr>
 <td><a href="../ACLineSegment/">ACLineSegment</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../Conductor/">Conductor</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../VoltageLevel/">VoltageLevel</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../TransformerEnd/">TransformerEnd</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../Breaker/">Breaker</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../ProtectedSwitch/">ProtectedSwitch</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../Switch/">Switch</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../BusbarSection/">BusbarSection</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../Connector/">Connector</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../Disconnector/">Disconnector</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../EnergyConsumer/">EnergyConsumer</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../EnergyConnection/">EnergyConnection</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../Junction/">Junction</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../LoadBreakSwitch/">LoadBreakSwitch</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformer/">PowerTransformer</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="base_voltage.md">base_voltage</a></td>
 <td>range</td>
 <td><a href="./">BaseVoltage</a></td>
 </tr>

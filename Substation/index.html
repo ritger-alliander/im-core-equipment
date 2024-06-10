@@ -212,29 +212,29 @@
     class Substation
       EquipmentContainer &lt;|-- Substation
 
-      Substation : connectivity_nodes
+      Substation : ConnectivityNodeContainer.ConnectivityNodes
 
-          Substation --&gt; ConnectivityNode : connectivity_nodes
+          Substation --&gt; ConnectivityNode : ConnectivityNodeContainer.ConnectivityNodes
 
-      Substation : description
+      Substation : IdentifiedObject.description
 
-      Substation : energy_ident_code_eic
+      Substation : IdentifiedObject.energyIdentCodeEic
 
-      Substation : equipments
+      Substation : EquipmentContainer.Equipments
 
-          Substation --&gt; Equipment : equipments
+          Substation --&gt; Equipment : EquipmentContainer.Equipments
 
-      Substation : m_rid
+      Substation : IdentifiedObject.mRID
 
-      Substation : names
+      Substation : IdentifiedObject.Names
 
-          Substation --&gt; Name : names
+          Substation --&gt; Name : IdentifiedObject.Names
 
-      Substation : short_name
+      Substation : IdentifiedObject.shortName
 
-      Substation : voltage_levels
+      Substation : Substation.VoltageLevels
 
-          Substation --&gt; VoltageLevel : voltage_levels
+          Substation --&gt; VoltageLevel : Substation.VoltageLevels
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -265,49 +265,49 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../voltage_levels/">voltage_levels</a></td>
+<td><a href="../Substation.VoltageLevels/">voltage_levels</a></td>
 <td>0..* <br/> <a href="../VoltageLevel/">VoltageLevel</a></td>
 <td>The voltage levels within this substation</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../equipments/">equipments</a></td>
+<td><a href="../EquipmentContainer.Equipments/">equipments</a></td>
 <td>0..* <br/> <a href="../Equipment/">Equipment</a></td>
 <td>Contained equipment</td>
 <td><a href="../EquipmentContainer/">EquipmentContainer</a></td>
 </tr>
 <tr>
-<td><a href="../connectivity_nodes/">connectivity_nodes</a></td>
+<td><a href="../ConnectivityNodeContainer.ConnectivityNodes/">connectivity_nodes</a></td>
 <td>0..* <br/> <a href="../ConnectivityNode/">ConnectivityNode</a></td>
 <td>Connectivity nodes which belong to this connectivity node container</td>
 <td><a href="../ConnectivityNodeContainer/">ConnectivityNodeContainer</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -327,7 +327,7 @@
 <tbody>
 <tr>
 <td><a href="../VoltageLevel/">VoltageLevel</a></td>
-<td><a href="../substation/">substation</a></td>
+<td><a href="../VoltageLevel.Substation/">substation</a></td>
 <td>range</td>
 <td><a href="./">Substation</a></td>
 </tr>

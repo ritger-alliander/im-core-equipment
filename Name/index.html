@@ -207,13 +207,13 @@ _</p>
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Name">cim:Name</a></p>
 <pre class="mermaid"><code> classDiagram
     class Name
-      Name : identified_object
+      Name : Name.IdentifiedObject
 
-          Name --&gt; IdentifiedObject : identified_object
+          Name --&gt; IdentifiedObject : Name.IdentifiedObject
 
-      Name : name_type
+      Name : Name.NameType
 
-          Name --&gt; NameType : name_type
+          Name --&gt; NameType : Name.NameType
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -229,13 +229,13 @@ _</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../name_type/">name_type</a></td>
+<td><a href="../Name.NameType/">name_type</a></td>
 <td>1..1 <br/> <a href="../NameType/">NameType</a></td>
 <td>Type of this name</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../identified_object/">identified_object</a></td>
+<td><a href="../Name.IdentifiedObject/">identified_object</a></td>
 <td>1..1 <br/> <a href="../IdentifiedObject/">IdentifiedObject</a></td>
 <td>Identified object that this name designates</td>
 <td>direct</td>
@@ -255,199 +255,199 @@ _</p>
 <tbody>
 <tr>
 <td><a href="../ACLineSegment/">ACLineSegment</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Conductor/">Conductor</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../BaseVoltage/">BaseVoltage</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../VoltageLevel/">VoltageLevel</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Bay/">Bay</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Substation/">Substation</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../TransformerEnd/">TransformerEnd</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Terminal/">Terminal</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../ConnectivityNode/">ConnectivityNode</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../ConnectivityNodeContainer/">ConnectivityNodeContainer</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Equipment/">Equipment</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../EquipmentContainer/">EquipmentContainer</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../PowerSystemResource/">PowerSystemResource</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Breaker/">Breaker</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../ProtectedSwitch/">ProtectedSwitch</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Switch/">Switch</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../BusbarSection/">BusbarSection</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Connector/">Connector</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Disconnector/">Disconnector</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../EnergyConsumer/">EnergyConsumer</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../EnergyConnection/">EnergyConnection</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Junction/">Junction</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../Line/">Line</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../LoadBreakSwitch/">LoadBreakSwitch</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformer/">PowerTransformer</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../ACDCTerminal/">ACDCTerminal</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../BusbarSectionInfo/">BusbarSectionInfo</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../AssetInfo/">AssetInfo</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../NameType/">NameType</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>
 <tr>
 <td><a href="../WireInfo/">WireInfo</a></td>
-<td><a href="../names/">names</a></td>
+<td><a href="names.md">names</a></td>
 <td>range</td>
 <td><a href="./">Name</a></td>
 </tr>

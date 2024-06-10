@@ -205,15 +205,15 @@
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Susceptance">cim:Susceptance</a></p>
 <pre class="mermaid"><code> classDiagram
     class Susceptance
-      Susceptance : multiplier
+      Susceptance : Susceptance.multiplier
 
-          Susceptance --&gt; UnitMultiplier : multiplier
+          Susceptance --&gt; UnitMultiplier : Susceptance.multiplier
 
-      Susceptance : unit
+      Susceptance : Susceptance.unit
 
-          Susceptance --&gt; UnitSymbol : unit
+          Susceptance --&gt; UnitSymbol : Susceptance.unit
 
-      Susceptance : value
+      Susceptance : Susceptance.value
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -229,19 +229,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../value/">value</a></td>
+<td><a href="../Susceptance.value/">value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../unit/">unit</a></td>
+<td><a href="../Susceptance.unit/">unit</a></td>
 <td>0..1 <br/> <a href="../UnitSymbol/">UnitSymbol</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../multiplier/">multiplier</a></td>
+<td><a href="../Susceptance.multiplier/">multiplier</a></td>
 <td>0..1 <br/> <a href="../UnitMultiplier/">UnitMultiplier</a></td>
 <td></td>
 <td>direct</td>
@@ -261,13 +261,13 @@
 <tbody>
 <tr>
 <td><a href="../ACLineSegment/">ACLineSegment</a></td>
-<td><a href="../bch/">bch</a></td>
+<td><a href="../ACLineSegment.bch/">bch</a></td>
 <td>range</td>
 <td><a href="./">Susceptance</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
-<td><a href="../b/">b</a></td>
+<td><a href="../PowerTransformerEnd.b/">b</a></td>
 <td>range</td>
 <td><a href="./">Susceptance</a></td>
 </tr>

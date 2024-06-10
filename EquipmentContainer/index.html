@@ -219,25 +219,25 @@
       EquipmentContainer &lt;|-- Line
 
 
-      EquipmentContainer : connectivity_nodes
+      EquipmentContainer : ConnectivityNodeContainer.ConnectivityNodes
 
-          EquipmentContainer --&gt; ConnectivityNode : connectivity_nodes
+          EquipmentContainer --&gt; ConnectivityNode : ConnectivityNodeContainer.ConnectivityNodes
 
-      EquipmentContainer : description
+      EquipmentContainer : IdentifiedObject.description
 
-      EquipmentContainer : energy_ident_code_eic
+      EquipmentContainer : IdentifiedObject.energyIdentCodeEic
 
-      EquipmentContainer : equipments
+      EquipmentContainer : EquipmentContainer.Equipments
 
-          EquipmentContainer --&gt; Equipment : equipments
+          EquipmentContainer --&gt; Equipment : EquipmentContainer.Equipments
 
-      EquipmentContainer : m_rid
+      EquipmentContainer : IdentifiedObject.mRID
 
-      EquipmentContainer : names
+      EquipmentContainer : IdentifiedObject.Names
 
-          EquipmentContainer --&gt; Name : names
+          EquipmentContainer --&gt; Name : IdentifiedObject.Names
 
-      EquipmentContainer : short_name
+      EquipmentContainer : IdentifiedObject.shortName
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -271,43 +271,43 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../equipments/">equipments</a></td>
+<td><a href="../EquipmentContainer.Equipments/">equipments</a></td>
 <td>0..* <br/> <a href="../Equipment/">Equipment</a></td>
 <td>Contained equipment</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../connectivity_nodes/">connectivity_nodes</a></td>
+<td><a href="../ConnectivityNodeContainer.ConnectivityNodes/">connectivity_nodes</a></td>
 <td>0..* <br/> <a href="../ConnectivityNode/">ConnectivityNode</a></td>
 <td>Connectivity nodes which belong to this connectivity node container</td>
 <td><a href="../ConnectivityNodeContainer/">ConnectivityNodeContainer</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -327,91 +327,91 @@
 <tbody>
 <tr>
 <td><a href="../ACLineSegment/">ACLineSegment</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../Conductor/">Conductor</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../Equipment/">Equipment</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../Breaker/">Breaker</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../ProtectedSwitch/">ProtectedSwitch</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../Switch/">Switch</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../BusbarSection/">BusbarSection</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../Connector/">Connector</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../Disconnector/">Disconnector</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../EnergyConsumer/">EnergyConsumer</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../EnergyConnection/">EnergyConnection</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../Junction/">Junction</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../LoadBreakSwitch/">LoadBreakSwitch</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformer/">PowerTransformer</a></td>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>range</td>
 <td><a href="./">EquipmentContainer</a></td>
 </tr>

@@ -205,15 +205,15 @@
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Voltage">cim:Voltage</a></p>
 <pre class="mermaid"><code> classDiagram
     class Voltage
-      Voltage : multiplier
+      Voltage : Voltage.multiplier
 
-          Voltage --&gt; UnitMultiplier : multiplier
+          Voltage --&gt; UnitMultiplier : Voltage.multiplier
 
-      Voltage : unit
+      Voltage : Voltage.unit
 
-          Voltage --&gt; UnitSymbol : unit
+          Voltage --&gt; UnitSymbol : Voltage.unit
 
-      Voltage : value
+      Voltage : Voltage.value
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -229,19 +229,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../value/">value</a></td>
+<td><a href="Voltage.value.md">value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../multiplier/">multiplier</a></td>
+<td><a href="Voltage.multiplier.md">multiplier</a></td>
 <td>0..1 <br/> <a href="../UnitMultiplier/">UnitMultiplier</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../unit/">unit</a></td>
+<td><a href="Voltage.unit.md">unit</a></td>
 <td>0..1 <br/> <a href="../UnitSymbol/">UnitSymbol</a></td>
 <td></td>
 <td>direct</td>
@@ -261,31 +261,31 @@
 <tbody>
 <tr>
 <td><a href="../BaseVoltage/">BaseVoltage</a></td>
-<td><a href="../nominal_voltage/">nominal_voltage</a></td>
+<td><a href="../BaseVoltage.nominalVoltage/">nominal_voltage</a></td>
 <td>range</td>
 <td><a href="./">Voltage</a></td>
 </tr>
 <tr>
 <td><a href="../VoltageLevel/">VoltageLevel</a></td>
-<td><a href="../high_voltage_limit/">high_voltage_limit</a></td>
+<td><a href="../VoltageLevel.highVoltageLimit/">high_voltage_limit</a></td>
 <td>range</td>
 <td><a href="./">Voltage</a></td>
 </tr>
 <tr>
 <td><a href="../VoltageLevel/">VoltageLevel</a></td>
-<td><a href="../low_voltage_limit/">low_voltage_limit</a></td>
+<td><a href="../VoltageLevel.lowVoltageLimit/">low_voltage_limit</a></td>
 <td>range</td>
 <td><a href="./">Voltage</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
-<td><a href="../rated_u/">rated_u</a></td>
+<td><a href="../PowerTransformerEnd.ratedU/">rated_u</a></td>
 <td>range</td>
 <td><a href="./">Voltage</a></td>
 </tr>
 <tr>
 <td><a href="../BusbarSectionInfo/">BusbarSectionInfo</a></td>
-<td><a href="../rated_voltage/">rated_voltage</a></td>
+<td><a href="../BusbarSectionInfo.ratedVoltage/">rated_voltage</a></td>
 <td>range</td>
 <td><a href="./">Voltage</a></td>
 </tr>

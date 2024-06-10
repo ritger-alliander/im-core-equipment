@@ -205,15 +205,15 @@
 <p>URI: <a href="http://iec.ch/TC57/CIM100#CurrentFlow">cim:CurrentFlow</a></p>
 <pre class="mermaid"><code> classDiagram
     class CurrentFlow
-      CurrentFlow : multiplier
+      CurrentFlow : CurrentFlow.multiplier
 
-          CurrentFlow --&gt; UnitMultiplier : multiplier
+          CurrentFlow --&gt; UnitMultiplier : CurrentFlow.multiplier
 
-      CurrentFlow : unit
+      CurrentFlow : CurrentFlow.unit
 
-          CurrentFlow --&gt; UnitSymbol : unit
+          CurrentFlow --&gt; UnitSymbol : CurrentFlow.unit
 
-      CurrentFlow : value
+      CurrentFlow : CurrentFlow.value
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -229,19 +229,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../value/">value</a></td>
+<td><a href="CurrentFlow.value.md">value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../multiplier/">multiplier</a></td>
+<td><a href="CurrentFlow.multiplier.md">multiplier</a></td>
 <td>0..1 <br/> <a href="../UnitMultiplier/">UnitMultiplier</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../unit/">unit</a></td>
+<td><a href="CurrentFlow.unit.md">unit</a></td>
 <td>0..1 <br/> <a href="../UnitSymbol/">UnitSymbol</a></td>
 <td></td>
 <td>direct</td>
@@ -261,43 +261,43 @@
 <tbody>
 <tr>
 <td><a href="../Breaker/">Breaker</a></td>
-<td><a href="../rated_current/">rated_current</a></td>
+<td><a href="rated_current.md">rated_current</a></td>
 <td>range</td>
 <td><a href="./">CurrentFlow</a></td>
 </tr>
 <tr>
 <td><a href="../ProtectedSwitch/">ProtectedSwitch</a></td>
-<td><a href="../rated_current/">rated_current</a></td>
+<td><a href="rated_current.md">rated_current</a></td>
 <td>range</td>
 <td><a href="./">CurrentFlow</a></td>
 </tr>
 <tr>
 <td><a href="../Switch/">Switch</a></td>
-<td><a href="../rated_current/">rated_current</a></td>
+<td><a href="rated_current.md">rated_current</a></td>
 <td>range</td>
 <td><a href="./">CurrentFlow</a></td>
 </tr>
 <tr>
 <td><a href="../Disconnector/">Disconnector</a></td>
-<td><a href="../rated_current/">rated_current</a></td>
+<td><a href="rated_current.md">rated_current</a></td>
 <td>range</td>
 <td><a href="./">CurrentFlow</a></td>
 </tr>
 <tr>
 <td><a href="../LoadBreakSwitch/">LoadBreakSwitch</a></td>
-<td><a href="../rated_current/">rated_current</a></td>
+<td><a href="rated_current.md">rated_current</a></td>
 <td>range</td>
 <td><a href="./">CurrentFlow</a></td>
 </tr>
 <tr>
 <td><a href="../BusbarSectionInfo/">BusbarSectionInfo</a></td>
-<td><a href="../rated_current/">rated_current</a></td>
+<td><a href="rated_current.md">rated_current</a></td>
 <td>range</td>
 <td><a href="./">CurrentFlow</a></td>
 </tr>
 <tr>
 <td><a href="../WireInfo/">WireInfo</a></td>
-<td><a href="../rated_current/">rated_current</a></td>
+<td><a href="rated_current.md">rated_current</a></td>
 <td>range</td>
 <td><a href="./">CurrentFlow</a></td>
 </tr>

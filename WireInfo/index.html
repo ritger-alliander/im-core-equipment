@@ -209,57 +209,57 @@ _</p>
     class WireInfo
       AssetInfo &lt;|-- WireInfo
 
-      WireInfo : core_radius
+      WireInfo : WireInfo.coreRadius
 
-          WireInfo --&gt; Length : core_radius
+          WireInfo --&gt; Length : WireInfo.coreRadius
 
-      WireInfo : core_strand_count
+      WireInfo : WireInfo.coreStrandCount
 
-      WireInfo : description
+      WireInfo : IdentifiedObject.description
 
-      WireInfo : energy_ident_code_eic
+      WireInfo : IdentifiedObject.energyIdentCodeEic
 
-      WireInfo : gmr
+      WireInfo : WireInfo.gmr
 
-          WireInfo --&gt; Length : gmr
+          WireInfo --&gt; Length : WireInfo.gmr
 
-      WireInfo : insulated
+      WireInfo : WireInfo.insulated
 
-      WireInfo : insulation_material
+      WireInfo : WireInfo.insulationMaterial
 
-          WireInfo --&gt; WireInsulationKind : insulation_material
+          WireInfo --&gt; WireInsulationKind : WireInfo.insulationMaterial
 
-      WireInfo : insulation_thickness
+      WireInfo : WireInfo.insulationThickness
 
-          WireInfo --&gt; Length : insulation_thickness
+          WireInfo --&gt; Length : WireInfo.insulationThickness
 
-      WireInfo : m_rid
+      WireInfo : IdentifiedObject.mRID
 
-      WireInfo : material
+      WireInfo : WireInfo.material
 
-          WireInfo --&gt; WireMaterialKind : material
+          WireInfo --&gt; WireMaterialKind : WireInfo.material
 
-      WireInfo : names
+      WireInfo : IdentifiedObject.Names
 
-          WireInfo --&gt; Name : names
+          WireInfo --&gt; Name : IdentifiedObject.Names
 
-      WireInfo : power_system_resources
+      WireInfo : AssetInfo.PowerSystemResources
 
-          WireInfo --&gt; PowerSystemResource : power_system_resources
+          WireInfo --&gt; PowerSystemResource : AssetInfo.PowerSystemResources
 
-      WireInfo : radius
+      WireInfo : WireInfo.radius
 
-          WireInfo --&gt; Length : radius
+          WireInfo --&gt; Length : WireInfo.radius
 
-      WireInfo : rated_current
+      WireInfo : WireInfo.ratedCurrent
 
-          WireInfo --&gt; CurrentFlow : rated_current
+          WireInfo --&gt; CurrentFlow : WireInfo.ratedCurrent
 
-      WireInfo : short_name
+      WireInfo : IdentifiedObject.shortName
 
-      WireInfo : size_description
+      WireInfo : WireInfo.sizeDescription
 
-      WireInfo : strand_count
+      WireInfo : WireInfo.strandCount
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -284,103 +284,103 @@ _</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../core_radius/">core_radius</a></td>
+<td><a href="../WireInfo.coreRadius/">core_radius</a></td>
 <td>0..1 <br/> <a href="../Length/">Length</a></td>
 <td>(if there is a different core material) Radius of the central core</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../core_strand_count/">core_strand_count</a></td>
+<td><a href="../WireInfo.coreStrandCount/">core_strand_count</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>(if used) Number of strands in the steel core</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../gmr/">gmr</a></td>
+<td><a href="../WireInfo.gmr/">gmr</a></td>
 <td>0..1 <br/> <a href="../Length/">Length</a></td>
 <td>Geometric mean radius</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../insulated/">insulated</a></td>
+<td><a href="../WireInfo.insulated/">insulated</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>True if conductor is insulated</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../insulation_material/">insulation_material</a></td>
+<td><a href="../WireInfo.insulationMaterial/">insulation_material</a></td>
 <td>0..1 <br/> <a href="../WireInsulationKind/">WireInsulationKind</a></td>
 <td>(if insulated conductor) Material used for insulation</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../insulation_thickness/">insulation_thickness</a></td>
+<td><a href="../WireInfo.insulationThickness/">insulation_thickness</a></td>
 <td>0..1 <br/> <a href="../Length/">Length</a></td>
 <td>(if insulated conductor) Thickness of the insulation</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../material/">material</a></td>
+<td><a href="../WireInfo.material/">material</a></td>
 <td>0..1 <br/> <a href="../WireMaterialKind/">WireMaterialKind</a></td>
 <td>Conductor material</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../radius/">radius</a></td>
+<td><a href="../WireInfo.radius/">radius</a></td>
 <td>0..1 <br/> <a href="../Length/">Length</a></td>
 <td>Outside radius of the wire</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../rated_current/">rated_current</a></td>
+<td><a href="WireInfo.ratedCurrent.md">rated_current</a></td>
 <td>0..1 <br/> <a href="../CurrentFlow/">CurrentFlow</a></td>
 <td>Current carrying capacity of the wire under stated thermal conditions</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../size_description/">size_description</a></td>
+<td><a href="../WireInfo.sizeDescription/">size_description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>Describes the wire gauge or cross section (e</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../strand_count/">strand_count</a></td>
+<td><a href="../WireInfo.strandCount/">strand_count</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>Number of strands in the conductor</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../power_system_resources/">power_system_resources</a></td>
+<td><a href="../AssetInfo.PowerSystemResources/">power_system_resources</a></td>
 <td>0..* <br/> <a href="../PowerSystemResource/">PowerSystemResource</a></td>
 <td>All power system resources with this datasheet information</td>
 <td><a href="../AssetInfo/">AssetInfo</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>

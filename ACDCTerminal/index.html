@@ -211,19 +211,19 @@
       ACDCTerminal &lt;|-- Terminal
 
 
-      ACDCTerminal : description
+      ACDCTerminal : IdentifiedObject.description
 
-      ACDCTerminal : energy_ident_code_eic
+      ACDCTerminal : IdentifiedObject.energyIdentCodeEic
 
-      ACDCTerminal : m_rid
+      ACDCTerminal : IdentifiedObject.mRID
 
-      ACDCTerminal : names
+      ACDCTerminal : IdentifiedObject.Names
 
-          ACDCTerminal --&gt; Name : names
+          ACDCTerminal --&gt; Name : IdentifiedObject.Names
 
-      ACDCTerminal : sequence_number
+      ACDCTerminal : ACDCTerminal.sequenceNumber
 
-      ACDCTerminal : short_name
+      ACDCTerminal : IdentifiedObject.shortName
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -248,37 +248,37 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../sequence_number/">sequence_number</a></td>
+<td><a href="../ACDCTerminal.sequenceNumber/">sequence_number</a></td>
 <td>1..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>The orientation of the terminal connections for a multiple terminal conductin...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>

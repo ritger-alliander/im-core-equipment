@@ -205,15 +205,15 @@
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Length">cim:Length</a></p>
 <pre class="mermaid"><code> classDiagram
     class Length
-      Length : multiplier
+      Length : Length.multiplier
 
-          Length --&gt; UnitMultiplier : multiplier
+          Length --&gt; UnitMultiplier : Length.multiplier
 
-      Length : unit
+      Length : Length.unit
 
-          Length --&gt; UnitSymbol : unit
+          Length --&gt; UnitSymbol : Length.unit
 
-      Length : value
+      Length : Length.value
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -229,19 +229,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../value/">value</a></td>
+<td><a href="Length.value.md">value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../unit/">unit</a></td>
+<td><a href="Length.unit.md">unit</a></td>
 <td>0..1 <br/> <a href="../UnitSymbol/">UnitSymbol</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../multiplier/">multiplier</a></td>
+<td><a href="Length.multiplier.md">multiplier</a></td>
 <td>0..1 <br/> <a href="../UnitMultiplier/">UnitMultiplier</a></td>
 <td></td>
 <td>direct</td>
@@ -261,37 +261,37 @@
 <tbody>
 <tr>
 <td><a href="../ACLineSegment/">ACLineSegment</a></td>
-<td><a href="../length/">length</a></td>
+<td><a href="../Conductor.length/">length</a></td>
 <td>range</td>
 <td><a href="./">Length</a></td>
 </tr>
 <tr>
 <td><a href="../Conductor/">Conductor</a></td>
-<td><a href="../length/">length</a></td>
+<td><a href="../Conductor.length/">length</a></td>
 <td>range</td>
 <td><a href="./">Length</a></td>
 </tr>
 <tr>
 <td><a href="../WireInfo/">WireInfo</a></td>
-<td><a href="../core_radius/">core_radius</a></td>
+<td><a href="../WireInfo.coreRadius/">core_radius</a></td>
 <td>range</td>
 <td><a href="./">Length</a></td>
 </tr>
 <tr>
 <td><a href="../WireInfo/">WireInfo</a></td>
-<td><a href="../gmr/">gmr</a></td>
+<td><a href="../WireInfo.gmr/">gmr</a></td>
 <td>range</td>
 <td><a href="./">Length</a></td>
 </tr>
 <tr>
 <td><a href="../WireInfo/">WireInfo</a></td>
-<td><a href="../insulation_thickness/">insulation_thickness</a></td>
+<td><a href="../WireInfo.insulationThickness/">insulation_thickness</a></td>
 <td>range</td>
 <td><a href="./">Length</a></td>
 </tr>
 <tr>
 <td><a href="../WireInfo/">WireInfo</a></td>
-<td><a href="../radius/">radius</a></td>
+<td><a href="../WireInfo.radius/">radius</a></td>
 <td>range</td>
 <td><a href="./">Length</a></td>
 </tr>

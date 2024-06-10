@@ -205,15 +205,15 @@
 <p>URI: <a href="http://iec.ch/TC57/CIM100#ActivePower">cim:ActivePower</a></p>
 <pre class="mermaid"><code> classDiagram
     class ActivePower
-      ActivePower : multiplier
+      ActivePower : ActivePower.multiplier
 
-          ActivePower --&gt; UnitMultiplier : multiplier
+          ActivePower --&gt; UnitMultiplier : ActivePower.multiplier
 
-      ActivePower : unit
+      ActivePower : ActivePower.unit
 
-          ActivePower --&gt; UnitSymbol : unit
+          ActivePower --&gt; UnitSymbol : ActivePower.unit
 
-      ActivePower : value
+      ActivePower : ActivePower.value
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -229,19 +229,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../value/">value</a></td>
+<td><a href="ActivePower.value.md">value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../multiplier/">multiplier</a></td>
+<td><a href="ActivePower.multiplier.md">multiplier</a></td>
 <td>0..1 <br/> <a href="../UnitMultiplier/">UnitMultiplier</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../unit/">unit</a></td>
+<td><a href="ActivePower.unit.md">unit</a></td>
 <td>0..1 <br/> <a href="../UnitSymbol/">UnitSymbol</a></td>
 <td></td>
 <td>direct</td>
@@ -261,7 +261,7 @@
 <tbody>
 <tr>
 <td><a href="../EnergyConsumer/">EnergyConsumer</a></td>
-<td><a href="../pfixed/">pfixed</a></td>
+<td><a href="../EnergyConsumer.pfixed/">pfixed</a></td>
 <td>range</td>
 <td><a href="./">ActivePower</a></td>
 </tr>

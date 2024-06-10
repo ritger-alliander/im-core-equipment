@@ -209,53 +209,53 @@
     class ACLineSegment
       Conductor &lt;|-- ACLineSegment
 
-      ACLineSegment : aggregate
+      ACLineSegment : Equipment.aggregate
 
-      ACLineSegment : base_voltage
+      ACLineSegment : ConductingEquipment.BaseVoltage
 
-          ACLineSegment --&gt; BaseVoltage : base_voltage
+          ACLineSegment --&gt; BaseVoltage : ConductingEquipment.BaseVoltage
 
-      ACLineSegment : bch
+      ACLineSegment : ACLineSegment.bch
 
-          ACLineSegment --&gt; Susceptance : bch
+          ACLineSegment --&gt; Susceptance : ACLineSegment.bch
 
-      ACLineSegment : description
+      ACLineSegment : IdentifiedObject.description
 
-      ACLineSegment : energy_ident_code_eic
+      ACLineSegment : IdentifiedObject.energyIdentCodeEic
 
-      ACLineSegment : equipment_container
+      ACLineSegment : Equipment.EquipmentContainer
 
-          ACLineSegment --&gt; EquipmentContainer : equipment_container
+          ACLineSegment --&gt; EquipmentContainer : Equipment.EquipmentContainer
 
-      ACLineSegment : gch
+      ACLineSegment : ACLineSegment.gch
 
-          ACLineSegment --&gt; Conductance : gch
+          ACLineSegment --&gt; Conductance : ACLineSegment.gch
 
-      ACLineSegment : length
+      ACLineSegment : Conductor.length
 
-          ACLineSegment --&gt; Length : length
+          ACLineSegment --&gt; Length : Conductor.length
 
-      ACLineSegment : m_rid
+      ACLineSegment : IdentifiedObject.mRID
 
-      ACLineSegment : names
+      ACLineSegment : IdentifiedObject.Names
 
-          ACLineSegment --&gt; Name : names
+          ACLineSegment --&gt; Name : IdentifiedObject.Names
 
-      ACLineSegment : normally_in_service
+      ACLineSegment : Equipment.normallyInService
 
-      ACLineSegment : r
+      ACLineSegment : ACLineSegment.r
 
-          ACLineSegment --&gt; Resistance : r
+          ACLineSegment --&gt; Resistance : ACLineSegment.r
 
-      ACLineSegment : short_name
+      ACLineSegment : IdentifiedObject.shortName
 
-      ACLineSegment : terminals
+      ACLineSegment : ConductingEquipment.Terminals
 
-          ACLineSegment --&gt; Terminal : terminals
+          ACLineSegment --&gt; Terminal : ConductingEquipment.Terminals
 
-      ACLineSegment : x
+      ACLineSegment : ACLineSegment.x
 
-          ACLineSegment --&gt; Reactance : x
+          ACLineSegment --&gt; Reactance : ACLineSegment.x
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -289,91 +289,91 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../bch/">bch</a></td>
+<td><a href="../ACLineSegment.bch/">bch</a></td>
 <td>1..1 <br/> <a href="../Susceptance/">Susceptance</a></td>
 <td>Positive sequence shunt (charging) susceptance, uniformly distributed, of the...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../gch/">gch</a></td>
+<td><a href="../ACLineSegment.gch/">gch</a></td>
 <td>0..1 <br/> <a href="../Conductance/">Conductance</a></td>
 <td>Positive sequence shunt (charging) conductance, uniformly distributed, of the...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../r/">r</a></td>
+<td><a href="../ACLineSegment.r/">r</a></td>
 <td>1..1 <br/> <a href="../Resistance/">Resistance</a></td>
 <td>Positive sequence series resistance of the entire line section</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../x/">x</a></td>
+<td><a href="../ACLineSegment.x/">x</a></td>
 <td>1..1 <br/> <a href="../Reactance/">Reactance</a></td>
 <td>Positive sequence series reactance of the entire line section</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../length/">length</a></td>
+<td><a href="../Conductor.length/">length</a></td>
 <td>0..1 <br/> <a href="../Length/">Length</a></td>
 <td>Segment length for calculating line section capabilities</td>
 <td><a href="../Conductor/">Conductor</a></td>
 </tr>
 <tr>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="../ConductingEquipment.BaseVoltage/">base_voltage</a></td>
 <td>0..1 <br/> <a href="../BaseVoltage/">BaseVoltage</a></td>
 <td>Base voltage of this conducting equipment</td>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
 </tr>
 <tr>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="../ConductingEquipment.Terminals/">terminals</a></td>
 <td>0..* <br/> <a href="../Terminal/">Terminal</a></td>
 <td>Conducting equipment have terminals that may be connected to other conducting...</td>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
 </tr>
 <tr>
-<td><a href="../aggregate/">aggregate</a></td>
+<td><a href="../Equipment.aggregate/">aggregate</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>The aggregate flag provides an alternative way of representing an aggregated ...</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../normally_in_service/">normally_in_service</a></td>
+<td><a href="../Equipment.normallyInService/">normally_in_service</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>Specifies the availability of the equipment under normal operating conditions</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>0..1 <br/> <a href="../EquipmentContainer/">EquipmentContainer</a></td>
 <td>Container of this equipment</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>

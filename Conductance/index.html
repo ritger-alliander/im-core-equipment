@@ -205,15 +205,15 @@
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Conductance">cim:Conductance</a></p>
 <pre class="mermaid"><code> classDiagram
     class Conductance
-      Conductance : multiplier
+      Conductance : Conductance.multiplier
 
-          Conductance --&gt; UnitMultiplier : multiplier
+          Conductance --&gt; UnitMultiplier : Conductance.multiplier
 
-      Conductance : unit
+      Conductance : Conductance.unit
 
-          Conductance --&gt; UnitSymbol : unit
+          Conductance --&gt; UnitSymbol : Conductance.unit
 
-      Conductance : value
+      Conductance : Conductance.value
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -229,19 +229,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../value/">value</a></td>
+<td><a href="Conductance.value.md">value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../unit/">unit</a></td>
+<td><a href="Conductance.unit.md">unit</a></td>
 <td>0..1 <br/> <a href="../UnitSymbol/">UnitSymbol</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../multiplier/">multiplier</a></td>
+<td><a href="Conductance.multiplier.md">multiplier</a></td>
 <td>0..1 <br/> <a href="../UnitMultiplier/">UnitMultiplier</a></td>
 <td></td>
 <td>direct</td>
@@ -261,13 +261,13 @@
 <tbody>
 <tr>
 <td><a href="../ACLineSegment/">ACLineSegment</a></td>
-<td><a href="../gch/">gch</a></td>
+<td><a href="../ACLineSegment.gch/">gch</a></td>
 <td>range</td>
 <td><a href="./">Conductance</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
-<td><a href="../g/">g</a></td>
+<td><a href="../PowerTransformerEnd.g/">g</a></td>
 <td>range</td>
 <td><a href="./">Conductance</a></td>
 </tr>

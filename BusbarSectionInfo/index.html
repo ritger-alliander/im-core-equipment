@@ -209,29 +209,29 @@ _</p>
     class BusbarSectionInfo
       AssetInfo &lt;|-- BusbarSectionInfo
 
-      BusbarSectionInfo : description
+      BusbarSectionInfo : IdentifiedObject.description
 
-      BusbarSectionInfo : energy_ident_code_eic
+      BusbarSectionInfo : IdentifiedObject.energyIdentCodeEic
 
-      BusbarSectionInfo : m_rid
+      BusbarSectionInfo : IdentifiedObject.mRID
 
-      BusbarSectionInfo : names
+      BusbarSectionInfo : IdentifiedObject.Names
 
-          BusbarSectionInfo --&gt; Name : names
+          BusbarSectionInfo --&gt; Name : IdentifiedObject.Names
 
-      BusbarSectionInfo : power_system_resources
+      BusbarSectionInfo : AssetInfo.PowerSystemResources
 
-          BusbarSectionInfo --&gt; PowerSystemResource : power_system_resources
+          BusbarSectionInfo --&gt; PowerSystemResource : AssetInfo.PowerSystemResources
 
-      BusbarSectionInfo : rated_current
+      BusbarSectionInfo : BusbarSectionInfo.ratedCurrent
 
-          BusbarSectionInfo --&gt; CurrentFlow : rated_current
+          BusbarSectionInfo --&gt; CurrentFlow : BusbarSectionInfo.ratedCurrent
 
-      BusbarSectionInfo : rated_voltage
+      BusbarSectionInfo : BusbarSectionInfo.ratedVoltage
 
-          BusbarSectionInfo --&gt; Voltage : rated_voltage
+          BusbarSectionInfo --&gt; Voltage : BusbarSectionInfo.ratedVoltage
 
-      BusbarSectionInfo : short_name
+      BusbarSectionInfo : IdentifiedObject.shortName
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -256,49 +256,49 @@ _</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../rated_current/">rated_current</a></td>
+<td><a href="BusbarSectionInfo.ratedCurrent.md">rated_current</a></td>
 <td>0..1 <br/> <a href="../CurrentFlow/">CurrentFlow</a></td>
 <td>Rated current</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../rated_voltage/">rated_voltage</a></td>
+<td><a href="../BusbarSectionInfo.ratedVoltage/">rated_voltage</a></td>
 <td>0..1 <br/> <a href="../Voltage/">Voltage</a></td>
 <td>Rated voltage</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../power_system_resources/">power_system_resources</a></td>
+<td><a href="../AssetInfo.PowerSystemResources/">power_system_resources</a></td>
 <td>0..* <br/> <a href="../PowerSystemResource/">PowerSystemResource</a></td>
 <td>All power system resources with this datasheet information</td>
 <td><a href="../AssetInfo/">AssetInfo</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>

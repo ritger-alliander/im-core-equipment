@@ -216,21 +216,21 @@
       ConnectivityNodeContainer &lt;|-- EquipmentContainer
 
 
-      ConnectivityNodeContainer : connectivity_nodes
+      ConnectivityNodeContainer : ConnectivityNodeContainer.ConnectivityNodes
 
-          ConnectivityNodeContainer --&gt; ConnectivityNode : connectivity_nodes
+          ConnectivityNodeContainer --&gt; ConnectivityNode : ConnectivityNodeContainer.ConnectivityNodes
 
-      ConnectivityNodeContainer : description
+      ConnectivityNodeContainer : IdentifiedObject.description
 
-      ConnectivityNodeContainer : energy_ident_code_eic
+      ConnectivityNodeContainer : IdentifiedObject.energyIdentCodeEic
 
-      ConnectivityNodeContainer : m_rid
+      ConnectivityNodeContainer : IdentifiedObject.mRID
 
-      ConnectivityNodeContainer : names
+      ConnectivityNodeContainer : IdentifiedObject.Names
 
-          ConnectivityNodeContainer --&gt; Name : names
+          ConnectivityNodeContainer --&gt; Name : IdentifiedObject.Names
 
-      ConnectivityNodeContainer : short_name
+      ConnectivityNodeContainer : IdentifiedObject.shortName
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -258,37 +258,37 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../connectivity_nodes/">connectivity_nodes</a></td>
+<td><a href="../ConnectivityNodeContainer.ConnectivityNodes/">connectivity_nodes</a></td>
 <td>0..* <br/> <a href="../ConnectivityNode/">ConnectivityNode</a></td>
 <td>Connectivity nodes which belong to this connectivity node container</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -308,7 +308,7 @@
 <tbody>
 <tr>
 <td><a href="../ConnectivityNode/">ConnectivityNode</a></td>
-<td><a href="../connectivity_node_container/">connectivity_node_container</a></td>
+<td><a href="../ConnectivityNode.ConnectivityNodeContainer/">connectivity_node_container</a></td>
 <td>range</td>
 <td><a href="./">ConnectivityNodeContainer</a></td>
 </tr>

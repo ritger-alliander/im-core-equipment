@@ -218,55 +218,55 @@
     class PowerTransformerEnd
       TransformerEnd &lt;|-- PowerTransformerEnd
 
-      PowerTransformerEnd : b
+      PowerTransformerEnd : PowerTransformerEnd.b
 
-          PowerTransformerEnd --&gt; Susceptance : b
+          PowerTransformerEnd --&gt; Susceptance : PowerTransformerEnd.b
 
-      PowerTransformerEnd : base_voltage
+      PowerTransformerEnd : TransformerEnd.BaseVoltage
 
-          PowerTransformerEnd --&gt; BaseVoltage : base_voltage
+          PowerTransformerEnd --&gt; BaseVoltage : TransformerEnd.BaseVoltage
 
-      PowerTransformerEnd : connection_kind
+      PowerTransformerEnd : PowerTransformerEnd.connectionKind
 
-          PowerTransformerEnd --&gt; WindingConnection : connection_kind
+          PowerTransformerEnd --&gt; WindingConnection : PowerTransformerEnd.connectionKind
 
-      PowerTransformerEnd : description
+      PowerTransformerEnd : IdentifiedObject.description
 
-      PowerTransformerEnd : end_number
+      PowerTransformerEnd : TransformerEnd.endNumber
 
-      PowerTransformerEnd : energy_ident_code_eic
+      PowerTransformerEnd : IdentifiedObject.energyIdentCodeEic
 
-      PowerTransformerEnd : g
+      PowerTransformerEnd : PowerTransformerEnd.g
 
-          PowerTransformerEnd --&gt; Conductance : g
+          PowerTransformerEnd --&gt; Conductance : PowerTransformerEnd.g
 
-      PowerTransformerEnd : m_rid
+      PowerTransformerEnd : IdentifiedObject.mRID
 
-      PowerTransformerEnd : names
+      PowerTransformerEnd : IdentifiedObject.Names
 
-          PowerTransformerEnd --&gt; Name : names
+          PowerTransformerEnd --&gt; Name : IdentifiedObject.Names
 
-      PowerTransformerEnd : power_transformer
+      PowerTransformerEnd : PowerTransformerEnd.PowerTransformer
 
-          PowerTransformerEnd --&gt; PowerTransformer : power_transformer
+          PowerTransformerEnd --&gt; PowerTransformer : PowerTransformerEnd.PowerTransformer
 
-      PowerTransformerEnd : r
+      PowerTransformerEnd : PowerTransformerEnd.r
 
-          PowerTransformerEnd --&gt; Resistance : r
+          PowerTransformerEnd --&gt; Resistance : PowerTransformerEnd.r
 
-      PowerTransformerEnd : rated_u
+      PowerTransformerEnd : PowerTransformerEnd.ratedU
 
-          PowerTransformerEnd --&gt; Voltage : rated_u
+          PowerTransformerEnd --&gt; Voltage : PowerTransformerEnd.ratedU
 
-      PowerTransformerEnd : short_name
+      PowerTransformerEnd : IdentifiedObject.shortName
 
-      PowerTransformerEnd : terminal
+      PowerTransformerEnd : TransformerEnd.Terminal
 
-          PowerTransformerEnd --&gt; Terminal : terminal
+          PowerTransformerEnd --&gt; Terminal : TransformerEnd.Terminal
 
-      PowerTransformerEnd : x
+      PowerTransformerEnd : PowerTransformerEnd.x
 
-          PowerTransformerEnd --&gt; Reactance : x
+          PowerTransformerEnd --&gt; Reactance : PowerTransformerEnd.x
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -291,91 +291,91 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../power_transformer/">power_transformer</a></td>
+<td><a href="../PowerTransformerEnd.PowerTransformer/">power_transformer</a></td>
 <td>1..1 <br/> <a href="../PowerTransformer/">PowerTransformer</a></td>
 <td>The power transformer of this power transformer end</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../b/">b</a></td>
+<td><a href="../PowerTransformerEnd.b/">b</a></td>
 <td>1..1 <br/> <a href="../Susceptance/">Susceptance</a></td>
 <td>Magnetizing branch susceptance (B mag)</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../connection_kind/">connection_kind</a></td>
+<td><a href="../PowerTransformerEnd.connectionKind/">connection_kind</a></td>
 <td>0..1 <br/> <a href="../WindingConnection/">WindingConnection</a></td>
 <td>Kind of connection</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../g/">g</a></td>
+<td><a href="../PowerTransformerEnd.g/">g</a></td>
 <td>0..1 <br/> <a href="../Conductance/">Conductance</a></td>
 <td>Magnetizing branch conductance</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../rated_u/">rated_u</a></td>
+<td><a href="../PowerTransformerEnd.ratedU/">rated_u</a></td>
 <td>1..1 <br/> <a href="../Voltage/">Voltage</a></td>
 <td>Rated voltage: phase-phase for three-phase windings, and either phase-phase o...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../r/">r</a></td>
+<td><a href="PowerTransformerEnd.r.md">r</a></td>
 <td>1..1 <br/> <a href="../Resistance/">Resistance</a></td>
 <td>Resistance (star-model) of the transformer end</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../x/">x</a></td>
+<td><a href="PowerTransformerEnd.x.md">x</a></td>
 <td>1..1 <br/> <a href="../Reactance/">Reactance</a></td>
 <td>Positive sequence series reactance (star-model) of the transformer end</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="TransformerEnd.BaseVoltage.md">base_voltage</a></td>
 <td>1..1 <br/> <a href="../BaseVoltage/">BaseVoltage</a></td>
 <td>Base voltage of the transformer end</td>
 <td><a href="../TransformerEnd/">TransformerEnd</a></td>
 </tr>
 <tr>
-<td><a href="../terminal/">terminal</a></td>
+<td><a href="../TransformerEnd.Terminal/">terminal</a></td>
 <td>1..1 <br/> <a href="../Terminal/">Terminal</a></td>
 <td>Terminal of the power transformer to which this transformer end belongs</td>
 <td><a href="../TransformerEnd/">TransformerEnd</a></td>
 </tr>
 <tr>
-<td><a href="../end_number/">end_number</a></td>
+<td><a href="../TransformerEnd.endNumber/">end_number</a></td>
 <td>1..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>Number for this transformer end, corresponding to the end's order in the powe...</td>
 <td><a href="../TransformerEnd/">TransformerEnd</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -395,7 +395,7 @@
 <tbody>
 <tr>
 <td><a href="../PowerTransformer/">PowerTransformer</a></td>
-<td><a href="../power_transformer_end/">power_transformer_end</a></td>
+<td><a href="../PowerTransformer.PowerTransformerEnd/">power_transformer_end</a></td>
 <td>range</td>
 <td><a href="./">PowerTransformerEnd</a></td>
 </tr>

@@ -205,15 +205,15 @@
 <p>URI: <a href="http://iec.ch/TC57/CIM100#PerCent">cim:PerCent</a></p>
 <pre class="mermaid"><code> classDiagram
     class PerCent
-      PerCent : multiplier
+      PerCent : PerCent.multiplier
 
-          PerCent --&gt; UnitMultiplier : multiplier
+          PerCent --&gt; UnitMultiplier : PerCent.multiplier
 
-      PerCent : unit
+      PerCent : PerCent.unit
 
-          PerCent --&gt; UnitSymbol : unit
+          PerCent --&gt; UnitSymbol : PerCent.unit
 
-      PerCent : value
+      PerCent : PerCent.value
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -229,19 +229,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../value/">value</a></td>
+<td><a href="PerCent.value.md">value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td>Normally 0 to 100 on a defined base</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../unit/">unit</a></td>
+<td><a href="PerCent.unit.md">unit</a></td>
 <td>0..1 <br/> <a href="../UnitSymbol/">UnitSymbol</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../multiplier/">multiplier</a></td>
+<td><a href="PerCent.multiplier.md">multiplier</a></td>
 <td>0..1 <br/> <a href="../UnitMultiplier/">UnitMultiplier</a></td>
 <td></td>
 <td>direct</td>
@@ -261,13 +261,13 @@
 <tbody>
 <tr>
 <td><a href="../EnergyConsumer/">EnergyConsumer</a></td>
-<td><a href="../pfixed_pct/">pfixed_pct</a></td>
+<td><a href="../EnergyConsumer.pfixedPct/">pfixed_pct</a></td>
 <td>range</td>
 <td><a href="./">PerCent</a></td>
 </tr>
 <tr>
 <td><a href="../EnergyConsumer/">EnergyConsumer</a></td>
-<td><a href="../qfixed_pct/">qfixed_pct</a></td>
+<td><a href="../EnergyConsumer.qfixedPct/">qfixed_pct</a></td>
 <td>range</td>
 <td><a href="./">PerCent</a></td>
 </tr>

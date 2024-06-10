@@ -212,35 +212,35 @@
     class Terminal
       ACDCTerminal &lt;|-- Terminal
 
-      Terminal : conducting_equipment
+      Terminal : Terminal.ConductingEquipment
 
-          Terminal --&gt; ConductingEquipment : conducting_equipment
+          Terminal --&gt; ConductingEquipment : Terminal.ConductingEquipment
 
-      Terminal : connectivity_node
+      Terminal : Terminal.ConnectivityNode
 
-          Terminal --&gt; ConnectivityNode : connectivity_node
+          Terminal --&gt; ConnectivityNode : Terminal.ConnectivityNode
 
-      Terminal : description
+      Terminal : IdentifiedObject.description
 
-      Terminal : energy_ident_code_eic
+      Terminal : IdentifiedObject.energyIdentCodeEic
 
-      Terminal : m_rid
+      Terminal : IdentifiedObject.mRID
 
-      Terminal : names
+      Terminal : IdentifiedObject.Names
 
-          Terminal --&gt; Name : names
+          Terminal --&gt; Name : IdentifiedObject.Names
 
-      Terminal : phases
+      Terminal : Terminal.phases
 
-          Terminal --&gt; PhaseCode : phases
+          Terminal --&gt; PhaseCode : Terminal.phases
 
-      Terminal : sequence_number
+      Terminal : ACDCTerminal.sequenceNumber
 
-      Terminal : short_name
+      Terminal : IdentifiedObject.shortName
 
-      Terminal : transformer_end
+      Terminal : Terminal.TransformerEnd
 
-          Terminal --&gt; TransformerEnd : transformer_end
+          Terminal --&gt; TransformerEnd : Terminal.TransformerEnd
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -265,61 +265,61 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../conducting_equipment/">conducting_equipment</a></td>
+<td><a href="Terminal.ConductingEquipment.md">conducting_equipment</a></td>
 <td>1..1 <br/> <a href="../ConductingEquipment/">ConductingEquipment</a></td>
 <td>The conducting equipment of the terminal</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../connectivity_node/">connectivity_node</a></td>
+<td><a href="../Terminal.ConnectivityNode/">connectivity_node</a></td>
 <td>0..1 <br/> <a href="../ConnectivityNode/">ConnectivityNode</a></td>
 <td>The connectivity node to which this terminal connects with zero impedance</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../phases/">phases</a></td>
+<td><a href="../Terminal.phases/">phases</a></td>
 <td>0..1 <br/> <a href="../PhaseCode/">PhaseCode</a></td>
 <td>Represents the normal network phasing condition</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../transformer_end/">transformer_end</a></td>
+<td><a href="../Terminal.TransformerEnd/">transformer_end</a></td>
 <td>0..* <br/> <a href="../TransformerEnd/">TransformerEnd</a></td>
 <td>All transformer ends connected at this terminal</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../sequence_number/">sequence_number</a></td>
+<td><a href="../ACDCTerminal.sequenceNumber/">sequence_number</a></td>
 <td>1..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>The orientation of the terminal connections for a multiple terminal conductin...</td>
 <td><a href="../ACDCTerminal/">ACDCTerminal</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -339,103 +339,103 @@
 <tbody>
 <tr>
 <td><a href="../ACLineSegment/">ACLineSegment</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../Conductor/">Conductor</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../TransformerEnd/">TransformerEnd</a></td>
-<td><a href="../terminal/">terminal</a></td>
+<td><a href="../TransformerEnd.Terminal/">terminal</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../ConnectivityNode/">ConnectivityNode</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../Breaker/">Breaker</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../ProtectedSwitch/">ProtectedSwitch</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../Switch/">Switch</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../BusbarSection/">BusbarSection</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../Connector/">Connector</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../Disconnector/">Disconnector</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../EnergyConsumer/">EnergyConsumer</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../EnergyConnection/">EnergyConnection</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../Junction/">Junction</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../LoadBreakSwitch/">LoadBreakSwitch</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformer/">PowerTransformer</a></td>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="terminals.md">terminals</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
-<td><a href="../terminal/">terminal</a></td>
+<td><a href="../TransformerEnd.Terminal/">terminal</a></td>
 <td>range</td>
 <td><a href="./">Terminal</a></td>
 </tr>

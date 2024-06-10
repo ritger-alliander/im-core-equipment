@@ -207,41 +207,41 @@
     class Disconnector
       Switch &lt;|-- Disconnector
 
-      Disconnector : aggregate
+      Disconnector : Equipment.aggregate
 
-      Disconnector : base_voltage
+      Disconnector : ConductingEquipment.BaseVoltage
 
-          Disconnector --&gt; BaseVoltage : base_voltage
+          Disconnector --&gt; BaseVoltage : ConductingEquipment.BaseVoltage
 
-      Disconnector : description
+      Disconnector : IdentifiedObject.description
 
-      Disconnector : energy_ident_code_eic
+      Disconnector : IdentifiedObject.energyIdentCodeEic
 
-      Disconnector : equipment_container
+      Disconnector : Equipment.EquipmentContainer
 
-          Disconnector --&gt; EquipmentContainer : equipment_container
+          Disconnector --&gt; EquipmentContainer : Equipment.EquipmentContainer
 
-      Disconnector : m_rid
+      Disconnector : IdentifiedObject.mRID
 
-      Disconnector : names
+      Disconnector : IdentifiedObject.Names
 
-          Disconnector --&gt; Name : names
+          Disconnector --&gt; Name : IdentifiedObject.Names
 
-      Disconnector : normal_open
+      Disconnector : Switch.normalOpen
 
-      Disconnector : normally_in_service
+      Disconnector : Equipment.normallyInService
 
-      Disconnector : rated_current
+      Disconnector : Switch.ratedCurrent
 
-          Disconnector --&gt; CurrentFlow : rated_current
+          Disconnector --&gt; CurrentFlow : Switch.ratedCurrent
 
-      Disconnector : retained
+      Disconnector : Switch.retained
 
-      Disconnector : short_name
+      Disconnector : IdentifiedObject.shortName
 
-      Disconnector : terminals
+      Disconnector : ConductingEquipment.Terminals
 
-          Disconnector --&gt; Terminal : terminals
+          Disconnector --&gt; Terminal : ConductingEquipment.Terminals
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -275,79 +275,79 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../normal_open/">normal_open</a></td>
+<td><a href="../Switch.normalOpen/">normal_open</a></td>
 <td>1..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>The attribute is used in cases when no Measurement for the status value is pr...</td>
 <td><a href="../Switch/">Switch</a></td>
 </tr>
 <tr>
-<td><a href="../rated_current/">rated_current</a></td>
+<td><a href="../Switch.ratedCurrent/">rated_current</a></td>
 <td>0..1 <br/> <a href="../CurrentFlow/">CurrentFlow</a></td>
 <td>The maximum continuous current carrying capacity in amps governed by the devi...</td>
 <td><a href="../Switch/">Switch</a></td>
 </tr>
 <tr>
-<td><a href="../retained/">retained</a></td>
+<td><a href="../Switch.retained/">retained</a></td>
 <td>1..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>Branch is retained in the topological solution</td>
 <td><a href="../Switch/">Switch</a></td>
 </tr>
 <tr>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="../ConductingEquipment.BaseVoltage/">base_voltage</a></td>
 <td>0..1 <br/> <a href="../BaseVoltage/">BaseVoltage</a></td>
 <td>Base voltage of this conducting equipment</td>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
 </tr>
 <tr>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="../ConductingEquipment.Terminals/">terminals</a></td>
 <td>0..* <br/> <a href="../Terminal/">Terminal</a></td>
 <td>Conducting equipment have terminals that may be connected to other conducting...</td>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
 </tr>
 <tr>
-<td><a href="../aggregate/">aggregate</a></td>
+<td><a href="../Equipment.aggregate/">aggregate</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>The aggregate flag provides an alternative way of representing an aggregated ...</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../normally_in_service/">normally_in_service</a></td>
+<td><a href="../Equipment.normallyInService/">normally_in_service</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>Specifies the availability of the equipment under normal operating conditions</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>0..1 <br/> <a href="../EquipmentContainer/">EquipmentContainer</a></td>
 <td>Container of this equipment</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>

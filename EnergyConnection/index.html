@@ -211,33 +211,33 @@
       EnergyConnection &lt;|-- EnergyConsumer
 
 
-      EnergyConnection : aggregate
+      EnergyConnection : Equipment.aggregate
 
-      EnergyConnection : base_voltage
+      EnergyConnection : ConductingEquipment.BaseVoltage
 
-          EnergyConnection --&gt; BaseVoltage : base_voltage
+          EnergyConnection --&gt; BaseVoltage : ConductingEquipment.BaseVoltage
 
-      EnergyConnection : description
+      EnergyConnection : IdentifiedObject.description
 
-      EnergyConnection : energy_ident_code_eic
+      EnergyConnection : IdentifiedObject.energyIdentCodeEic
 
-      EnergyConnection : equipment_container
+      EnergyConnection : Equipment.EquipmentContainer
 
-          EnergyConnection --&gt; EquipmentContainer : equipment_container
+          EnergyConnection --&gt; EquipmentContainer : Equipment.EquipmentContainer
 
-      EnergyConnection : m_rid
+      EnergyConnection : IdentifiedObject.mRID
 
-      EnergyConnection : names
+      EnergyConnection : IdentifiedObject.Names
 
-          EnergyConnection --&gt; Name : names
+          EnergyConnection --&gt; Name : IdentifiedObject.Names
 
-      EnergyConnection : normally_in_service
+      EnergyConnection : Equipment.normallyInService
 
-      EnergyConnection : short_name
+      EnergyConnection : IdentifiedObject.shortName
 
-      EnergyConnection : terminals
+      EnergyConnection : ConductingEquipment.Terminals
 
-          EnergyConnection --&gt; Terminal : terminals
+          EnergyConnection --&gt; Terminal : ConductingEquipment.Terminals
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -271,61 +271,61 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../base_voltage/">base_voltage</a></td>
+<td><a href="../ConductingEquipment.BaseVoltage/">base_voltage</a></td>
 <td>0..1 <br/> <a href="../BaseVoltage/">BaseVoltage</a></td>
 <td>Base voltage of this conducting equipment</td>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
 </tr>
 <tr>
-<td><a href="../terminals/">terminals</a></td>
+<td><a href="../ConductingEquipment.Terminals/">terminals</a></td>
 <td>0..* <br/> <a href="../Terminal/">Terminal</a></td>
 <td>Conducting equipment have terminals that may be connected to other conducting...</td>
 <td><a href="../ConductingEquipment/">ConductingEquipment</a></td>
 </tr>
 <tr>
-<td><a href="../aggregate/">aggregate</a></td>
+<td><a href="../Equipment.aggregate/">aggregate</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>The aggregate flag provides an alternative way of representing an aggregated ...</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../normally_in_service/">normally_in_service</a></td>
+<td><a href="../Equipment.normallyInService/">normally_in_service</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>Specifies the availability of the equipment under normal operating conditions</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../equipment_container/">equipment_container</a></td>
+<td><a href="../Equipment.EquipmentContainer/">equipment_container</a></td>
 <td>0..1 <br/> <a href="../EquipmentContainer/">EquipmentContainer</a></td>
 <td>Container of this equipment</td>
 <td><a href="../Equipment/">Equipment</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>

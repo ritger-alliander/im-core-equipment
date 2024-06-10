@@ -205,15 +205,15 @@
 <p>URI: <a href="http://iec.ch/TC57/CIM100#Reactance">cim:Reactance</a></p>
 <pre class="mermaid"><code> classDiagram
     class Reactance
-      Reactance : multiplier
+      Reactance : Reactance.multiplier
 
-          Reactance --&gt; UnitMultiplier : multiplier
+          Reactance --&gt; UnitMultiplier : Reactance.multiplier
 
-      Reactance : unit
+      Reactance : Reactance.unit
 
-          Reactance --&gt; UnitSymbol : unit
+          Reactance --&gt; UnitSymbol : Reactance.unit
 
-      Reactance : value
+      Reactance : Reactance.value
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -229,19 +229,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../value/">value</a></td>
+<td><a href="Reactance.value.md">value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../unit/">unit</a></td>
+<td><a href="Reactance.unit.md">unit</a></td>
 <td>0..1 <br/> <a href="../UnitSymbol/">UnitSymbol</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../multiplier/">multiplier</a></td>
+<td><a href="Reactance.multiplier.md">multiplier</a></td>
 <td>0..1 <br/> <a href="../UnitMultiplier/">UnitMultiplier</a></td>
 <td></td>
 <td>direct</td>
@@ -261,13 +261,13 @@
 <tbody>
 <tr>
 <td><a href="../ACLineSegment/">ACLineSegment</a></td>
-<td><a href="../x/">x</a></td>
+<td><a href="x.md">x</a></td>
 <td>range</td>
 <td><a href="./">Reactance</a></td>
 </tr>
 <tr>
 <td><a href="../PowerTransformerEnd/">PowerTransformerEnd</a></td>
-<td><a href="../x/">x</a></td>
+<td><a href="x.md">x</a></td>
 <td>range</td>
 <td><a href="./">Reactance</a></td>
 </tr>

@@ -217,17 +217,17 @@
       PowerSystemResource &lt;|-- Equipment
 
 
-      PowerSystemResource : description
+      PowerSystemResource : IdentifiedObject.description
 
-      PowerSystemResource : energy_ident_code_eic
+      PowerSystemResource : IdentifiedObject.energyIdentCodeEic
 
-      PowerSystemResource : m_rid
+      PowerSystemResource : IdentifiedObject.mRID
 
-      PowerSystemResource : names
+      PowerSystemResource : IdentifiedObject.Names
 
-          PowerSystemResource --&gt; Name : names
+          PowerSystemResource --&gt; Name : IdentifiedObject.Names
 
-      PowerSystemResource : short_name
+      PowerSystemResource : IdentifiedObject.shortName
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -253,31 +253,31 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td><a href="../IdentifiedObject/">IdentifiedObject</a></td>
@@ -297,19 +297,19 @@
 <tbody>
 <tr>
 <td><a href="../BusbarSectionInfo/">BusbarSectionInfo</a></td>
-<td><a href="../power_system_resources/">power_system_resources</a></td>
+<td><a href="../AssetInfo.PowerSystemResources/">power_system_resources</a></td>
 <td>range</td>
 <td><a href="./">PowerSystemResource</a></td>
 </tr>
 <tr>
 <td><a href="../AssetInfo/">AssetInfo</a></td>
-<td><a href="../power_system_resources/">power_system_resources</a></td>
+<td><a href="../AssetInfo.PowerSystemResources/">power_system_resources</a></td>
 <td>range</td>
 <td><a href="./">PowerSystemResource</a></td>
 </tr>
 <tr>
 <td><a href="../WireInfo/">WireInfo</a></td>
-<td><a href="../power_system_resources/">power_system_resources</a></td>
+<td><a href="../AssetInfo.PowerSystemResources/">power_system_resources</a></td>
 <td>range</td>
 <td><a href="./">PowerSystemResource</a></td>
 </tr>

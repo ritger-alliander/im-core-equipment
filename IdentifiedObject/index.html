@@ -217,17 +217,17 @@
       IdentifiedObject &lt;|-- ACDCTerminal
       IdentifiedObject &lt;|-- AssetInfo
 
-      IdentifiedObject : description
+      IdentifiedObject : IdentifiedObject.description
 
-      IdentifiedObject : energy_ident_code_eic
+      IdentifiedObject : IdentifiedObject.energyIdentCodeEic
 
-      IdentifiedObject : m_rid
+      IdentifiedObject : IdentifiedObject.mRID
 
-      IdentifiedObject : names
+      IdentifiedObject : IdentifiedObject.Names
 
-          IdentifiedObject --&gt; Name : names
+          IdentifiedObject --&gt; Name : IdentifiedObject.Names
 
-      IdentifiedObject : short_name
+      IdentifiedObject : IdentifiedObject.shortName
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -254,31 +254,31 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../IdentifiedObject.description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description is a free human readable text describing or naming the object</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../energy_ident_code_eic/">energy_ident_code_eic</a></td>
+<td><a href="../IdentifiedObject.energyIdentCodeEic/">energy_ident_code_eic</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of the EIC code (Energy identification ...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../m_rid/">m_rid</a></td>
+<td><a href="../IdentifiedObject.mRID/">m_rid</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Master resource identifier issued by a model authority</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../short_name/">short_name</a></td>
+<td><a href="../IdentifiedObject.shortName/">short_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The attribute is used for an exchange of a human readable short name with len...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../names/">names</a></td>
+<td><a href="../IdentifiedObject.Names/">names</a></td>
 <td>0..* <br/> <a href="../Name/">Name</a></td>
 <td>All names of this identified object</td>
 <td>direct</td>
@@ -298,7 +298,7 @@
 <tbody>
 <tr>
 <td><a href="../Name/">Name</a></td>
-<td><a href="../identified_object/">identified_object</a></td>
+<td><a href="../Name.IdentifiedObject/">identified_object</a></td>
 <td>range</td>
 <td><a href="./">IdentifiedObject</a></td>
 </tr>
